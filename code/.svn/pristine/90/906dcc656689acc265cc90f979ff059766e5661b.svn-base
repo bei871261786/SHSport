@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="100dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/shape_enable_grayblue_corner1_selector"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <include layout="@layout/jincai_basechild_centop"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_stroke_rectangle_white_grey_selector">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3.0">
+
+                        <CheckBox
+                            android:id="@+id/dingdan_cbx_w"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/shape_spt_option_selecotr"
+                            android:button="@null" />
+
+                        <LinearLayout
+                            android:id="@+id/dingdan_win_ll"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/dingdan_zhu_spf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3.0dip"
+                                android:singleLine="true"
+                                android:text="胜2.12"
+                                android:textColor="@color/fb_color_text_matchname"
+                                android:textSize="@dimen/standard_textsize_f5" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:layout_weight="3">
+
+                        <CheckBox
+                            android:id="@+id/dingdan_cbx_d"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/shape_spt_option_selecotr"
+                            android:button="@null" />
+
+                        <!-- <TextView
+                             android:id="@+id/spt_drawhot_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center|left|top"
+                             android:background="@drawable/spt_hot"
+                             android:padding="2.0dip"
+                             android:singleLine="true"
+                             android:text="热"
+                             android:textColor="@color/white"
+                             android:textSize="@dimen/standard_textsize_f7"
+                             android:visibility="gone" />-->
+
+                        <LinearLayout
+                            android:id="@+id/dingdan_draw_ll"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/dingdan_ping_spf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3.0dip"
+                                android:singleLine="true"
+                                android:text="平：--"
+                                android:textColor="@color/fb_color_text_matchname"
+                                android:textSize="@dimen/standard_textsize_f5" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3.0">
+
+                        <CheckBox
+                            android:id="@+id/dingdan_cbx_l"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/shape_spt_option_selecotr"
+                            android:button="@null" />
+
+                        <!-- <TextView
+                             android:id="@+id/spt_losthot_tv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center|left|top"
+                             android:background="@drawable/spt_hot"
+                             android:padding="2.0dip"
+                             android:singleLine="true"
+                             android:text="热"
+                             android:textColor="@color/white"
+                             android:textSize="@dimen/standard_textsize_f7"
+                             android:visibility="gone" />-->
+
+                        <LinearLayout
+                            android:id="@+id/spdingdan_lost_ll"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/dingdan_fu_spf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3.0dip"
+                                android:singleLine="true"
+                                android:text="负：--"
+                                android:textColor="@color/fb_color_text_matchname"
+                                android:textSize="@dimen/standard_textsize_f5" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/match_dantuo"
+            android:layout_width="30.0dip"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/shape_flitrate_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="胆"
+            android:textColor="@color/black_white_check_selecor"
+            android:textSize="@dimen/standard_textsize_f4" />
+
+        <ImageView
+            android:id="@+id/match_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10.0dip"
+            android:src="@mipmap/icon_del" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

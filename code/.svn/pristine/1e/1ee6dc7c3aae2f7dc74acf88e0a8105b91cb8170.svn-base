@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_background_gray"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/filtrate_head"
+        style="@style/head_title_barstyle">
+
+        <ImageView
+            android:id="@+id/topButton_back_filtrate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="25dp"
+            android:src="@mipmap/topback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="赛事选择"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standard_textsize_f2"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/flitrate_fan_quan_xuan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/filtrate_head"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/flitrate_grid_leftright"
+            android:layout_marginRight="@dimen/flitrate_grid_leftright"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/flitrate_match_selectall"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:background="@drawable/shape_enable_grayblue_corner2_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="全选"
+                android:textColor="@drawable/color_enable_c2_wihte_selector"
+                android:textSize="@dimen/standard_textsize_f3" />
+
+            <Button
+                android:id="@+id/flitrate_match_reversalall"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:background="@drawable/shape_enable_grayblue_corner2_selector"
+                android:button="@null"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="反选"
+                android:textColor="@drawable/color_enable_c2_wihte_selector"
+                android:textSize="@dimen/standard_textsize_f3" />
+
+            <Button
+                android:id="@+id/flitrate_match_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:background="@drawable/shape_enable_grayblue_corner2_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="清除"
+                android:textColor="@drawable/color_enable_c2_wihte_selector"
+                android:textSize="@dimen/standard_textsize_f3" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/flitrate_hotflitrate_bootom"
+        android:layout_below="@id/flitrate_fan_quan_xuan"
+        android:layout_marginLeft="@dimen/flitrate_grid_leftright"
+        android:layout_marginRight="@dimen/flitrate_grid_leftright"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/flitrate_fb_allmatch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sub_background_gray"
+            android:horizontalSpacing="8dp"
+            android:numColumns="3"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="8dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flitrate_hotflitrate_bootom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/flitrate_total_bisai"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="共134场比赛"
+            android:textColor="@color/back_gray"
+            android:textSize="@dimen/standard_textsize_f3" />
+
+        <include layout="@layout/basecalcel_submit1"></include>
+    </LinearLayout>
+
+</RelativeLayout>

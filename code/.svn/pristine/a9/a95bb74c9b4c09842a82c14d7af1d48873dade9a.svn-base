@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_bg"
+    android:paddingBottom="@dimen/dp_size_10dp"
+    android:paddingTop="@dimen/dp_size_15dp">
+
+
+    <TextView
+        android:id="@+id/syx5_issue_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dp_size_20dp"
+        android:text="-   -   -   - "
+        android:textColor="@color/black_gray"
+        android:textSize="@dimen/sp_size_14sp_T14" />
+
+    <TextView
+        android:id="@+id/syx5_stoptime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/dp_size_5dp"
+        android:layout_marginRight="@dimen/dp_size_20dp"
+        android:text="- - - -"
+        android:textColor="@color/homered"
+        android:textSize="@dimen/sp_size_14sp_T14" />
+
+    <TextView
+        android:id="@+id/syx5_stoptimetext_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/syx5_stoptime_tv"
+        android:text="投注剩余时间:"
+        android:layout_marginRight="@dimen/dp_size_5dp"
+        android:textColor="@color/black_gray"
+        android:textSize="@dimen/sp_size_14sp_T14" />
+
+</RelativeLayout>

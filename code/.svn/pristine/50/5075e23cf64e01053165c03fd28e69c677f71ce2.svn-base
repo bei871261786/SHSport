@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pl3_fragment_cal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_numbg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/calculate_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/calculate_fragment_title" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pl3_ball1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/pl3_ball2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/pl3_ball3_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/calculate_top_ll"
+        android:background="@color/black_gray1" />
+
+    <RadioGroup
+        android:id="@+id/pl3_rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_40dp"
+        android:layout_below="@id/view1"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/pl3_zhixuan_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/pl3tab_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="直选"
+            android:textColor="@color/pl3tab_text_color" />
+
+        <RadioButton
+            android:id="@+id/pl3_zu3_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/pl3tab_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="组选三"
+            android:textColor="@color/pl3tab_text_color" />
+
+        <RadioButton
+            android:id="@+id/pl3_zu6_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/pl3tab_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="组选六"
+            android:textColor="@color/pl3tab_text_color" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/pl3_rg"
+        android:background="@color/black_gray1" />
+
+    <FrameLayout
+        android:layout_below="@id/view2"
+        android:id="@+id/pl3_childfragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+         />
+
+</RelativeLayout>

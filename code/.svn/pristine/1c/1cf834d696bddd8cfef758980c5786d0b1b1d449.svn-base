@@ -1,0 +1,165 @@
+package shlottery.gov.cn.lotterycenter.ui.adapter;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import shlottery.gov.cn.lotterycenter.R;
+import shlottery.gov.cn.lotterycenter.bean.Sf14Bean;
+import shlottery.gov.cn.lotterycenter.bean.SfcDingdanBean;
+import shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll;
+import shlottery.gov.cn.lotterycenter.utils.DateUtils;
+
+/**
+ * @创建者 Tyler Wang.
+ * @创建时间 2017/3/28  16:11.
+ * @描述 ${推荐详情页 列表 竞足混合Adapter}.
+ */
+public class RmdJzhhAdapter extends BaseAdapter {
+    private Context        mContext;
+    private SfcDingdanBean mSfcDingdanBean;
+    private List<Sf14Bean.DataBean.IssueListBean.MatchListBean> mMatchListBeens = new ArrayList<>();
+
+    public RmdJzhhAdapter(Context context, SfcDingdanBean mSfcDingdanBean) {
+        this.mContext = context;
+        this.mSfcDingdanBean = mSfcDingdanBean;
+    }
+
+    private void initMatchListBean() {
+        if (mSfcDingdanBean.getMatchListBeans() != null) {
+            mMatchListBeens = new ArrayList<>();
+            for (int i = 0; i < mSfcDingdanBean.getMatchListBeans().size(); i++) {
+                mMatchListBeens.add(mSfcDingdanBean.getMatchListBeans().get(i));
+            }
+        }
+    }
+
+    @Override
+    public int getCount() {
+        if (mSfcDingdanBean == null || mSfcDingdanBean.getMatchListBeans() == null) {
+            return 0;
+        }
+        return mSfcDingdanBean.getMatchListBeans().size();
+    }
+
+    @Override
+    public Sf14Bean.DataBean.IssueListBean.MatchListBean getItem(int position) {
+        return mMatchListBeens.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder = null;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.rmd_jzhh_item, parent, false);
+            holder = new ViewHolder(convertView);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+        initMatchListBean();
+        Sf14Bean.DataBean.IssueListBean.MatchListBean matchBean = getItem(position);
+        String lotId = matchBean.getLotId();
+        String weekNo = matchBean.getWeekNo();
+        long stopTime = matchBean.getValidTime();
+        int hand = (int) matchBean.getHand();
+        String leagueName = matchBean.getLeagueName();
+        String hostName = matchBean.getHostName();
+        String visitName = matchBean.getVisitName();
+        List<String> stakeOption = matchBean.getStakeOption();
+
+        holder.mTvJzhhWeekno.setText(weekNo);
+        holder.mTvJzhhStoptime.setText(DateUtils.formatTimeSimple(stopTime * 1000) + "截止");
+        holder.mTvJzhhLeaguename.setText(leagueName);
+        Resources res = mContext.getResources();
+        holder.mTvJzhhHand.setTextColor(hand > 0 ? res.getColor(R.color.red) : res.getColor(R.color.green));
+        holder.mTvJzhhHand.setText(hand == 0 ? "" : hand + "");
+        holder.mTvJzhhHostname.setText(hostName);
+        holder.mTvJzhhVisitname.setText(visitName);
+        switch (lotId) {
+            //竞足 胜平负
+            case "jzspf":
+                //竞足 让球胜平负
+            case "jzxspf":
+                holder.mGvJzhhStake.setVisibility(View.GONE);
+                holder.mLlJzhhStake.setVisibility(View.VISIBLE);
+                Boolean win = matchBean.getCheckedHashMap().get(0);
+                Boolean dogfall = matchBean.getCheckedHashMap().get(1);
+                Boolean lose = matchBean.getCheckedHashMap().get(2);
+                holder.mTvJzhhStakeWin.setBackgroundResource(win ? R.mipmap.dingdanred_bg : R.mipmap.dingdanwhite_bg);
+                holder.mTvJzhhStakedogfall.setBackgroundResource(dogfall ? R.mipmap.dingdanred_bg : R.mipmap
+                        .dingdanwhite_bg);
+                holder.mTvJzhhStakelose.setBackgroundResource(lose ? R.mipmap.dingdanred_bg : R.mipmap.dingdanwhite_bg);
+                holder.mTvJzhhStakeWin.setTextColor(win ? res.getColor(R.color.white) : res.getColor(R.color.black));
+                holder.mTvJzhhStakedogfall.setTextColor(dogfall ? res.getColor(R.color.white) : res.getColor(R.color
+                        .black));
+                holder.mTvJzhhStakelose.setTextColor(lose ? res.getColor(R.color.white) : res.getColor(R.color.black));
+                break;
+
+            //竞足 半全场
+            case "jzbqc":
+                //竞足 比分
+            case "jzbf":
+                //竞足 进球数
+            case "jzjqs":
+                holder.mGvJzhhStake.setVisibility(View.VISIBLE);
+                holder.mLlJzhhStake.setVisibility(View.GONE);
+                holder.mGvJzhhStake.setAdapter(new JzhhGridViewAdapter(stakeOption));
+                break;
+
+            default:
+                break;
+
+        }
+        return convertView;
+    }
+
+
+    static class ViewHolder {
+        @BindView(R.id.tv_jzhh_weekno)
+        TextView              mTvJzhhWeekno;
+        @BindView(R.id.tv_jzhh_stoptime)
+        TextView              mTvJzhhStoptime;
+        @BindView(R.id.tv_jzhh_leaguename)
+        TextView              mTvJzhhLeaguename;
+        @BindView(R.id.tv_jzhh_hand)
+        TextView              mTvJzhhHand;
+        @BindView(R.id.tv_jzhh_score)
+        TextView              mTvJzhhScore;
+        @BindView(R.id.tv_jzhh_hostname)
+        TextView              mTvJzhhHostname;
+        @BindView(R.id.tv_jzhh_visitname)
+        TextView              mTvJzhhVisitname;
+        //下注的列表
+        @BindView(R.id.gv_jzhh_stake)
+        GridViewWithoutScroll mGvJzhhStake;
+        @BindView(R.id.ll_jzhh_stake)
+        LinearLayout          mLlJzhhStake;
+        @BindView(R.id.tv_jzhh_stake_win)
+        TextView              mTvJzhhStakeWin;
+        @BindView(R.id.tv_jzhh_stake_dogfall)
+        TextView              mTvJzhhStakedogfall;
+        @BindView(R.id.tv_jzhh_stake_lose)
+        TextView              mTvJzhhStakelose;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:minHeight="100dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_marginTop="@dimen/dp_size_8dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/zhudan_week_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="周五001"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:id="@+id/zhudan_league_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_size_15dp"
+            android:layout_toRightOf="@id/zhudan_week_tv"
+            android:gravity="center"
+            android:text="国足A"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:id="@+id/zhudan_stoptime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_size_15dp"
+            android:gravity="center"
+            android:text="2016-10-11 16:50"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/zhudan_hostname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="北京"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_13sp_T13" />
+
+        <TextView
+            android:id="@+id/zhudan_vs_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_size_15dp"
+            android:gravity="center"
+            android:text="VS"
+            android:textColor="@color/expandtxt_matchname_red"
+            android:textSize="@dimen/sp_size_13sp_T13" />
+
+        <TextView
+            android:id="@+id/zhudan_visit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_size_15dp"
+            android:gravity="center"
+            android:text="上海"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_13sp_T13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/sps_ll1"
+           style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory1_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps1_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll2"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory2_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps2_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll3"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory3_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps3_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll4"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory4_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps4_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll5"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory5_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps5_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_size_8dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/sps_ll21"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory21_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps21_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll22"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory22_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps22_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll23"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory23_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps23_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll24"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory24_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps24_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sps_ll25"
+            style="@style/zhudan_item_ll">
+
+            <TextView
+                android:id="@+id/zhudan_victory25_tv"
+                style="@style/zhudan_item_text1" />
+
+            <TextView
+                android:id="@+id/zhudan_sps25_tv"
+                style="@style/zhudan_item_text2" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/issueDetail_IssueName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="一等奖"
+        android:textColor="@color/txtColor_black"
+        android:textSize="@dimen/sp_size_15sp_T15" />
+
+    <LinearLayout
+        android:id="@+id/issueDetail_expandLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/issueDetail_baseDes"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="基本"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_15sp_T15"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/issueDetail_addDes"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="追加"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_15sp_T15"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/issueDetail_baseIssueCount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@color/txtColor_black"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <TextView
+            android:id="@+id/issueDetail_addIssueCount"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/txtColor_black"
+            android:textSize="@dimen/sp_size_15sp_T15"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/issueDetail_baseIssueMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1000000"
+            android:textColor="@color/select_red"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <TextView
+            android:id="@+id/issueDetail_addIssueMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="4511221"
+            android:textColor="@color/select_red"
+            android:textSize="@dimen/sp_size_15sp_T15"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

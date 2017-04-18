@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="90dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <include
+        android:id="@+id/basechild_zjq"
+        layout="@layout/jincai_basechild_left"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="8"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/jincai_basechild_centop"></include>
+
+        <TextView
+            android:id="@+id/spt_score_selecttip_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@color/dingdan_background_gray"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip"
+            android:singleLine="true"
+            android:text="点击展开投注区"
+            android:textColor="@color/expandtxt_red"
+            android:textSize="@dimen/standard_textsize_f4_S" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/bqc_analysis_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/analysis" />
+
+    </LinearLayout>
+
+</LinearLayout>

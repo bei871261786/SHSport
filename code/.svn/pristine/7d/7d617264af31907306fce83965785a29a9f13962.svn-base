@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_size_10dp"
+        android:paddingTop="@dimen/dp_size_15dp">
+
+        <TextView
+            android:id="@+id/pl3_issue_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_size_20dp"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:id="@+id/stoptime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_size_20dp"
+            android:layout_toRightOf="@id/pl3_issue_tv"
+            android:text="投注截止时间:"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:id="@+id/pl3_stoptime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/stoptime_tv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <!-- <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/pl3_issue_tv"
+             android:layout_marginLeft="@dimen/dp_size_20dp"
+             android:text="奖池:1325456424元"
+             android:textColor="@color/black_gray"
+             android:textSize="@dimen/sp_size_16sp_T16" />-->
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerline_height"
+        android:background="@color/black_gray" />
+
+
+
+</LinearLayout>

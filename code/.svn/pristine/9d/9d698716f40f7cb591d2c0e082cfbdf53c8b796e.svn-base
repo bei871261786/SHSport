@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@color/white"
+    android:minHeight="30dp">
+
+    <View
+        android:id="@+id/centerline"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/host_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/centerline"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/back_gray"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <TextView
+        android:id="@+id/visitmember_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/centerline"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <TextView
+        android:id="@+id/visit_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/back_gray"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <TextView
+        android:id="@+id/hostname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/hostpaiming_tv"
+        android:text=""
+        android:textColor="@color/back_gray"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <TextView
+        android:id="@+id/hostmember_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <TextView
+        android:id="@+id/visitname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/visitpaiming_tv"
+        android:text=""
+        android:textColor="@color/back_gray"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+
+    <TextView
+        android:id="@+id/hostpaiming_tv"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/hostmember_tv"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <TextView
+        android:id="@+id/visitpaiming_tv"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/visitmember_tv"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+</RelativeLayout>

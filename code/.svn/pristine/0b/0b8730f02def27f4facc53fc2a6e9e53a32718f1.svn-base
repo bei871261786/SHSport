@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/voucher_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner_white"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/voucher_tab"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/blue_gray_enshape_selector"></View>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/voucher_item_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="bottom"
+                android:text="20"
+                android:textColor="@color/blue_gray_enable_selector"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/voucher_item_yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="元"
+                android:textColor="@color/blue_gray_enable_selector"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+
+        </LinearLayout>
+
+
+        <shlottery.gov.cn.lotterycenter.ui.view.DashedLineView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/voucher_item_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="**代金券"
+                android:textColor="@color/black_gray_enable_selector"
+                android:textSize="@dimen/sp_size_18sp_T18" />
+
+            <TextView
+                android:id="@+id/voucher_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="失效时间："
+                android:textColor="@color/back_gray"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/voucher_item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/voucher_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/voucher_layout"
+        android:layout_centerVertical="true" />
+</RelativeLayout>
+
+
+

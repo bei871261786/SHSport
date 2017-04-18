@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_numbg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/pl5_issueLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_titleBar"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_size_10dp"
+        android:paddingTop="@dimen/dp_size_15dp">
+
+        <TextView
+            android:id="@+id/pl5_issue_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_size_20dp"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:id="@+id/stoptime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_size_20dp"
+            android:layout_toRightOf="@id/pl5_issue_tv"
+            android:text="投注截止时间:"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:id="@+id/pl5_stoptime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/stoptime_tv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <!-- <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/pl5_issue_tv"
+             android:layout_marginLeft="@dimen/dp_size_20dp"
+             android:text="奖池:1325456424元"
+             android:textColor="@color/black_gray"
+             android:textSize="@dimen/sp_size_16sp_T16" />-->
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/baselottery_bottom_ll"
+        android:layout_below="@id/pl5_issueLayout"
+
+        android:fadeScrollbars="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_size_10dp"
+                android:layout_marginLeft="@dimen/dp_size_15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_size_10dp"
+                        android:padding="@dimen/dp_size_3dp"
+                        android:text="每位至少选择一个号码"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_13sp_T13" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_size_3dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_13sp_T13"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pl5_shake_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pl5_shake_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_size_10dp"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:gravity="center"
+                        android:text="摇一摇机选"
+                        android:textColor="@color/black_gray"
+                        android:textSize="@dimen/sp_size_13sp_T13" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_size_30dp"
+                        android:layout_height="@dimen/dp_size_30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@id/pl5_shake_tv"
+                        android:src="@mipmap/shake" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/numlottery_textline"
+                        android:text="万位" />
+
+                    <TextView
+                        android:id="@+id/pl5_yl1_tv"
+                        style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl5_l1gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        style="@style/numlottery_textline"
+                        android:text="千位" />
+
+                    <TextView
+                        android:id="@+id/pl5_yl2_tv"
+                        style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl5_l2gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        style="@style/numlottery_textline"
+                        android:text="百位"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/pl5_yl3_tv"
+                        style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl5_l3gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        style="@style/numlottery_textline"
+                        android:text="十位"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/pl5_yl4_tv"
+                        style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl5_l4gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        style="@style/numlottery_textline"
+                        android:text="个位"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/pl5_yl5_tv"
+                        style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl5_l5gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/lottery_bottom" />
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tablerow_gray_bg"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+      >
+        <TextView
+            style="@style/basketball_shuju_txt"
+            android:text="首发/替补" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_size_10dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/scroll_right" />
+    </RelativeLayout>
+
+
+</LinearLayout>

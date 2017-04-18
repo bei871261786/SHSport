@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_size_10dp"
+        android:text="普通投注"
+        android:textColor="@color/homered"
+        android:textSize="@dimen/sp_size_17sp_T17" />
+
+    <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+        android:id="@+id/syx5_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_size_5dp"
+        android:background="@color/gray_bglight"
+        android:horizontalSpacing="1dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_size_10dp"
+        android:text="胆拖投注"
+        android:textColor="@color/homered"
+        android:textSize="@dimen/sp_size_17sp_T17" />
+
+    <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+        android:id="@+id/syx5dantuo_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_size_10dp"
+        android:background="@color/gray_bglight"
+        android:horizontalSpacing="1dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp" />
+</LinearLayout>

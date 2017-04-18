@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar"></include>
+
+    <LinearLayout
+        android:id="@+id/head_expand"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/homeblue"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_size_48dp"
+            android:background="@color/homeblue"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_size_8dp"
+            android:paddingLeft="@dimen/dp_size_15dp"
+            android:paddingRight="@dimen/dp_size_15dp"
+            android:paddingTop="@dimen/dp_size_8dp">
+
+            <RadioButton
+                android:id="@+id/recommend_famous_head"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobt_whitegray_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="专家看彩"
+                android:textColor="@color/radiaobtn_textgray_white_color" />
+
+            <RadioButton
+                android:id="@+id/recommend_lottery_head"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobt_whitegray_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="体彩分析"
+                android:textColor="@color/radiaobtn_textgray_white_color" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/recommend_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

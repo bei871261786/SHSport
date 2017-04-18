@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <CheckBox
+            android:id="@+id/flitrate_order_jinzu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="竞彩足球"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:id="@+id/flitrate_order_jinlan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="竞彩篮球"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:id="@+id/flitrate_order_sf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="胜负彩"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <CheckBox
+            android:id="@+id/flitrate_order_ren9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="任九场"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:id="@+id/flitrate_order_bqc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="半全场"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:id="@+id/flitrate_order_jqc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="进球彩"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <CheckBox
+            android:id="@+id/flitrate_order_11x5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="11选5"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:id="@+id/flitrate_order_lotto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="大乐透"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:id="@+id/flitrate_order_pl3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="排列三"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <CheckBox
+            android:id="@+id/flitrate_order_pl5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="排列五"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:id="@+id/flitrate_order_qixing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_chuanlian_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="七星彩"
+            android:textColor="@drawable/dingdan_gridview_text_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/back_gray"></View>
+
+    <include layout="@layout/basecalcel_submit1"></include>
+
+</LinearLayout>

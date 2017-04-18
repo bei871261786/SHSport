@@ -1,0 +1,239 @@
+package shlottery.gov.cn.lotterycenter.ui.activity;
+
+import android.annotation.TargetApi;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.ArrayList;
+
+import shlottery.gov.cn.lotterycenter.Base.BaseActivity;
+import shlottery.gov.cn.lotterycenter.R;
+import shlottery.gov.cn.lotterycenter.bean.NewsListBean;
+import shlottery.gov.cn.lotterycenter.callback.NewsFlitrateEventBus;
+import shlottery.gov.cn.lotterycenter.ui.fragment.RmdAnalysisFragment;
+import shlottery.gov.cn.lotterycenter.ui.fragment.RmdBaseFragment;
+import shlottery.gov.cn.lotterycenter.ui.fragment.RmdFamousFragment;
+import shlottery.gov.cn.lotterycenter.utils.LogUtils;
+
+import static shlottery.gov.cn.lotterycenter.R.id.titlebar_indicator;
+
+public class RecommendActivity extends BaseActivity {
+    private MyListener mListener;
+    private FragmentManager mFragmentManager;
+    private RmdBaseFragment mAnalysisFragment;
+    private RmdBaseFragment mNewsFragment;
+    private int mCurrentHead = 0;
+    private ImageView mIndicatorImg;
+    private RadioGroup mHeadGrouup;
+    private NewsFlitrateEventBus mEventbusData = new NewsFlitrateEventBus();
+    private Boolean isClearFlitrateTag = false;
+    private ArrayList<NewsListBean.DataBean.ListBean> mLotteryData = new ArrayList<>();
+    private String mTags = "";
+
+    @Override
+    protected void initView() {
+        setContentView(R.layout.activity_recommend);
+        mHeadGrouup = (RadioGroup) findViewById(R.id.radioGroup);
+        mHeadGrouup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (radioGroup.getChildAt(0).getId() == i) {
+                    toggleFragment(0);
+                } else if (radioGroup.getChildAt(1).getId() == i) {
+                    toggleFragment(1);
+                }
+            }
+        });
+        initTitleBar();
+        toggleFragment(0);
+    }
+
+    private void initTitleBar() {
+        LinearLayout mBack = (LinearLayout) findViewById(R.id.titlebar_back_ll);
+        mBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        titlebarTv = (TextView) findViewById(R.id.titlebar_tv);
+        titlebarTv.setText("推荐分析");
+        mIndicatorImg = (ImageView) findViewById(titlebar_indicator);
+        mIndicatorImg.setImageResource(R.mipmap.filtrate);
+        mIndicatorImg.setOnClickListener(mListener);
+    }
+
+    @Override
+    protected void init() {
+        mListener = new MyListener();
+        mFragmentManager = getSupportFragmentManager();
+        EventBus.getDefault().register(this);
+    }
+
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void toggleFragment(int type) {
+        LogUtils.i("切换fragment");
+        isClearFlitrateTag = true;
+        mTags = "";
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+        Resources resources = this.getResources();
+
+        switch (type) {
+            case 1:
+                mCurrentHead = 1;
+                if (null == mAnalysisFragment) {
+                    mAnalysisFragment = new RmdAnalysisFragment();
+                    transaction.add(R.id.recommend_fragment, mAnalysisFragment);
+                }
+
+                transaction.show(mAnalysisFragment);
+                if (mNewsFragment != null) {
+                    transaction.hide(mNewsFragment);
+                }
+
+                break;
+            case 0:
+                mCurrentHead = 0;
+                if (null == mNewsFragment) {
+                    mNewsFragment = new RmdFamousFragment();
+                    transaction.add(R.id.recommend_fragment, mNewsFragment);
+                }
+
+                transaction.show(mNewsFragment);
+                if (mAnalysisFragment != null) {
+                    transaction.hide(mAnalysisFragment);
+                }
+                break;
+        }
+        transaction.commit();
+    }
+
+
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
+    public void onEvent(NewsFlitrateEventBus event) {
+        LogUtils.i("onEvent Recommend:");
+        mEventbusData = event;
+        String tag = "";
+        if (event != null) {
+            ArrayList<String> tagList = null;
+            if (event.getLottery() != null) {
+                tagList = event.getLottery();
+                for (int i = 0; i < tagList.size(); i++) {
+
+                    if (i == tagList.size() - 1) {
+                        tag += tagList.get(i) + ",";
+                        continue;
+                    }
+                    tag += tagList.get(i) + "|";
+                    LogUtils.i("newsFragment eventbus getLottery:" + tag);
+                }
+            }
+            if (event.getCategory() != null) {
+                tagList = event.getCategory();
+                for (int i = 0; i < tagList.size(); i++) {
+
+                    if (i == tagList.size() - 1) {
+                        tag += tagList.get(i) + ",";
+                        continue;
+                    }
+                    tag += tagList.get(i) + "|";
+                    LogUtils.i("newsFragment eventbus getCategory:" + tag);
+                }
+            }
+            if (event.getDistrict() != null) {
+                tagList = event.getDistrict();
+                for (int i = 0; i < tagList.size(); i++) {
+
+                    if (i == tagList.size() - 1) {
+                        tag += tagList.get(i) + ",";
+                        continue;
+                    }
+                    tag += tagList.get(i) + "|";
+                }
+            }
+            if (event.getFamous() != null) {
+                tagList = event.getFamous();
+                for (int i = 0; i < tagList.size(); i++) {
+                    if (i == tagList.size() - 1) {
+                        tag += tagList.get(i) + ",";
+                        continue;
+                    }
+                    tag += tagList.get(i) + "|";
+                }
+            }
+            if (tag.contains(",")) {
+                tag = tag.substring(0, tag.length() - 1);
+            } else if (tag.contains("|")) {
+                tag = tag.substring(0, tag.length() - 1);
+            }
+        }
+
+        mTags = tag;
+        LogUtils.i("onEvent refresh mCurrentHead:" + mCurrentHead + ":::tags:" + mTags);
+        if (mCurrentHead == 0) {
+            LogUtils.i("onEvent refresh mNewsFragment:");
+            mNewsFragment.refresh();
+        } else {
+            LogUtils.i("onEvent refresh mAnalysisFragment:");
+            mAnalysisFragment.refresh();
+        }
+    }
+
+    public String getTag() {
+        return mTags;
+    }
+
+    private class MyListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.recommend_famous_head:
+                    LogUtils.i("RecommendActivity onClick 0");
+                    toggleFragment(0);
+                    break;
+                case R.id.recommend_lottery_head:
+                    LogUtils.i("RecommendActivity onClick 1");
+                    toggleFragment(1);
+                    break;
+
+                case R.id.titlebar_indicator:
+                    Intent intent = new Intent(RecommendActivity.this, NewsFlitrateActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("tagEventbus", mEventbusData);
+                    bundle.putBoolean("isClearFlitrateTag", isClearFlitrateTag);
+                    ArrayList<Integer> typeList = new ArrayList<>();
+                    typeList.add(2);
+                    typeList.add(4);
+                    bundle.putIntegerArrayList("hideType", typeList);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    isClearFlitrateTag = false;
+                    break;
+            }
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+    @Override
+    protected String getBaidutitle() {
+        return "";
+    }
+}

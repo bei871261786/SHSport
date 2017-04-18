@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/football_base_linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/football_base_guoguan"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10.0dip"
+                        android:paddingTop="10.0dip">
+
+                        <TextView
+                            android:id="@+id/football_base_guoguan_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:text="过关"
+                            android:textColor="@color/indicator_danguo_enable_selector"
+                            android:textSize="@dimen/standard_textsize_f3" />
+
+                        <TextView
+                            android:id="@+id/bfootball_base_guoguantiaojian_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:text="(至少选择两场)"
+                            android:textColor="@color/indicator_danguo_enable_selector"
+                            android:textSize="@dimen/standard_textsize_f5" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/football_base_guoguan_select_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="2.0dip"
+                        android:background="@color/dantuo_zhushi_blue"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/football_base_guoguan_default_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="2.0dip"
+                        android:background="@color/gray_divider_line" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/football_base_danguan_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10.0dip"
+                        android:paddingTop="10.0dip">
+
+                        <TextView
+                            android:id="@+id/football_base_danguan_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:text="单关"
+                            android:textColor="@color/indicator_danguo_enable_selector"
+                            android:textSize="@dimen/standard_textsize_f3" />
+
+                        <TextView
+                            android:id="@+id/bfootball_base_danguantiaojian_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:text="(竞猜1场,奖金固定)"
+                            android:textColor="@color/indicator_danguo_enable_selector"
+                            android:textSize="@dimen/standard_textsize_f5" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/football_base_danguan_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="2.0dip"
+                        android:background="@color/dantuo_zhushi_blue"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/football_base_danguan_default_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1.0dip"
+                        android:background="@color/gray_divider_line" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/jingcai_bottom"
+            android:id="@+id/basebottom_bottom_ll"
+            ></include>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/football_base_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/basebottom_bottom_ll"
+            android:layout_below="@id/football_base_linearLayout"></android.support.v4.view.ViewPager>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

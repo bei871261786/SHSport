@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/dp_size_15dp"
+        android:layout_weight="7">
+
+        <RelativeLayout
+            android:id="@+id/news_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_alignParentTop="true"
+                android:id="@+id/newscontent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:lineSpacingExtra="1dp"
+                android:lineSpacingMultiplier="1.1"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp_size_15dp"
+                >
+
+                <TextView
+                    android:id="@+id/tag1_tv"
+                    android:visibility="invisible"
+                    style="@style/news_tab_style" />
+
+                <TextView
+                    android:id="@+id/tag2_tv"
+                    android:visibility="invisible"
+                    android:layout_toRightOf="@id/tag1_tv"
+
+                    style="@style/news_tab_style" />
+
+                <TextView
+                    android:id="@+id/news_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="2016/08/11"
+                    android:textColor="@color/news_tab_txt"
+                    android:textSize="@dimen/sp_size_12sp_T12" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/news_image_im"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="@dimen/dp_size_10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/news1" />
+</LinearLayout>

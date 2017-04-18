@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_11x5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar" />
+
+    <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+        android:id="@+id/syx5_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/homeblue"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:paddingBottom="@dimen/dp_size_10dp"
+        android:paddingLeft="@dimen/dp_size_20dp"
+        android:paddingRight="@dimen/dp_size_20dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+
+  <!--  <RadioGroup
+        android:id="@+id/syx5_rdg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/syx5_nomal_rdb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="普通投注"
+            android:textColor="@color/syx5rdg_selector"
+            android:textSize="@dimen/dp_size_18dp" />
+
+        <RadioButton
+            android:id="@+id/syx5_dan_rdb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="胆拖投注"
+            android:textColor="@color/syx5rdg_selector"
+            android:textSize="@dimen/dp_size_18dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/dan_indiactor_ll"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/syx5_nomal_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary" />
+
+        <View
+            android:id="@+id/syx5_dan_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <include layout="@layout/syx5_stoptime_rl" />-->
+
+    <FrameLayout
+        android:id="@+id/syxw_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

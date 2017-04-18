@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/activity_matchdetail"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray"
+              android:clipToPadding="false"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_white_corner_shape"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_white_corner_shape">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/matchname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_textsize_f5"/>
+
+                <!--  <TextView
+                      android:id="@+id/matchdengji_tv"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:gravity="center"
+                      android:text="二级"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/standard_textsize_f5" />-->
+
+                <TextView
+                    android:id="@+id/livematchtime_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_textsize_f5"/>
+
+                <!--  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:gravity="center"
+                      android:text="10:20"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/standard_textsize_f5" />-->
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/hostimage_im"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/fenshu_ll"
+                android:padding="5dp"/>
+
+            <ImageView
+                android:id="@+id/visitimage_im"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/fenshu_ll"
+                android:padding="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/fenshu_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/host_score_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="@color/select_red"
+                        android:textSize="@dimen/sp_size_18sp_T18"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/live_maohao_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:textColor="@color/select_red"
+                        android:textSize="@dimen/sp_size_18sp_T18"
+                        android:visibility="invisible"/>
+
+
+                    <TextView
+                        android:id="@+id/visitscore_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="3"
+                        android:textColor="@color/select_red"
+                        android:textSize="@dimen/sp_size_18sp_T18"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/haltscore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_maohao_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_12sp_T12"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/extrascore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_maohao_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_12sp_T12"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/pointscore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_maohao_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_12sp_T12"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/match_staus_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f5"/>
+
+            <TextView
+                android:id="@+id/hostteam_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/match_staus_tv"
+                android:gravity="center"
+                android:textColor="@color/homeblue"
+                android:textSize="@dimen/sp_size_14sp_T14"/>
+
+            <TextView
+                android:id="@+id/visitteam_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/match_staus_tv"
+                android:gravity="center"
+                android:textColor="@color/homeblue"
+                android:textSize="@dimen/sp_size_14sp_T14"/>
+
+            <TextView
+                android:id="@+id/hostrank_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@id/hostteam_tv"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_12sp_T12"/>
+
+            <TextView
+                android:id="@+id/visitrank_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/visitteam_tv"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_12sp_T12"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/descri_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/gray"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/descri_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/standard_textsize_f5"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_white_corner_shape"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_size_10dp"
+                android:paddingRight="@dimen/dp_size_10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <TextView
+                        android:id="@+id/event_live_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="事件"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f4"/>
+
+                    <RelativeLayout
+                        android:id="@+id/event_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/eventclose_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/close"/>
+
+                        <ImageView
+                            android:id="@+id/eventopen_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/open"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/event_listv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:divider="@color/gray"
+                    android:dividerHeight="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/white_white_corner_shape"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_size_10dp"
+                android:paddingRight="@dimen/dp_size_10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/team_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/teamclose_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/close"/>
+
+                        <ImageView
+                            android:id="@+id/teamopen_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/open"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/team_live_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="阵容"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f4"/>
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/team_listv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:divider="@null"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/white_white_corner_shape"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_size_10dp"
+                android:paddingRight="@dimen/dp_size_10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/statistics_live_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:text="统计"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f4"/>
+
+                    <RelativeLayout
+                        android:id="@+id/statistics_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/statistics_close_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/close"/>
+
+                        <ImageView
+                            android:id="@+id/statistics_open_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/open"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/statistics_onoff_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@+id/statistics_rl"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/statisticson_im"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+
+                            android:src="@mipmap/live_on"/>
+
+                        <ImageView
+                            android:id="@+id/statisticsoff_im"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/live_off"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/statistics_listv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:divider="@null"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

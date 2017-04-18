@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center"
+            android:text="@string/dingdan_back_title"
+            android:textColor="@color/homeblue"
+            android:textSize="@dimen/standard_textsize_f2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_bg" />
+
+
+    <TextView
+        android:id="@+id/rowcontainer_spf"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="@string/dingdan_back_description"
+        android:textColor="@color/standard_textcolor_c2"
+        android:textSize="@dimen/standard_textsize_f3">
+
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_bg" />
+
+    <include layout="@layout/basecalcel_submit1"></include>
+</LinearLayout>

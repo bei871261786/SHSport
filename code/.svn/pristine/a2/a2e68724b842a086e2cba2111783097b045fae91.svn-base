@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="赛事切换"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_size_18sp_T18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/football_button_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="竞彩足球"
+        android:textColor="@color/text_bluegray_selecor"
+        android:textSize="@dimen/sp_size_18sp_T18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/basketball_button_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="竞彩篮球"
+        android:textColor="@color/text_bluegray_selecor"
+        android:textSize="@dimen/sp_size_18sp_T18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/sfc_button_tv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="15dp"-->
+        <!--android:paddingTop="15dp"-->
+        <!--android:text="胜负彩14场"-->
+        <!--android:textColor="@color/text_bluegray_selecor"-->
+        <!--android:textSize="@dimen/sp_size_18sp_T18" />-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/gray" />-->
+
+    <TextView
+        android:id="@+id/cancle_button_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="取消"
+        android:textColor="@color/text_bluegray_selecor"
+        android:textSize="@dimen/sp_size_18sp_T18" />
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:background="@color/gray" />-->
+
+
+</LinearLayout>

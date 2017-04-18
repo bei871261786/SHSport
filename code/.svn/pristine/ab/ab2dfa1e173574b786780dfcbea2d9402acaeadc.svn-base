@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/mix_qingkong_queren"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mix_delete_all_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_grayblue_selector"
+                android:gravity="center"
+                android:text="清空"
+                android:textColor="@drawable/text_blackwhite_pre_selector" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mix_match_total_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="已选择0场比赛"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/mix_least_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="(请至少选择2场比赛)"
+                    android:textColor="#999999" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mix_queren_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_bluegray_selector"
+                android:gravity="center"
+                android:text="确认"
+                android:textColor="@color/black_white_enable_selector" />
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/mix_qingkong_queren">
+
+            <ExpandableListView
+                android:id="@+id/mix_match_elistview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:childDivider="@color/gray"
+                android:dividerHeight="1dp"></ExpandableListView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dingdan_background_gray"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/account_voucher_totalCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总数：0张"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/empty_view"
+        style="@style/empty_txt_style"
+        android:text="暂无代金券" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/account_voucher_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/account_voucher_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

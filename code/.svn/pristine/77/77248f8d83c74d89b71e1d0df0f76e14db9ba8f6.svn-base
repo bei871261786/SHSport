@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/head_title_barstyle"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_size_8dp"
+            android:src="@mipmap/home_title" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/home_refresh_srl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/home_scr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_bglight"
+            android:fillViewport="false"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/homecontent_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/viewpager_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:clickable="true">
+
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/home_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/viewpagertitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:alpha="65"
+                        android:background="@color/homelightblue"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_size_17sp_T17" />
+
+
+                </RelativeLayout>
+
+
+                <!--      <com.hejunlin.superindicatorlibray.LoopViewPager
+                          android:id="@+id/home_viewpager"
+                          android:layout_width="match_parent"
+                          android:layout_height="200dp"
+                          android:background="@color/colorPrimary" />
+
+                      <FrameLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="40dp"
+                          android:layout_gravity="bottom"
+                          android:background="@color/colorAccent">
+
+                          <com.hejunlin.superindicatorlibray.CircleIndicator
+                              android:id="@+id/home_indicator"
+                              android:layout_width="match_parent"
+                              android:layout_height="48dp"
+                              android:layout_gravity="right|center_vertical"
+                              android:layout_marginRight="@dimen/dp_size_15dp"
+                              android:gravity="center"
+                              android:orientation="horizontal" />-->
+
+                <!--</FrameLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_gonggao_height"
+                    android:layout_marginTop="@dimen/home_padding_large"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_size_10dp"
+                        android:background="@drawable/notice_coner_shape"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_size_5dp"
+                            android:text="公告"
+                            android:textColor="@color/homered"
+                            android:textSize="@dimen/sp_size_13sp_T13" />
+
+                        <ImageView
+                            android:id="@+id/home_laba_im"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="@dimen/dp_size_3dp"
+                            android:paddingRight="@dimen/dp_size_8dp"
+                            android:paddingTop="5dp"
+                            android:src="@mipmap/notice_im" />
+                    </LinearLayout>
+
+
+                    <shlottery.gov.cn.lotterycenter.ui.view.MarqueeView.MarqueeView
+                        android:id="@+id/homenotice_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_size_8dp"
+                        app:enableAlphaAnim="true"
+                        app:intervalTime="3000"
+                        app:orientation="bottomToTop" />
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/home_gridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_padding_large"
+                    android:background="@color/gray_bglight"
+                    android:focusable="false"
+                    android:horizontalSpacing="1dp"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="@dimen/home_padding_large"
+                    android:background="@color/home_kj_blue">
+
+                    <LinearLayout
+                        android:id="@+id/home_indicator_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/home_kj_blue"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/kaijiang_vpg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/home_indicator_ll"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:focusable="false" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_padding_large"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:gravity="center|left"
+                        android:padding="@dimen/home_smalltitle_padding"
+                        android:text="体彩专家"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/home_smalltitle_size"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/gray_bglight" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/zhuanjia1_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="10dp">
+
+                            <shlottery.gov.cn.lotterycenter.ui.view.CircleImageView
+                                android:id="@+id/mingjia1"
+                                android:layout_width="49dp"
+                                android:layout_height="49dp"
+                                android:layout_centerVertical="true"
+                                app:border_color="@color/gray_bglight" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/mingjia1"
+                                android:layout_alignRight="@id/mingjia1"
+                                android:layout_below="@id/mingjia1"
+                                android:layout_marginBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:layout_centerInParent="true"
+                                    android:background="@mipmap/name_back" />
+
+                                <TextView
+                                    android:id="@+id/mingjia1_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_14sp_T14" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_size_5dp"
+                                android:layout_toRightOf="@id/mingjia1"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_size_15dp"
+                                    android:background="@drawable/text_redconer_shape"
+                                    android:gravity="center"
+                                    android:paddingLeft="@dimen/dp_size_5dp"
+                                    android:paddingRight="@dimen/dp_size_5dp"
+                                    android:textColor="@color/homered"
+                                    android:textSize="@dimen/sp_size_13sp_T13"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/shenglvtitle_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_size_5dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center|left"
+                                    android:lineSpacingMultiplier="1.1"
+                                    android:maxLines="3"
+                                    android:textColor="@color/black_gray"
+                                    android:textSize="@dimen/sp_size_12sp_T12" />
+
+                                <TextView
+                                    android:id="@+id/home_summary_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_size_10dp"
+                                    android:layout_marginTop="@dimen/dp_size_10dp"
+                                    android:layout_toRightOf="@id/shenglvtitle_tv"
+                                    android:gravity="center"
+                                    android:textColor="@color/homered"
+                                    android:textSize="@dimen/sp_size_12sp_T12"
+                                    android:visibility="gone" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray_bglight" />
+
+                        <RelativeLayout
+                            android:id="@+id/zhuanjia2_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:paddingRight="10dp">
+
+
+                            <shlottery.gov.cn.lotterycenter.ui.view.CircleImageView
+                                android:id="@+id/mingjia2"
+                                android:layout_width="49dp"
+                                android:layout_height="49dp"
+                                android:layout_centerVertical="true"
+                                app:border_color="@color/gray_bglight" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/mingjia2"
+                                android:layout_alignRight="@id/mingjia2"
+                                android:layout_below="@id/mingjia2"
+                                android:layout_marginBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="fitXY"
+                                    android:background="@mipmap/name_back" />
+
+                                <TextView
+                                    android:id="@+id/mingjia2_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_14sp_T14" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_size_5dp"
+                                android:layout_toRightOf="@id/mingjia2"
+                                android:gravity="center_vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_size_15dp"
+
+                                    android:background="@drawable/text_redconer_shape"
+                                    android:gravity="center"
+                                    android:paddingLeft="@dimen/dp_size_5dp"
+                                    android:paddingRight="@dimen/dp_size_5dp"
+                                    android:textColor="@color/homered"
+                                    android:textSize="@dimen/sp_size_13sp_T13"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/shenglvtitle2_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="@dimen/dp_size_5dp"
+                                    android:ellipsize="end"
+                                    android:gravity="center|left"
+                                    android:lineSpacingMultiplier="1.1"
+                                    android:maxLines="3"
+                                    android:textColor="@color/black_gray"
+                                    android:textSize="@dimen/sp_size_13sp_T13" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_size_10dp"
+                                    android:layout_marginTop="@dimen/dp_size_10dp"
+                                    android:layout_toRightOf="@id/shenglvtitle2_tv"
+                                    android:gravity="center"
+                                    android:textColor="@color/homered"
+                                    android:textSize="@dimen/sp_size_13sp_T13"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_padding_large"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:gravity="center|left"
+                        android:padding="@dimen/home_smalltitle_padding"
+                        android:text="推荐方案"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/home_smalltitle_size"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/gray_bglight" />
+
+                    <LinearLayout
+                        android:id="@+id/home_tuijian_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/tuijianfangan_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_size_10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/tuijian_im"
+                                android:layout_width="@dimen/dp_size_50dp"
+                                android:layout_height="@dimen/dp_size_50dp" />
+
+                            <TextView
+                                android:id="@+id/tuijian_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tuijianfangan_ll"
+                                android:gravity="center"
+                                android:textColor="@color/black_gray"
+                                android:textSize="@dimen/sp_size_10sp_T10" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/tuijian_view"
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray_bglight" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="@dimen/dp_size_20dp"
+                            android:layout_weight="4"
+                            android:gravity="center|left"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/home_guoguanfangshi_ll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/home_tuijian_tabmargin_left"
+                                android:layout_marginRight="@dimen/home_tuijian_tabmargin_right"
+                                android:orientation="horizontal"
+                                android:paddingLeft="5dp">
+
+                                <TextView
+                                    android:id="@+id/fangshi_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/text_coner_shape"
+                                    android:gravity="center"
+                                    android:paddingRight="@dimen/dp_size_5dp"
+                                    android:paddingLeft="@dimen/dp_size_5dp"
+                                    android:paddingBottom="@dimen/dp_size_3dp"
+                                    android:paddingTop="@dimen/dp_size_3dp"
+                                    android:text="过关方式"
+                                    android:textColor="@color/black_gray"
+                                    android:textSize="@dimen/sp_size_12sp_T12" />
+
+                                <TextView
+                                    android:id="@+id/guoguan_fs_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:textColor="@color/home_tj_red"
+                                    android:textSize="@dimen/sp_size_13sp_T13" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/home_touzhubeishu_ll"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|right"
+                                android:layout_marginBottom="@dimen/dp_size_15dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="@dimen/home_tuijian_tabmargin_right"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/text_coner_shape"
+                                    android:gravity="center"
+                                    android:paddingRight="@dimen/dp_size_5dp"
+                                    android:paddingLeft="@dimen/dp_size_5dp"
+                                    android:paddingBottom="@dimen/dp_size_3dp"
+                                    android:paddingTop="@dimen/dp_size_3dp"
+                                    android:text="过关方式"
+                                    android:textColor="@color/black_gray"
+                                    android:textSize="@dimen/sp_size_12sp_T12" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/dp_size_10dp"
+                                    android:gravity="center"
+                                    android:text="3串3"
+                                    android:textColor="@color/home_tj_red"
+                                    android:textSize="@dimen/sp_size_13sp_T13" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/home_jiangjinshouyi_ll"
+                                android:layout_width="0dp"
+                                android:gravity="center_horizontal"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_size_10dp"
+                                android:layout_marginRight="@dimen/home_tuijian_tabmargin_right"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/shouyi_title_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/text_coner_shape"
+                                    android:gravity="center"
+                                    android:paddingRight="@dimen/dp_size_5dp"
+                                    android:paddingLeft="@dimen/dp_size_5dp"
+                                    android:paddingBottom="@dimen/dp_size_3dp"
+                                    android:paddingTop="@dimen/dp_size_3dp"
+                                    android:text="奖金收益"
+                                    android:textColor="@color/black_gray"
+                                    android:textSize="@dimen/sp_size_12sp_T12" />
+
+                                <TextView
+                                    android:id="@+id/shouyi_jine_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/dp_size_10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/home_tj_red"
+                                    android:textSize="@dimen/sp_size_13sp_T13" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_newsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_padding_large"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_size_20dp"
+                        android:src="@mipmap/right_into" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/home_smalltitle_padding"
+                        android:text="热点资讯"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/home_smalltitle_size"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/textView13" />
+
+                </RelativeLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.ListViewForScrollView
+                    android:id="@+id/zixun_lst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_size_2dp"
+                    android:paddingLeft="@dimen/dp_size_10dp"
+                    android:paddingRight="@dimen/dp_size_10dp"
+                    android:background="@color/white"
+                    android:divider="@color/gray_bg"
+                    android:dividerHeight="@dimen/divider1"
+                    android:focusable="false" />
+            </LinearLayout>
+
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/base_titleBar"
+        style="@style/head_title_barstyle"
+        android:visibility="gone"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titlebar_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="上海体彩"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_size_20sp_T20" />
+
+            <ImageView
+                android:id="@+id/titlebar_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/up_down_delector"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/titlebar_indicatordown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/indicator_down"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

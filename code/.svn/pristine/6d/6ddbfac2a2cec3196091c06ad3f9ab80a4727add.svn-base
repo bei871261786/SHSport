@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <TableRow android:layout_height="@dimen/dp_size_50dp">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:id="@+id/renx2_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="任选二"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:id="@+id/renx3_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="任选三"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="任选四"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="任选五"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <TableRow
+                android:layout_height="@dimen/dp_size_50dp"
+                android:weightSum="4">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="任选六"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="任选七"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="任选八"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="前一直选"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <TableRow
+                android:layout_height="@dimen/dp_size_50dp"
+                android:weightSum="4">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="前二直选"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="前二组选"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="前三直选"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_bg" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_size_15dp"
+                    android:text="前三组选`"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>

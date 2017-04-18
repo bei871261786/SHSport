@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_dingdan_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_80dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_size_8dp"
+            android:layout_marginLeft="@dimen/dp_size_15dp"
+            android:src="@mipmap/shuoming_icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_size_8dp"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:lineSpacingExtra="@dimen/dp_size_3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="3"
+            android:text="此为模拟注单,请勿以此为凭据兑奖,兑奖请以实体彩票为准"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <ImageView
+            android:id="@+id/zhongjiang_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_size_8dp"
+            android:layout_marginLeft="@dimen/dp_size_8dp"
+            android:layout_marginRight="@dimen/dp_size_15dp"
+            android:visibility="invisible"
+            android:src="@mipmap/bouns_big" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/zddetail_lotid_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_size_15dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+            <!--android:text="超级大乐透"-->
+
+        <TextView
+            android:id="@+id/issue_dan_bei_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_size_8dp"
+            android:gravity="center"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+            <!--android:text="第2016124期  胆拖 倍投"-->
+
+        <LinearLayout
+            android:id="@+id/mostbouns_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_size_5dp"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="最高奖金预测:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+            <TextView
+                android:id="@+id/mostbouns_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_size_8dp"
+                android:gravity="center"
+                android:text="80"
+                android:textColor="@color/select_red"
+                android:textSize="@dimen/sp_size_18sp_T18" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_size_8dp"
+                android:gravity="center"
+                android:text="元"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_size_8dp"
+            android:layout_marginBottom="@dimen/dp_size_15dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="投注金额:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_16sp_T16" />
+
+            <TextView
+                android:id="@+id/zddetail_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_size_8dp"
+                android:gravity="center"
+                android:text="--"
+                android:textColor="@color/select_red"
+                android:textSize="@dimen/sp_size_21sp_T21" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_size_8dp"
+                android:gravity="center"
+                android:text="元"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_16sp_T16" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/zddetail_total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_size_15dp"
+            android:layout_marginTop="@dimen/dp_size_8dp"
+            android:gravity="center"
+            android:text="本次预计出票共4张  40注"
+            android:textColor="@color/black_gray"
+            android:visibility="gone"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/zhudandetail_lsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:divider="@color/gray_bg"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

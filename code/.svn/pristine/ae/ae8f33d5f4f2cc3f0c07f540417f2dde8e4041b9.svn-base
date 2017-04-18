@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:background="@color/gray_bglight"
+    android:fitsSystemWindows="true">
+
+    <!--tab上方的显示区域-->
+    <shlottery.gov.cn.lotterycenter.ui.view.NoScrollViewPager
+        android:id="@+id/homeViewpager"
+        isScrollable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mHomeRadioGroup"
+        android:layout_below="@+id/base_titleBar"
+        android:background="@color/white"
+        tools:context=".ui.MainActivity" />
+
+    <!--底下的四个tab-->
+    <RadioGroup
+        android:id="@+id/mHomeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_tabs_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/mHomeSyRb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabhome_selector"
+
+            android:checked="true"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_size_8dp"
+            android:text="首页"
+            android:textColor="@color/tabhome_txt_selector" />
+
+        <RadioButton
+            android:id="@+id/mHomeZxRb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabnews_selector"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_size_8dp"
+            android:text="资讯"
+            android:textColor="@color/tabhome_txt_selector" />
+
+        <RadioButton
+            android:id="@+id/mHomeCzRb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/tab_lottory_sel"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_size_8dp"
+            android:text="彩种"
+            android:textColor="@color/tabhome_txt_selector" />
+
+        <RadioButton
+            android:id="@+id/mHomeSsRb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabmatch_selector"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_size_8dp"
+            android:text="赛事"
+            android:textColor="@color/tabhome_txt_selector" />
+
+        <RadioButton
+            android:id="@+id/mHomeUserRb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabuser_selector"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_size_8dp"
+            android:text="用户"
+            android:textColor="@color/tabhome_txt_selector" />
+    </RadioGroup>
+
+    <include
+        layout="@layout/lottery_titlebar"
+        android:visibility="gone" />
+</RelativeLayout>

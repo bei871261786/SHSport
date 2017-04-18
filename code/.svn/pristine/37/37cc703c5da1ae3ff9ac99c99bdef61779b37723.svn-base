@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_lotto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/lotto_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/baselottery_bottom_ll"
+        android:layout_below="@+id/lin1"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/lottery_titlebar" />
+
+        <RadioGroup
+            android:id="@+id/head_expand"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/homeblue"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_size_8dp"
+            android:paddingLeft="@dimen/dp_size_15dp"
+            android:paddingRight="@dimen/dp_size_15dp"
+            android:paddingTop="@dimen/dp_size_8dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/lotto_headexpand_normal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobt_whitegray_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="普通投注"
+                android:textColor="@color/radiaobtn_textgray_white_color"
+                android:textSize="@dimen/sp_size_18sp_T18" />
+
+            <RadioButton
+                android:id="@+id/lotto_headexpand_dantuo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobt_whitegray_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="胆拖投注"
+                android:textColor="@color/radiaobtn_textgray_white_color"
+                android:textSize="@dimen/sp_size_18sp_T18" />
+        </RadioGroup>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/homeblue"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/lotto_headexpand_normal2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/shape_title_expand_selected"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="45dp"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="普通投注"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/lotto_headexpand_dantuo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/shape_title_expand_noselected"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="45dp"
+                        android:paddingTop="10dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="胆拖投注"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lotto_issue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="第****期"
+                android:textColor="@color/black_gray"
+                android:textSize="@dimen/sp_size_12sp_T12" />
+
+            <TextView
+                android:id="@+id/lotto_stopTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/lotto_issue"
+                android:text="截止：****"
+                android:textColor="@color/black_gray"
+                android:textSize="@dimen/sp_size_12sp_T12" />
+
+            <TextView
+                android:id="@+id/lotto_pool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="奖池：*****元"
+                android:textColor="@color/black_gray"
+                android:textSize="@dimen/sp_size_12sp_T12" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

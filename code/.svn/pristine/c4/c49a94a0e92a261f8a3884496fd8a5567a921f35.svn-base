@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/userinfo_titlebar"></include>
+    <!-- <LinearLayout
+         style="@style/head_title_barstyle"
+         android:layout_gravity="center">
+
+         <ImageView
+             android:id="@+id/update_bignumber_back"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_centerVertical="true"
+             android:layout_gravity="center"
+             android:layout_weight="2"
+             android:clipToPadding="true"
+             android:fitsSystemWindows="true"
+             android:padding="15dp"
+             android:src="@mipmap/back" />
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="9"
+             android:gravity="center"
+             android:paddingRight="30dp"
+             android:text="修改登录密码"
+             android:textColor="@color/white"
+             android:textSize="@dimen/standard_textsize_f1" />
+
+     </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/white_white_corner_shape"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/white_corner_gray_shape"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手机号码:"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/standard_textsize_f3" />
+
+                    <EditText
+                        android:id="@+id/mobilennumber_forgetpassword_et"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_weight="1.0"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:hint="请输入手机号码"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:padding="10.0dip"
+                        android:singleLine="true"
+                        android:textColor="@color/standard_textcolor_c2"
+                        android:textColorHint="@color/gray"
+                        android:textCursorDrawable="@drawable/edittext_color"
+                        android:textSize="@dimen/standard_textsize_f3" />
+
+                    <TextView
+                        android:id="@+id/forgetpassword_getcode_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_enable_bluegray_corner1_selector"
+                        android:gravity="center|right"
+                        android:padding="5dp"
+                        android:text="获取验证码"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/standard_textsize_f4" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/white_corner_gray_shape"
+                    android:gravity="center_vertical"
+                    android:padding="10.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="验证码:"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/standard_textsize_f3" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/forgetpsw_verificationcode_et"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="center|left"
+                            android:hint="请输入验证码"
+                            android:inputType="textPassword"
+                            android:maxLength="6"
+                            android:padding="10.0dip"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textColorHint="@color/gray"
+                            android:textCursorDrawable="@drawable/edittext_color"
+                            android:textSize="@dimen/standard_textsize_f3" />
+
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+
+            <Button
+                android:id="@+id/forget_psw_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_enable_bluegray_corner1_selector"
+                android:gravity="center"
+                android:paddingBottom="10.0dip"
+                android:paddingTop="10.0dip"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f1" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

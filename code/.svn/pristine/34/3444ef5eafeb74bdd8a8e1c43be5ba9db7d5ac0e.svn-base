@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_titleBar"
+    style="@style/head_title_barstyle">
+
+    <LinearLayout
+        android:id="@+id/userinfo_titlebar_back"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+      >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fitsSystemWindows="true"
+            android:src="@mipmap/topback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="返回"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standard_textsize_f2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_titlebar_Tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="超G竞彩"
+        android:textColor="@color/white"
+        android:textSize="@dimen/standard_textsize_f1" />
+
+
+    <ImageView
+        android:id="@+id/userinfo_turnto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:paddingRight="25dp"
+        android:src="@mipmap/indicator_turn" />
+
+    <ImageView
+        android:id="@+id/userinfo_flitrare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="25dp"
+        android:visibility="gone"
+        android:src="@mipmap/filtrate" />
+
+</RelativeLayout>

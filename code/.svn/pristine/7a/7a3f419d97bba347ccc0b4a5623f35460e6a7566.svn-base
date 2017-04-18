@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/dp_size_3dp"
+        android:paddingBottom="@dimen/dp_size_3dp"
+        android:background="@mipmap/fucengbg">
+
+
+        <TextView
+            android:id="@+id/jcscoreleaguename_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="英超"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/eventtime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/jcscoreleaguename_tv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/matchtime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/jcscoreleaguename_tv"
+            android:layout_below="@+id/jcscoreleaguename_tv"
+            android:layout_marginTop="4dp"
+            android:text="22:00"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/eventhomeleaguename_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="曼城"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/eventvisitleaguename_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/matchtime_tv"
+            android:layout_alignBottom="@+id/matchtime_tv"
+            android:layout_alignLeft="@+id/eventhomeleaguename_tv"
+            android:text="富勒姆"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/homegoal_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_size_3dp"
+            android:layout_alignBottom="@+id/homesocrenumber_tv"
+            android:layout_toEndOf="@+id/eventhomeleaguename_tv"
+            android:layout_toRightOf="@+id/eventhomeleaguename_tv"
+            android:src="@mipmap/smallfootball"
+            android:visibility="invisible"
+           />
+
+        <ImageView
+            android:id="@+id/visitredcard_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_size_3dp"
+            android:layout_alignBottom="@+id/visitgoal_im"
+            android:layout_toEndOf="@+id/visitgoal_im"
+            android:layout_toRightOf="@+id/visitgoal_im"
+            android:src="@mipmap/redcardbg"
+            android:layout_marginBottom="@dimen/dp_size_3dp"
+            android:visibility="invisible"
+           />
+
+        <TextView
+            android:id="@+id/homesocrenumber_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/matchtime_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/visitsocrenumber_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/homesocrenumber_tv"
+            android:layout_alignTop="@+id/eventvisitleaguename_tv"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/homeredcard_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_size_3dp"
+            android:layout_alignTop="@+id/eventhomeleaguename_tv"
+            android:layout_toEndOf="@+id/homegoal_im"
+            android:layout_toRightOf="@+id/homegoal_im"
+            android:src="@mipmap/redcardbg"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/visitgoal_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_size_3dp"
+            android:layout_marginLeft="@dimen/dp_size_3dp"
+            android:layout_alignBottom="@+id/matchtime_tv"
+            android:layout_toEndOf="@+id/eventvisitleaguename_tv"
+            android:layout_toRightOf="@+id/eventvisitleaguename_tv"
+            android:src="@mipmap/smallfootball"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
