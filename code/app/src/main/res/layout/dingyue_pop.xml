@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_size_35dp"
+        android:layout_marginTop="@dimen/dp_size_20dp"
+        android:orientation="horizontal">
+
+
+        <CheckedTextView
+            android:id="@+id/zhuanjia_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dingyue_blue_white_selector"
+            android:padding="@dimen/dp_size_5dp"
+            android:text="专家看彩"
+            android:textColor="@color/dingyue_checkbox_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <CheckedTextView
+            android:id="@+id/gonggao_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/dingyue_blue_white_selector"
+            android:padding="@dimen/dp_size_5dp"
+            android:text="公告通知"
+            android:textColor="@color/dingyue_checkbox_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_marginRight="@dimen/dp_size_15dp"
+        android:layout_marginTop="@dimen/dp_size_15dp"
+        android:background="@color/gray_bg" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/baselottery_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_size_15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dingyue_ok_tv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/shape_bluegray_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/black_white_enable_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <TextView
+            android:id="@+id/dingyue_cancle_tv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/shape_grayblue_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/text_blackwhite_pre_selector"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+    </LinearLayout>
+</LinearLayout>

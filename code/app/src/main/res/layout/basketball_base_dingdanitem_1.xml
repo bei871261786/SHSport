@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:layout_marginLeft="16.0dip"
+    android:background="@color/white"
+    android:minHeight="@dimen/list_item_zjq_height"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_enable_grayblue_corner1_selector"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <include layout="@layout/jincai_basechildbasketball_centop"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/dingdan_base_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:singleLine="true"
+                        android:text="****"
+                        android:textColor="@color/expandtxt_red"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/match_dantuo"
+            android:layout_width="30.0dip"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/shape_flitrate_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="胆"
+            android:textColor="@color/black_white_check_selecor"
+            android:textSize="@dimen/standard_textsize_f4" />
+
+        <ImageView
+            android:id="@+id/match_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10.0dip"
+            android:src="@mipmap/icon_del" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/sub_background_gray"
+    android:layout_height="match_parent">
+
+
+    <CheckBox
+        android:id="@+id/flitrate_matchName_cb"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_flitrate_gridview_selecotr"
+        android:button="@null"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="test"
+        android:textColor="@color/black_white_check_selecor"
+        android:textSize="@dimen/standard_textsize_f4" />
+</LinearLayout>

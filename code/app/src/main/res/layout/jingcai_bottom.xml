@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/baselottery_deleteall_tv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2"
+        android:textSize="@dimen/sp_size_14sp_T14"
+        android:background="@drawable/shape_grayblue_selector"
+        android:gravity="center"
+        android:text="清空"
+        android:textColor="@drawable/text_blackwhite_pre_selector" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/baseBottom_matchCount_txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已选0场比赛"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/baseBottom_sub_txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="(请至少选择2场比赛)"
+            android:textColor="@color/black_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/baselottery_sum_bt"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2"
+        android:background="@drawable/shape_bluegray_selector"
+        android:gravity="center"
+        android:text="确定"
+        android:textSize="@dimen/sp_size_14sp_T14"
+        android:textColor="@color/black_white_enable_selector" />
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub_background_gray">
+
+    <ScrollView
+        android:id="@+id/scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/baselottery_bottom_ll"
+        android:fadeScrollbars="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="前区：至少选择5个红球"
+                    android:textColor="@color/standard_textcolor_c2"
+                    android:textSize="@dimen/sp_size_14sp_T14" />
+
+                <LinearLayout
+                    android:id="@+id/shake_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/lotto_img_shake"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@id/lotto_tuoma_txt"
+                        android:layout_alignTop="@id/lotto_tuoma_txt"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/lotto_shake_txt"
+                        android:src="@mipmap/shake" />
+
+                    <TextView
+                        android:id="@+id/lotto_shake_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="摇一摇机选"
+                        android:textColor="@color/standard_textcolor_c6"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                android:id="@+id/lotto_normal_qianqu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_size_5dp"
+                android:layout_marginTop="@dimen/dp_size_5dp"
+                android:horizontalSpacing="1dp"
+                android:numColumns="7"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/sp_size_10sp_T10" />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:text="后区：至少选择2个篮球"
+                    android:textColor="@color/standard_textcolor_c2"
+                    android:textSize="@dimen/sp_size_14sp_T14" />
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/lotto_normal_houqu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_size_5dp"
+                    android:layout_marginTop="@dimen/dp_size_5dp"
+                    android:horizontalSpacing="1dp"
+                    android:numColumns="7"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/sp_size_10sp_T10" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/lottery_bottom" />
+</RelativeLayout>

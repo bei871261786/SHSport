@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/base_titleBar"
+        style="@style/head_title_barstyle"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/titlebar_back_ll"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fitsSystemWindows="true"
+                android:src="@mipmap/topback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_size_18sp_T18"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titlebar_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="账户"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_size_20sp_T20" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titlebar_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+
+            android:padding="5dp"
+            android:text="注单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_size_17sp_T17" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/lotterys_scr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/homecontent_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="高频彩"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lotterys_driver" />
+
+            <LinearLayout
+                android:id="@+id/lotterys_gaopingcai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/lotterys_gpc_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/logo_sh115_2" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical|left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lotterys_gpc_decri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="上海11选5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_16sp_T16" />
+
+                        <TextView
+                            android:id="@+id/lotterys_intro_sh115"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:text="每10分钟开奖一次"
+                            android:textColor="@color/standard_textcolor_c3"
+                            android:textSize="@dimen/sp_size_11sp_T11" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lotterys_sh11x5_issueno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/lotterys_sh11x5_datelayout"
+                        android:layout_alignRight="@+id/lotterys_sh11x5_datelayout"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/standard_textcolor_c3"
+                        android:textSize="@dimen/dp_size_10dp" />
+
+                    <TextView
+                        android:id="@+id/testStak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/lotterys_sh11x5_datelayout"
+                        android:layout_alignRight="@+id/lotterys_sh11x5_datelayout"
+                        android:layout_below="@id/lotterys_sh11x5_issueno"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="截止投注时间"
+                        android:textColor="@color/standard_textcolor_c3"
+                        android:textSize="@dimen/sp_size_11sp_T11" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/testStak"
+                        android:layout_toLeftOf="@+id/lotterys_sh11x5_datelayout"
+                        android:padding="5dp"
+                        android:text="还剩 "
+                        android:textColor="@color/standard_textcolor_c3"
+                        android:textSize="@dimen/sp_size_11sp_T11" />
+
+                    <LinearLayout
+                        android:id="@+id/lotterys_sh11x5_datelayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/testStak"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/lotterys_sh11x5_hour1"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/dingdan_background_gray"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="0 "
+                            android:textColor="@color/select_red"
+                            android:textSize="@dimen/sp_size_15sp_T15" />
+
+                        <TextView
+                            android:id="@+id/lotterys_sh11x5_hour2"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@color/dingdan_background_gray"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="0 "
+                            android:textColor="@color/select_red"
+                            android:textSize="@dimen/sp_size_15sp_T15" />
+
+                        <TextView
+
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text=": "
+                            android:textColor="@color/select_red"
+                            android:textSize="@dimen/sp_size_15sp_T15" />
+
+                        <TextView
+                            android:id="@+id/lotterys_sh11x5_minus1"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@color/dingdan_background_gray"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="0 "
+                            android:textColor="@color/select_red"
+                            android:textSize="@dimen/sp_size_15sp_T15" />
+
+                        <TextView
+                            android:id="@+id/lotterys_sh11x5_minus2"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@color/dingdan_background_gray"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="0 "
+                            android:textColor="@color/select_red"
+                            android:textSize="@dimen/sp_size_15sp_T15" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/dashed_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="数字彩"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_16sp_T16" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lotterys_driver" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_lotto_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_lotto_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/logo_lotto_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="超级大乐透"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_lotto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+
+                                android:text="ffff"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lotterys_driver"></View>
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_qx_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_qx_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/logo_qx_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="七星彩"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_qx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lotterys_driver" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_pl3_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_sort3_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/logo_pl3_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="排列三"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_sort3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lotterys_driver"></View>
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_pl5_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_sort5_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/logo_pl5_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="排列五"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_pl5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lotterys_driver" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/dashed_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="竞技彩"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lotterys_driver" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lotteryshelper_jz_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/lotteryshelper_jz_logo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+
+                        android:src="@mipmap/logo_jinzu_2" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical|left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="竞彩足球"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_16sp_T16" />
+
+                        <TextView
+                            android:id="@+id/lotteryshelper_date_jz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/standard_textcolor_c3"
+                            android:textSize="@dimen/sp_size_11sp_T11" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/lotterys_driver"></View>
+
+                <LinearLayout
+                    android:id="@+id/lotteryshelper_jl_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/lotteryshelper_jl_logo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+
+                        android:src="@mipmap/logo_jinlan_2" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical|left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="竞彩篮球"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_16sp_T16" />
+
+
+                        <TextView
+                            android:id="@+id/lotteryshelper_date_jl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/standard_textcolor_c3"
+                            android:textSize="@dimen/sp_size_11sp_T11" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/dashed_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="足彩"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_16sp_T16" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lotterys_driver" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_sfc14_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_sfc14_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/logo_soccer_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="胜负彩14场"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_sfc14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lotterys_driver"></View>
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_sfc9_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_sfc9_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/logo_soccer_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="胜负彩任选9"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_sfc9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lotterys_driver" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_bqc_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_bqc_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+
+                            android:src="@mipmap/logo_soccer_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="6场半全场"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_bqc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/lotterys_driver"></View>
+
+                    <LinearLayout
+                        android:id="@+id/lotteryshelper_jqc_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/lotteryshelper_jqc_logo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:src="@mipmap/logo_soccer_2" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="4场进球彩"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_16sp_T16" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="截止销售"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                            <TextView
+                                android:id="@+id/lotteryshelper_date_jqc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/sp_size_11sp_T11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

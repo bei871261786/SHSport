@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/tablerow_white_bg"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/bas_time_tv"
+        style="@style/basketball_shuju_txt" />
+
+    <TextView
+        android:id="@+id/bas_mimgzhong_tv"
+        style="@style/basketball_shuju_txt"/>
+
+    <TextView
+        android:id="@+id/bas_sanfen_tv"
+        style="@style/basketball_shuju_txt" />
+
+    <TextView
+        android:id="@+id/bas_defen_tv"
+        style="@style/basketball_shuju_txt" />
+
+    <TextView
+        android:id="@+id/bas_lanban_tv"
+        style="@style/basketball_shuju_txt" />
+
+    <TextView
+        android:id="@+id/bas_zhugong_tv"
+        style="@style/basketball_shuju_txt" />
+
+    <TextView
+        android:id="@+id/bas_shiwu_tv"
+        style="@style/basketball_shuju_txt" />
+
+    <TextView
+        android:id="@+id/bas_qiangduan_tv"
+        style="@style/basketball_shuju_txt"/>
+
+    <TextView
+        android:id="@+id/bas_gaimao_tv"
+        style="@style/basketball_shuju_txt"/>
+
+    <TextView
+        android:id="@+id/bas_fangui_tv"
+        style="@style/basketball_shuju_txt" />
+
+</LinearLayout>

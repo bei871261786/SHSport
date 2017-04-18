@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_super_gdeail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar"></include>
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.EmptyRecycleview
+        android:id="@+id/superG_detai_Reycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"></shlottery.gov.cn.lotterycenter.ui.widget.EmptyRecycleview>
+
+    <TextView
+        android:id="@+id/emptytiple"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="您选择的嘉宾暂无节目"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_size_18sp_T18"
+        android:visibility="gone" />
+
+</LinearLayout>

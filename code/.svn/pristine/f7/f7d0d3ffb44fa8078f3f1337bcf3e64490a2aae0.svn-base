@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:minHeight="54dp"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sfc_dd_weekNo_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_13sp_T13" />
+
+        <TextView
+            android:id="@+id/dd_stoptime_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_12sp_T12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10">
+
+        <TextView
+            android:id="@+id/sfc_dd_leaguename_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_13sp_T13"></TextView>
+
+        <TextView
+            android:id="@+id/sfc_dd_hand_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_13sp_T13"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/sfcdd_visitname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/sfddvs_tv"
+                android:gravity="center"
+                android:text="尼克斯"
+                android:textColor="@color/expandtxt_matchname_red"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+            <TextView
+                android:id="@+id/sfddvs_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_size_5dp"
+                android:layout_marginRight="@dimen/dp_size_5dp"
+                android:gravity="center"
+                android:text="vs"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_13sp_T13" />
+            <TextView
+                android:id="@+id/sfcdd_hostname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/sfddvs_tv"
+                android:gravity="center"
+                android:text="凯尔特人(主)"
+                android:textColor="@color/expandtxt_matchname_red"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+            <TextView
+                android:id="@+id/tv_item_jincai_dingdan_hand"
+                android:layout_toRightOf="@id/sfcdd_hostname_tv"
+                android:layout_width="wrap_content"
+                android:textColor="@color/red"
+                android:gravity="center"
+                android:textSize="@dimen/sp_size_12sp_T12"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/dd_lost_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@mipmap/dingdanred_bg"
+                    android:gravity="center"
+                    android:text="主负"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/dd_ping_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_size_13sp_T13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/dd_win_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@mipmap/dingdanred_bg"
+                    android:gravity="center"
+                    android:text="主胜"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

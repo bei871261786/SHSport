@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="16dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_size_3dp"
+        >
+
+        <TextView
+            android:id="@+id/livestatistics_tv"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/back_gray"
+            android:textSize="@dimen/standard_textsize_f5" />
+
+        <RelativeLayout
+            android:id="@+id/hostanalyse_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/livestatistics_tv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hostfullanalyse_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center|right"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f7" />
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:id="@+id/hosthalfanalyse_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:background="@drawable/gray_live_shape"
+                android:layout_below="@id/hostfullanalyse_tv"
+                android:layout_alignParentRight="true"
+                android:gravity="center|right"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="@dimen/standard_textsize_f7" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/visitanalyse_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/livestatistics_tv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/visitfullanalyse_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:background="@color/blue"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f7" />
+
+            <TextView
+                android:layout_marginTop="1dp"
+                android:id="@+id/visithalfanalyse_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:background="@drawable/gray_live_shape"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f7" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

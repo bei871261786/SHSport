@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calculatebottom_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_40dp"
+        android:background="@color/gray_numbg"
+        android:paddingBottom="@dimen/dp_size_5dp"
+        android:paddingTop="@dimen/dp_size_8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textbei_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="倍"
+                android:textColor="@color/changCiColor"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+
+            <ImageView
+                android:id="@+id/calculate_plus_im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@id/textbei_tv"
+                android:src="@mipmap/plus_sign" />
+
+            <EditText
+                android:id="@+id/calculate_multiple_edit"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@id/calculate_plus_im"
+                android:background="@drawable/shape_whitegray_corner"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="@dimen/dp_size_2dp"
+                android:text="1"
+                android:textColor="@color/standard_textcolor_c2" />
+
+            <ImageView
+                android:id="@+id/calculate_minus_im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_toLeftOf="@id/calculate_multiple_edit"
+                android:src="@mipmap/minus_sign" />
+
+            <TextView
+                android:id="@+id/beishu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@id/calculate_minus_im"
+                android:gravity="center"
+                android:text="倍数"
+                android:textColor="@color/changCiColor"
+                android:textSize="@dimen/standard_textsize_f4" />
+
+            <TextView
+                android:id="@+id/calculate_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_size_24dp"
+                android:text="请选择投注号码"
+                android:textColor="@color/changCiColor"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+            <TextView
+                android:id="@+id/calculate_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_size_5dp"
+                android:layout_toRightOf="@id/calculate_count_tv"
+                android:textColor="@color/changCiColor"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/calculate_deleteall_tv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_grayblue_selector"
+            android:gravity="center"
+            android:text="清空"
+            android:textColor="@drawable/text_blackwhite_pre_selector" />
+
+
+        <TextView
+            android:id="@+id/calculate_sum_bt"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bluegray_selector"
+            android:gravity="center"
+            android:text="查询"
+            android:textColor="@color/black_white_enable_selector" />
+    </LinearLayout>
+</LinearLayout>

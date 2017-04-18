@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">上海体彩</string>
+    <string name="lottery_version">1.0.0</string>
+    <string name="copyright">www.shlottery.gov.cn All Rights Reserved</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+
+    <string name="yilou">遗漏</string>
+    <string name="pl2_zu3_least">请至少选2个号码哦</string>
+    <string name="pl2_zu6_least">请至少选3个号码哦</string>
+
+    <string-array name="tab_names">
+        <item>首页</item>
+        <item>资讯</item>
+        <item>彩种</item>
+        <item>赛事</item>
+        <item>用户</item>
+    </string-array>
+
+    <string-array name="homegridviewitem">
+        <item>最新开奖</item>
+        <item>模拟购彩</item>
+        <item>奖金计算</item>
+        <item>推荐分析</item>
+        <item>体彩活动</item>
+        <item>超G竞彩</item>
+        <item>网点导航</item>
+        <item>客服热线</item>
+    </string-array>
+
+
+    <string name="lotto_title_pool">奖池：%1$s</string>
+
+    <string name="dantuozhushi">大乐透的胆拖投注是；在前区号码或后区号码中选择少于单式投注号码个数的号码作为每注都有的号码成为胆码，再选取除胆码以外的号码作为拖码，由胆码和拖码组和成多注投注，称为单拖投注。\n \t\t胆拖投注包含三种形式：\n\t\t（一）前区胆拖：从01-35中选取1至4个号码为胆码，再选取除胆码以外的号码作为拖码，胆码和拖码组成前区号码（其数量之和必须等于或多于6个号码），并从01-12中选取2个号码为后区号码。\n \t\t（二）后区胆拖：从01-35中至少选取5个号码为前区号码，并从01-12中选取1个号码为胆码，再选取除胆码以外的2个以上（含2个）的号码为拖码，胆码和拖码组成后区号码。\n\t\t（三）双区胆拖：从01-35中选取1至4个号码为胆码，再选取除胆码以外的号码作为拖码，胆码和拖码组成前区号码（其数量之和必须等于或多于6个号码），并从01-12中选取1个号码为胆码，再选取除胆码以外的2个以上（含2个）的号码为拖码，胆码和拖码组成后区号码。\n</string>
+    <!--适配规格-->
+    <!--首页开奖viewpager下方指示圆点大小-->
+    <integer name="home_kjpoint_size">50</integer>
+</resources>

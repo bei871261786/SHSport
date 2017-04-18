@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="100dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_enable_grayblue_corner1_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/baseChild_visit_rank_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="3.0dip"
+                                android:singleLine="true"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/standard_textsize_f6" />
+
+                            <TextView
+                                android:id="@+id/baseChild_visit_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="客队"
+                                android:textColor="@color/expandtxt_matchname_red"
+                                android:textSize="@dimen/standard_textsize_f4_S" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/baseChild_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="VS"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textSize="@dimen/standard_textsize_f4_S" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/baseChild_host_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="主队"
+                                android:textColor="@color/expandtxt_matchname_red"
+                                android:textSize="@dimen/standard_textsize_f4_S" />
+
+                            <TextView
+                                android:id="@+id/baseChild_host_rank_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3.0dip"
+                                android:singleLine="true"
+                                android:textColor="@color/standard_textcolor_c3"
+                                android:textSize="@dimen/standard_textsize_f6" />
+
+                            <TextView
+                                android:id="@+id/baseChild_ping_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/standard_textcolor_c2"
+                                android:textSize="@dimen/standard_textsize_f4_S" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_stroke_rectangle_white_grey_selector">
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3.0">
+
+                        <CheckBox
+                            android:id="@+id/dingdan_cbx_l"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/shape_spt_option_selecotr"
+                            android:button="@null" />
+
+
+                        <LinearLayout
+                            android:id="@+id/spdingdan_lost_ll"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/dingdan_fu_spf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3.0dip"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/fb_color_text_matchname"
+                                android:textSize="@dimen/standard_textsize_f5" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3.0">
+
+                        <CheckBox
+                            android:id="@+id/dingdan_cbx_w"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/shape_spt_option_selecotr"
+                            android:button="@null" />
+
+                        <LinearLayout
+                            android:id="@+id/dingdan_win_ll"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/dingdan_zhu_spf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3.0dip"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/fb_color_text_matchname"
+                                android:textSize="@dimen/standard_textsize_f5" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/match_dantuo"
+            android:layout_width="30.0dip"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/shape_flitrate_gridview_selecotr"
+            android:button="@null"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="胆"
+            android:textColor="@color/black_white_check_selecor"
+            android:textSize="@dimen/standard_textsize_f4" />
+
+        <ImageView
+            android:id="@+id/match_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="10.0dip"
+            android:src="@mipmap/icon_del" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

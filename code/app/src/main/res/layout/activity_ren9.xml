@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_r9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar" />
+
+    <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+        android:id="@+id/syx5_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/homeblue"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:paddingBottom="@dimen/dp_size_10dp"
+        android:paddingLeft="@dimen/dp_size_20dp"
+        android:paddingRight="@dimen/dp_size_20dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+
+    <include layout="@layout/syx5_stoptime_rl" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/r9_swl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sfc_bottom">
+
+            <ListView
+                android:id="@+id/r9_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_bg" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/sfc_bottom"
+            layout="@layout/sfc_bottom" />
+
+    </RelativeLayout>
+
+</LinearLayout>

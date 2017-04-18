@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_super_g"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/base_titlebar"></include>
+
+    <FrameLayout
+        android:id="@+id/video_fullView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/light_blue"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/superG_scro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/SuperG_sco_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/superG_head_issueno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="issueno"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_20sp_T20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/superG_head_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_20sp_T20" />
+
+            <TextView
+                android:id="@+id/superG_head_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_20sp_T20" />
+
+
+            <WebView
+                android:id="@+id/SuperG_webView"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_height"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/superG_guestlogo"
+                    android:layout_width="@dimen/image_wight_small"
+                    android:layout_height="@dimen/image_height_small"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/guest" />
+
+                <TextView
+                    android:id="@+id/superG_guestdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/superG_guestlogo"
+                    android:gravity="center"
+                    android:text="嘉宾:"
+                    android:textColor="@color/dantuo_zhushi_blue"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <TextView
+                    android:id="@+id/superG_guest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/superG_guestdes"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <ImageView
+                    android:id="@+id/superG_hostlogo"
+                    android:layout_width="@dimen/image_wight_small"
+                    android:layout_height="@dimen/image_height_small"
+                    android:layout_toLeftOf="@+id/superG_hosttdes"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/host" />
+
+                <TextView
+                    android:id="@+id/superG_hosttdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/superG_host"
+                    android:gravity="center"
+                    android:text="主持人:"
+                    android:textColor="@color/dantuo_zhushi_blue"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+
+                <TextView
+                    android:id="@+id/superG_host"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/superG_radiogrpoup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/superG_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/supergab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="节目详情"
+                    android:textColor="@color/pl3tab_text_color" />
+
+                <RadioButton
+                    android:id="@+id/superG_caidan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/supergab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="终极彩单"
+                    android:textColor="@color/pl3tab_text_color" />
+
+                <RadioButton
+                    android:id="@+id/superG_bonuslist"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/supergab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="中奖名单"
+                    android:textColor="@color/pl3tab_text_color" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/superG_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:text=""
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_15sp_T15"
+                    android:visibility="visible" />
+
+
+                <ImageView
+                    android:id="@+id/superG_bonuslist_content"
+                    android:layout_width="match_parent"
+                    android:background="@color/backgroud_gray"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/superG_caidan_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

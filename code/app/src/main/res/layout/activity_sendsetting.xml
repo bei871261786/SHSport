@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_white_corner_shape"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/send_setting_rl"
+                style="@style/setting_relativestyle">
+
+
+                <TextView
+                    android:id="@+id/send_setting_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="center_vertical"
+                    android:text="开奖推送"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/standard_textsize_f2" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/sh115_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/sh115_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/sh115_im" />
+
+                <TextView
+                    android:id="@+id/sh115_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/sh115_im"
+                    android:text="上海11选5" />
+
+                <ImageView
+                    android:id="@+id/sh115_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/sh115_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/dlt_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/dlt_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/dlt_im" />
+
+                <TextView
+                    android:id="@+id/dlt_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/dlt_im"
+                    android:text="超级大乐透" />
+
+                <ImageView
+                    android:id="@+id/dlt_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/dlt_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/pl3_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/pl3_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/pl3_im" />
+
+                <TextView
+                    android:id="@+id/pl3_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/pl3_im"
+                    android:text="排列三" />
+
+                <ImageView
+                    android:id="@+id/pl3_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/pl3_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/pl5_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/pl5_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/pl5_im" />
+
+                <TextView
+                    android:id="@+id/pl5_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/pl5_im"
+                    android:text="排列五" />
+
+                <ImageView
+                    android:id="@+id/pl5_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/pl5_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/qxc_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/qxc_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/qxc_im" />
+
+                <TextView
+                    android:id="@+id/qxc_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/qxc_im"
+                    android:text="七星彩" />
+
+                <ImageView
+                    android:id="@+id/qxc_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/qxc_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/sfc_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/sfc_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/sfc_im" />
+
+                <TextView
+                    android:id="@+id/sfc_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/sfc_im"
+                    android:text="胜负彩" />
+
+                <ImageView
+                    android:id="@+id/sfc_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/sfc_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/jqc_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/jqc_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/sfc_im" />
+
+                <TextView
+                    android:id="@+id/jqc_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/jqc_im"
+                    android:text="4场进球彩" />
+
+                <ImageView
+                    android:id="@+id/jqc_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/jqc_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/bqc_rl"
+                style="@style/setting_relativestyle">
+
+                <ImageView
+                    android:id="@+id/bqc_im"
+                    style="@style/setting_lottery_icon"
+                    android:src="@mipmap/sfc_im" />
+
+                <TextView
+                    android:id="@+id/bqc_tv"
+                    style="@style/setting_lottery_text"
+                    android:layout_toRightOf="@id/bqc_im"
+                    android:text="6场半全场" />
+
+                <ImageView
+                    android:id="@+id/bqc_sendon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/bqc_sendoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/system_message_rl"
+                style="@style/setting_relativestyle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_size_15dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/standard_textsize_f3"
+                    android:textColor="@color/black"
+                    android:text="系统消息" />
+
+                <ImageView
+                    android:id="@+id/system_messageon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/system_messageoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/zhongjiang_message_rl"
+                style="@style/setting_relativestyle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_size_15dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/standard_textsize_f3"
+                    android:textColor="@color/black"
+                    android:text="中奖提醒" />
+
+                <ImageView
+                    android:id="@+id/zhongjiang_messageon_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/zhongjiang_messageoff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:visibility="gone"
+                android:background="@color/gray_bg" />
+
+            <RelativeLayout
+                android:id="@+id/zhuanjiakancai_rl"
+                style="@style/setting_relativestyle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_size_15dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/standard_textsize_f3"
+                    android:textColor="@color/black"
+                    android:text="专家看彩" />
+
+                <ImageView
+                    android:id="@+id/zhuanjiakancaion_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_on" />
+
+                <ImageView
+                    android:id="@+id/zhuanjiakancaioff_im"
+                    style="@style/setting_onoffstyle"
+                    android:src="@mipmap/send_off" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

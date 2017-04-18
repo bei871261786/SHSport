@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/register_titlebar"></include>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--第一步 填写昵称 密码信息-->
+            <LinearLayout
+                android:id="@+id/ll_redister_first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_white_corner_shape"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10.0dip">
+
+                        <ImageView
+                            style="@style/register_mipmap"
+                            android:src="@mipmap/nickname"/>
+
+                        <EditText
+                            android:id="@+id/et_register_name"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="center|left"
+                            android:hint="请输入昵称(2-16个中英文或数字组成)"
+                            android:maxLength="16"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/dp_size_8dp"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textColorHint="@color/black_gray1"
+                            android:textCursorDrawable="@drawable/edittext_color"
+                            android:textSize="@dimen/standard_textsize_f5"/>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_bg"/>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10.0dip">
+
+                        <ImageView
+                            style="@style/register_mipmap"
+                            android:src="@mipmap/password"/>
+
+                        <EditText
+                            android:id="@+id/et_register_pwd"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:gravity="center|left"
+                            android:hint="@string/editextpsw"
+                            android:inputType="textPassword"
+                            android:maxLength="16"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/dp_size_8dp"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textColorHint="@color/black_gray1"
+                            android:textCursorDrawable="@drawable/edittext_color"
+                            android:textSize="@dimen/standard_textsize_f6"/>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_bg"/>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10.0dip">
+
+                        <ImageView
+                            style="@style/register_mipmap"
+                            android:src="@mipmap/password"/>
+
+                        <EditText
+                            android:id="@+id/et_register_repwd"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:gravity="center|left"
+                            android:hint="请再次输入密码"
+                            android:inputType="textPassword"
+                            android:maxLength="18"
+                            android:maxLines="1"
+                            android:padding="10.0dip"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textColorHint="@color/black_gray1"
+                            android:textCursorDrawable="@drawable/edittext_color"
+                            android:textSize="@dimen/standard_textsize_f5"/>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_bg"/>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10.0dip">
+
+                        <ImageView
+                            style="@style/register_mipmap"
+                            android:src="@mipmap/pincode"/>
+
+                        <EditText
+                            android:id="@+id/et_register_imgvcode"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:gravity="center|left"
+                            android:hint="请输入图片验证码"
+                            android:maxLength="18"
+                            android:maxLines="1"
+                            android:padding="10.0dip"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textColorHint="@color/black_gray1"
+                            android:textCursorDrawable="@drawable/edittext_color"
+                            android:textSize="@dimen/standard_textsize_f5"/>
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:id="@+id/iv_register_imgvcode"
+                            android:layout_width="100dp"
+                            android:layout_height="33dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_register_refreshimgvcode"
+                            android:layout_width="wrap_content"
+                            android:text="换一张"
+                            android:layout_marginLeft="@dimen/dp_size_10dp"
+                            android:textSize="@dimen/sp_size_14sp_T14"
+                            android:gravity="center"
+                            android:textColor="@drawable/selector_textcolor_blue"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/vcode"/>
+                    </TableRow>
+                </TableLayout>
+
+                <Button
+                    android:id="@+id/btn_register_next"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/shape_enable_bluegray_corner1_selector"
+                    android:gravity="center"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:text="下一步"
+                    android:textColor="@color/text_white_blue_selecor"
+                    android:textSize="@dimen/standard_textsize_f1"/>
+            </LinearLayout>
+
+            <!--第二步 手机验证-->
+            <LinearLayout
+                android:id="@+id/ll_redister_second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/white_white_corner_shape">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10.0dip">
+
+                        <ImageView
+                            style="@style/register_mipmap"
+                            android:src="@mipmap/mobile"/>
+
+                        <EditText
+                            android:id="@+id/et_register_phone"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:digits="\ 0123456789"
+                            android:gravity="center|left"
+                            android:hint="请输入手机号码"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:padding="10.0dip"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textColorHint="@color/black_gray1"
+                            android:textCursorDrawable="@drawable/edittext_color"
+                            android:textSize="@dimen/standard_textsize_f5"/>
+
+                        <TextView
+                            android:id="@+id/tv_register_getvcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:background="@drawable/vcode_bgselector"
+                            android:gravity="center"
+                            android:paddingBottom="8.0dip"
+                            android:paddingLeft="15.0dip"
+                            android:paddingRight="15.0dip"
+                            android:paddingTop="8.0dip"
+                            android:text="获取验证码"
+                            android:textColor="@color/text_bluewhite_selecor"
+                            android:textSize="@dimen/standard_textsize_f5"/>
+
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_bg"/>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10.0dip">
+
+                        <ImageView
+                            style="@style/register_mipmap"
+                            android:src="@mipmap/vcode"/>
+
+                        <EditText
+                            android:id="@+id/et_register_vcode"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="center|left"
+                            android:hint="请输入验证码"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:padding="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/standard_textcolor_c2"
+                            android:textColorHint="@color/black_gray1"
+                            android:textCursorDrawable="@drawable/edittext_color"
+                            android:textSize="@dimen/standard_textsize_f5"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <Button
+                    android:id="@+id/btn_register_submit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/shape_enable_bluegray_corner1_selector"
+                    android:gravity="center"
+                    android:paddingBottom="10.0dip"
+                    android:paddingTop="10.0dip"
+                    android:text="提交"
+                    android:textColor="@color/text_white_blue_selecor"
+                    android:textSize="@dimen/standard_textsize_f1"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

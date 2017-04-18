@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="100dp"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <include
+        android:id="@+id/basechild_zjq"
+        layout="@layout/jincai_basechild_left"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <include layout="@layout/jincai_basechild_centop"></include>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/basechild_zjq"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/spt_goal_option_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+
+                    <CheckedTextView
+                        android:id="@+id/zjq_0_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="txt0"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+
+                    <CheckedTextView
+                        android:id="@+id/zjq_1_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+
+                    <CheckedTextView
+                        android:id="@+id/zjq_2_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+
+                    <CheckedTextView
+                        android:id="@+id/zjq_3_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+
+                    <CheckedTextView
+                        android:id="@+id/zjq_4_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+
+                    <CheckedTextView
+                        android:id="@+id/zjq_5_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+
+                    <CheckedTextView
+                        android:id="@+id/zjq_6_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_14sp_T14" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+                    <CheckedTextView
+                        android:id="@+id/zjq_7_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_gray_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@color/black_white_check_selecor"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+
+                    android:background="@color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/bqc_analysis_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/analysis" />
+
+    </LinearLayout>
+</LinearLayout>

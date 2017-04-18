@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/match_titleBar"
+    style="@style/head_title_barstyle"
+    android:layout_alignParentTop="true">
+
+    <LinearLayout
+        android:id="@+id/titlebar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/matchtitle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="竞彩足球"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/titlebar_indicatorup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/title_up"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/titlebar_indicatordown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/indicator_down"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/filtrate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_toLeftOf="@+id/main_calendar"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:src="@mipmap/filtrate" />
+
+    <ImageView
+        android:id="@+id/main_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="25dp"
+        android:src="@mipmap/calendar" />
+</RelativeLayout>

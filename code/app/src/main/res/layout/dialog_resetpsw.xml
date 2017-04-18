@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="修改密码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <ImageView
+            android:id="@+id/resetpsw_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_size_10dp"
+            android:layout_marginTop="@dimen/dp_size_10dp"
+            android:src="@mipmap/close_dialog" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/new_psw_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_50dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_marginRight="@dimen/dp_size_15dp"
+        android:background="@drawable/gray_corner_black_shape"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="请输入新密码"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dp_size_10dp"
+        android:textColorHint="@color/black_gray1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_size_20dp"
+        android:layout_margin="@dimen/dp_size_15dp"
+        android:text="密码由6-16个英文+数字组成,区分大小写"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_size_15sp_T15" />
+
+    <EditText
+        android:id="@+id/renew_psw_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_50dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_marginRight="@dimen/dp_size_15dp"
+        android:background="@drawable/gray_corner_black_shape"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="请再次输入密码"
+        android:inputType="textPassword"
+        android:maxLength="16"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/dp_size_10dp"
+        android:textColorHint="@color/black_gray1" />
+
+    <Button
+        android:id="@+id/userinfo_next_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15.0dip"
+        android:background="@drawable/shape_enable_bluegray_corner1_selector"
+        android:gravity="center"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip"
+        android:text="提交"
+        android:textColor="@color/text_white_blue_selecor"
+        android:textCursorDrawable="@drawable/edittext_color"
+        android:textSize="@dimen/standard_textsize_f1" />
+</LinearLayout>

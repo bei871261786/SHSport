@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.PhotoViewPager
+        android:id="@+id/vp_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </shlottery.gov.cn.lotterycenter.ui.widget.PhotoViewPager>
+
+    <TextView
+        android:id="@+id/tv_photo_position"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_size_16dp"
+        android:layout_margin="@dimen/dp_size_10dp"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

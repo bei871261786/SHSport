@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <include layout="@layout/dialog_basketball_title"></include>
+
+    <LinearLayout
+        android:id="@+id/spt_sf_option_ll"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:layout_margin="10dp"
+        android:background="@color/dingdan_background_gray"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="胜\n负"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_gray_jincai_selector"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sf_1_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/black_white_check_selecor" />
+
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sf_0_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/black_white_check_selecor" />
+
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/border_gray" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spt_xsf_option_ll"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:background="@color/dingdan_background_gray"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="让\n分\n胜\n负"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_gray_jincai_selector"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_xsf_1_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/black_white_check_selecor" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_xsf_0_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/black_white_check_selecor" />
+
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/border_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dialog_dxsf_2_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/circle_default_gray" />
+
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spt_dx_option_ll"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:layout_margin="10dp"
+        android:background="@color/dingdan_background_gray"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="大\n小\n分"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_gray_jincai_selector"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_dx_0_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/black_white_check_selecor" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_dx_1_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/black_white_check_selecor" />
+
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/border_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dialog_dx_2_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@color/circle_default_gray" />
+
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spt_goal_option_ll"
+        android:layout_width="match_parent"
+        android:layout_height="140dip"
+        android:layout_margin="10dp"
+        android:background="@color/dingdan_background_gray"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="客\n胜"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="主\n胜"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_14sp_T14" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/border_gray" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_gray_jincai_selector"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_6_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_7_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_8_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/border_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_9_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_10_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_11_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_gray_jincai_selector"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_0_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_1_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_2_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/border_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_3_ct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:gravity="center"
+                        android:text="test"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_4_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+
+                    <CheckedTextView
+                        android:id="@+id/dialog_sfc_5_ct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/red_white_jincai_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@drawable/childtext_selector"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <View
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:background="@color/border_gray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/border_gray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/basecalcel_submit1"></include>
+
+</LinearLayout>

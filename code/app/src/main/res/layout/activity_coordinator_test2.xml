@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/titleLine"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/homeblue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/match_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/back" />
+
+        <shlottery.gov.cn.lotterycenter.ui.widget.Observers.ObserverTextView
+            android:id="@+id/match_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="赛事"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_size_15sp_T15"
+            />
+    </RelativeLayout>
+
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.Observers.ObserverImageView
+        android:id="@+id/match_hostLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_weight="1"
+        android:src="@mipmap/zhanghuyue" />
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.Observers.ObserverImageView
+        android:id="@+id/match_visitLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_weight="1"
+        android:src="@mipmap/zhanghuyue" />
+
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.Observers.ObserverTextView
+        android:id="@+id/match_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/match_hotName"
+        android:layout_alignTop="@+id/match_hotName"
+        android:text="100:30"
+        android:textColor="@color/black" />
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.Observers.ObserverTextView
+        android:id="@+id/match_hotName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/match_hostLogo"
+        android:layout_alignRight="@id/match_hostLogo"
+        android:layout_below="@id/match_hostLogo"
+        android:layout_centerHorizontal="true"
+        android:text="萨斯非"
+        android:textColor="@color/black" />
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.Observers.ObserverTextView
+        android:id="@+id/match_visitName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@id/match_visitLogo"
+        android:layout_alignRight="@id/match_visitLogo"
+        android:text="狂风"
+        android:layout_below="@id/match_visitLogo"
+        android:textColor="@color/black" />
+
+
+    <shlottery.gov.cn.lotterycenter.ui.widget.ObservableScrollView
+        android:id="@+id/match_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleLine">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/match_head"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@id/titleLine"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/match_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/large_text" />
+        </LinearLayout>
+
+
+    </shlottery.gov.cn.lotterycenter.ui.widget.ObservableScrollView>
+
+</RelativeLayout>

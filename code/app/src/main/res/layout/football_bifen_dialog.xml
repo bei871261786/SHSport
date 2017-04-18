@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/expandtback_red"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_homestanding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:text="[主]"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f6" />
+
+            <TextView
+                android:id="@+id/tv_homename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="队名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f4_S" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standard_textsize_f4_S" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_awayname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:text="队名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f4_S" />
+
+            <TextView
+                android:id="@+id/tv_awaystanding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[客]"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f6" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/black" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:lineSpacingExtra="1dp"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:text="@string/score_desc"
+        android:textColor="@color/black"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:background="@color/gray">
+
+        <!--<TextView
+            android:layout_width="14.0dip"
+            android:layout_height="fill_parent"
+            android:background="#ffe71919"
+            android:gravity="center"
+            android:paddingLeft="2.0dip"
+            android:paddingRight="2.0dip"
+            android:paddingTop="5.0dip"
+            android:text="胜"
+            android:textColor="#ffffffff"
+            android:textSize="12.0sp" />-->
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip">
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score1"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score2"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score3"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score4"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score5"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score6"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+
+                <CheckedTextView
+                    android:id="@+id/dc_score7"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip">
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score8"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score9"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score10"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score11"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score12"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score13"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:layout_marginLeft="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:background="@color/gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="wrap_content"
+                android:background="@color/black" />
+
+            <CheckedTextView
+                android:id="@+id/dc_score14"
+                style="@style/jincai_sleected_selector"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/standard_textsize_f7" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <CheckedTextView
+                android:id="@+id/dc_score15"
+                style="@style/jincai_sleected_selector"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/standard_textsize_f7" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <CheckedTextView
+                android:id="@+id/dc_score16"
+                style="@style/jincai_sleected_selector"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/standard_textsize_f7" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <CheckedTextView
+                android:id="@+id/dc_score17"
+                style="@style/jincai_sleected_selector"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/standard_textsize_f7" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+
+            <CheckedTextView
+                android:id="@+id/dc_score18"
+                style="@style/jincai_sleected_selector"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="3.0"
+                android:textSize="@dimen/standard_textsize_f7" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/white" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/white" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:background="@color/gray"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:layout_width="14.0dip"
+            android:layout_height="fill_parent"
+            android:background="#ff47bc0e"
+            android:gravity="center"
+            android:paddingLeft="2.0dip"
+            android:paddingRight="2.0dip"
+            android:paddingTop="5.0dip"
+            android:text="负"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/standard_textsize_f7" />-->
+
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip">
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score19"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score20"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score21"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score22"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score23"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score24"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score25"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip">
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score26"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score27"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score28"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score29"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score30"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/dc_score31"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.0"
+                    android:textSize="@dimen/standard_textsize_f7" />
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/black" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/basecalcel_submit1"></include>
+</LinearLayout>

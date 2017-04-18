@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_rmd_famous_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dingdan_background_gray"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar"></include>
+
+    <!--专家信息布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_graydeepgray_graident_corner"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <shlottery.gov.cn.lotterycenter.ui.view.CircleImageView
+                    android:id="@+id/famous_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop">
+
+                </shlottery.gov.cn.lotterycenter.ui.view.CircleImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/famousdetail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_18sp_T18"/>
+
+                <TextView
+                    android:id="@+id/famousdetail_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:maxLines="2"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/umeng_socialize_text_share_content"
+                    android:textSize="@dimen/sp_size_15sp_T15"/>
+            </LinearLayout>
+
+            <!--android:background="@drawable/checkbox_subscri_selector"-->
+            <!--android:textColor="@color/subscribe_check_selecor"-->
+            <CheckBox
+                android:id="@+id/famousdetail_subscribe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_whitered_corner"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="订阅"
+                android:textColor="@color/expandtxt_red"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--比赛信息布局-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/famousdetail_decreLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/famousdetail_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="**"
+                        android:textColor="@color/umeng_socialize_text_share_content"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <TextView
+                        android:id="@+id/famousdetail_issueNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/umeng_socialize_text_share_content"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/gray_numbg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="13"
+                        android:gravity="center"
+                        android:text="#"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="36"
+                        android:gravity="center"
+                        android:text="联赛/时间"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="42"
+                        android:gravity="center"
+                        android:text="对阵"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55"
+                        android:gravity="center"
+                        android:text="选项"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/gray"></View>
+
+            <shlottery.gov.cn.lotterycenter.ui.view.ListViewWithoutScroll
+                android:id="@+id/famousdetail_listview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                android:divider="@color/background_gray"
+                android:dividerHeight="0.5dp"
+                android:scrollbars="none"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/background_gray"></View>
+
+            <LinearLayout
+                android:id="@+id/famousdetail_soccerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/famousdetail_multiple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="倍数："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <TextView
+                        android:id="@+id/famousdetail_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="注数："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <TextView
+                        android:id="@+id/famousdetail_stakeMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="投注金额："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/famousdetail_jincaiInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/famousdetail_playtype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="过关："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <TextView
+                        android:id="@+id/famousdetail_jcmultiple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="倍数："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+
+                    <TextView
+                        android:id="@+id/famousdetail_jcstakeMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="投注金额："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/famousdetail_forestMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="奖金预测："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_15sp_T15"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/famousdetail_tidianLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/tidian"/>
+
+                <TextView
+                    android:id="@+id/famousdetail_tidian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/umeng_socialize_text_share_content"
+                    android:textSize="@dimen/sp_size_15sp_T15"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--生成注单按钮布局-->
+    <LinearLayout
+        android:id="@+id/sfc_zdsave_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_numbg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_size_10dp"
+        android:paddingLeft="@dimen/dp_size_15dp"
+        android:paddingRight="@dimen/dp_size_15dp"
+        android:paddingTop="@dimen/dp_size_5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_size_3dp"
+            android:text="所有推荐方案仅供参考"
+            android:textSize="@dimen/sp_size_12sp_T12"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/sfc_zdsave_tv"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_corner_bluegray"
+            android:gravity="center"
+            android:text="生成模拟注单"
+            android:textColor="@color/black_white_enable_selector"
+            android:textSize="@dimen/sp_size_16sp_T16"/>
+
+    </LinearLayout>
+</LinearLayout>

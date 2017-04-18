@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RadioGroup
+        android:id="@+id/dialogask_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/dialogask_tag_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_grayblue_corner1_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="投注类"
+            android:textColor="@color/text_black_white_checkselecor"
+            android:textSize="@dimen/kefu_tab_txtsize" />
+
+        <RadioButton
+            android:id="@+id/dialogask_tag_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_grayblue_corner1_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="中奖类"
+            android:textColor="@color/text_black_white_checkselecor"
+            android:textSize="@dimen/kefu_tab_txtsize" />
+
+        <RadioButton
+            android:id="@+id/dialogask_tag_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_grayblue_corner1_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="开奖类"
+            android:textColor="@color/text_black_white_checkselecor"
+            android:textSize="@dimen/kefu_tab_txtsize" />
+
+        <RadioButton
+            android:id="@+id/dialogask_tag_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_grayblue_corner1_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="活动类"
+            android:textColor="@color/text_black_white_checkselecor"
+            android:textSize="@dimen/kefu_tab_txtsize" />
+
+        <RadioButton
+            android:id="@+id/dialogask_tag_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_grayblue_corner1_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="其他"
+            android:textColor="@color/text_black_white_checkselecor"
+            android:textSize="@dimen/kefu_tab_txtsize" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/dialogask_inputEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/gray_corner_border_shape"
+        android:gravity="left"
+        android:hint="文字输入"
+        android:inputType="text"
+        android:maxLength="100"
+        android:minHeight="200dp"
+        android:padding="10dp"
+        android:textColor="@color/circle_default_gray"
+        android:textSize="@dimen/sp_size_17sp_T17" />
+
+    <Button
+        android:id="@+id/dialogask_send"
+        android:layout_width="100dp"
+        android:layout_height="35.0dip"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/centerview"
+        android:background="@drawable/shape_enable_bluegray_corner2_selector"
+        android:text="发送"
+        android:textColor="@color/text_white_black_selecor"
+        android:textSize="@dimen/standard_textsize_f4_S" />
+
+</LinearLayout>

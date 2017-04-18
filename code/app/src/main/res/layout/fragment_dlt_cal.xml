@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dlt_fragment_cal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_numbg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/calculate_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/calculate_fragment_title" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dlt_ball1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/dlt_ball2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/dlt_ball3_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/dlt_ball4_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/dlt_ball5_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/dlt_ball6_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_blue"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/dlt_ball7_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_size_5dp"
+                android:background="@mipmap/ballselect_blue"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_2dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerline_height"
+        android:background="@color/black_gray" />
+
+    <ScrollView
+        android:id="@+id/dlt_scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/calculatebottom_ll"
+        android:layout_below="@id/calculate_top_ll"
+        android:fadeScrollbars="true">
+
+        <LinearLayout
+            android:id="@+id/dlt_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_size_10dp"
+                android:layout_marginTop="@dimen/dp_size_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/dp_size_15dp"
+                    android:text="前区 : 至少选择5个红球"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_13sp_T13" />
+
+                <TextView
+                    android:id="@+id/zhuijia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_size_15dp"
+                    android:gravity="center"
+                    android:text="追加投注"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_13sp_T13" />
+
+                <CheckBox
+                    android:id="@+id/zhuijia_cxb"
+                    android:layout_width="@dimen/dp_size_24dp"
+                    android:layout_height="@dimen/dp_size_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_size_5dp"
+                    android:padding="@dimen/dp_size_3dp"
+                    android:layout_toLeftOf="@+id/zhuijia"
+                    android:background="@drawable/checkbox_caijingquan_selecotr"
+                    android:button="@null" />
+
+            </RelativeLayout>
+
+
+            <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                android:id="@+id/lotto_normal_qianqu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_size_5dp"
+                android:layout_marginTop="@dimen/dp_size_5dp"
+                android:horizontalSpacing="1dp"
+                android:numColumns="7"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/sp_size_10sp_T10" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dp_size_15dp"
+                android:text="后区 : 至少选择2个蓝球"
+                android:textColor="@color/black_gray"
+                android:layout_marginTop="@dimen/dp_size_10dp"
+                android:layout_marginBottom="@dimen/dp_size_5dp"
+                android:textSize="@dimen/sp_size_13sp_T13" />
+
+            <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                android:id="@+id/lotto_normal_houqu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_size_5dp"
+                android:layout_marginTop="@dimen/dp_size_5dp"
+                android:horizontalSpacing="1dp"
+                android:numColumns="7"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/sp_size_10sp_T10" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/calculate_bottom" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/homeblue" />
+<stroke android:color="@color/dantuo_zhushi_blue"></stroke>
+    <corners
+        android:bottomLeftRadius="@dimen/dp_size_4dp"
+        android:radius="@dimen/dp_size_4dp"></corners>
+</shape>

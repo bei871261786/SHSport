@@ -1,0 +1,220 @@
+package shlottery.gov.cn.lotterycenter.protool;
+
+import android.content.Context;
+
+import com.lzy.okgo.request.BaseRequest;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+
+import okhttp3.Call;
+import okhttp3.Response;
+import shlottery.gov.cn.lotterycenter.Base.Configure;
+import shlottery.gov.cn.lotterycenter.aplication.BaseApplication;
+import shlottery.gov.cn.lotterycenter.bean.UserInfoBean;
+import shlottery.gov.cn.lotterycenter.callback.HttpHelper;
+import shlottery.gov.cn.lotterycenter.callback.LoadCallback;
+import shlottery.gov.cn.lotterycenter.manager.UrlManager;
+import shlottery.gov.cn.lotterycenter.network.ParamsHelperInterface;
+import shlottery.gov.cn.lotterycenter.ui.jincailottery.soccer.callback.DialogStringCallback;
+import shlottery.gov.cn.lotterycenter.ui.widget.LoadingDialog;
+import shlottery.gov.cn.lotterycenter.utils.LogUtils;
+import shlottery.gov.cn.lotterycenter.utils.PrefUtils;
+import shlottery.gov.cn.lotterycenter.utils.SharedPreferencesUtils;
+import shlottery.gov.cn.lotterycenter.utils.StringUtils;
+import shlottery.gov.cn.lotterycenter.utils.UIUtils;
+
+/**
+ * ************************************************
+ * 作    者：yongchao.bei
+ * 版    本：1.0
+ * 创建日期：2016/11/4 13:43
+ * 描    述：
+ * 修订历史：
+ * ************************************************
+ */
+
+public abstract class BaseProtocol<Data> {
+    public static boolean isTest = true;
+    private String client = "";
+    private String secret = "";
+    protected String signKey = BaseApplication.signKey;
+    private long delaTime = 1000 * 10;
+    private HttpHelper mHttpHelper;
+    public final int POST = 1;
+    public final int GET = 0;
+    private LoadCallback<Data> mLoadCallback;
+    private DialogStringCallback mStringCallback;
+    private LoadingDialog loadingDialog;
+    private boolean needDialog = true;
+
+    public BaseProtocol(final Context context) {
+        needDialog = isNeedDialog();
+        client = PrefUtils.getString(BaseApplication.getApplication(), "Client", "");
+        UserInfoBean infoBean = (UserInfoBean) SharedPreferencesUtils.getObject(Configure.SPKEY_USERINFO);
+        if (infoBean != null && infoBean.getSecret() != null) {
+            secret = infoBean.getSecret();
+        }
+        mHttpHelper = new HttpHelper();
+        mStringCallback = new DialogStringCallback(BaseApplication.getApplication()) {
+            @Override
+            public void onBefore(BaseRequest request) {
+                if (context != null) {
+                    if (needDialog) {
+                        loadingDialog = new LoadingDialog(context, "正在加载...");
+                        loadingDialog.show();
+                    }
+                }
+            }
+
+            @Override
+            public void onSuccess(String s, Call call, Response response) {
+                LogUtils.i("baseProtocol onsucess" + s);
+                Data data = parseData(s);
+                LogUtils.i("baseProtocol parserData" + data);
+                mLoadCallback.onSucess(data);
+                if (loadingDialog != null) {
+                    loadingDialog.close();
+                }
+            }
+
+            @Override
+            public void onError(Call call, Response response, Exception e) {
+                LogUtils.i("baseProtocol onerror" + response + "::::" + e.toString());
+                mLoadCallback.onError();
+                UIUtils.showToastSafe("网络异常,请检查网络设置");
+                if (loadingDialog != null) {
+                    loadingDialog.close();
+                }
+            }
+        };
+    }
+
+    public BaseProtocol() {
+        client = PrefUtils.getString(BaseApplication.getApplication(), "Client", "");
+        UserInfoBean infoBean = (UserInfoBean) SharedPreferencesUtils.getObject(Configure.SPKEY_USERINFO);
+        if (infoBean != null && infoBean.getSecret() != null) {
+            secret = infoBean.getSecret();
+        }
+        mHttpHelper = new HttpHelper();
+        mStringCallback = new DialogStringCallback(BaseApplication.getApplication()) {
+
+            @Override
+            public void onBefore(BaseRequest request) {
+
+            }
+
+            @Override
+            public void onSuccess(String s, Call call, Response response) {
+                LogUtils.i("baseProtocol onsucess" + s);
+                Data data = parseData(s);
+                LogUtils.i("baseProtocol parserData" + data);
+                mLoadCallback.onSucess(data);
+            }
+
+            @Override
+            public void onError(Call call, Response response, Exception e) {
+                LogUtils.i("baseProtocol onerror" + response + "::::" + e.toString());
+                mLoadCallback.onError();
+                UIUtils.showToastSafe("网络异常,请检查网络设置");
+            }
+        };
+    }
+
+    public void load(Object tag, ParamsHelperInterface helper, LoadCallback mLoadCallback) {
+        this.mLoadCallback = mLoadCallback;
+        mHttpHelper.post(getHeadUrl() + getDetailUrl(), tag, getPostParams(getHeadParams(), helper.getParamas()), mStringCallback);
+    }
+
+    public void load(Object tag, LoadCallback mLoadCallback) {
+        this.mLoadCallback = mLoadCallback;
+        LogUtils.i("baseProtocol load:" + mHttpHelper + ":::" + tag + "::::" + mStringCallback);
+        mHttpHelper.post(getHeadUrl() + getDetailUrl(), tag, getGetParmas(getHeadParams()), mStringCallback);
+    }
+
+    private LinkedHashMap getGetParmas(LinkedHashMap headparmas) {
+        StringBuilder sb = new StringBuilder();
+        if (headparmas != null) {
+            Iterator<String> iterator = headparmas.keySet().iterator();
+            ArrayList<String> list = new ArrayList();
+            while (iterator.hasNext()) {
+                String key = iterator.next();
+                list.add((String) headparmas.get(key));
+            }
+            for (int i = list.size() - 1; i >= 0; i--) {
+                sb.append(list.get(i));
+            }
+        } else {
+            headparmas = new LinkedHashMap();
+        }
+        String sign = "";
+        if (isNeedLogin()) {
+            sign = StringUtils.getMD5(client + secret + signKey + sb.toString());
+            LogUtils.i("baseProtocol  login:");
+        } else {
+            sign = StringUtils.getMD5(client + signKey + sb.toString());
+            LogUtils.i("baseProtocol  no login:");
+        }
+        headparmas.put("sign", sign);
+        headparmas.put("client", client);
+        LogUtils.i("baseProtocol :" + sign + ":::::" + sb.toString() + "::::" + client + "::::::secret:" + secret);
+        return headparmas;
+    }
+
+    private HashMap getPostParams(LinkedHashMap headParams, LinkedHashMap detailParams) {
+        LinkedHashMap<String, String> params = new LinkedHashMap<>();
+        if (headParams != null) {
+            params.putAll(headParams);
+        }
+        if (detailParams != null) {
+            params.putAll(detailParams);
+        }
+        Iterator<String> iterator = params.keySet().iterator();
+        StringBuilder sb = new StringBuilder();
+        ArrayList<String> list = new ArrayList();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            list.add(params.get(key));
+            LogUtils.i("iterator value:" + params.get(key));
+        }
+        for (int i = 0; i < list.size(); i++) {
+            sb.append(list.get(i));
+        }
+        String sign = "";
+        if (isNeedLogin()) {
+            sign = StringUtils.getMD5(client + secret + signKey + sb.toString());
+        } else {
+            sign = StringUtils.getMD5(client + signKey + sb.toString());
+        }
+        LogUtils.i("baseProtocol MD5:" + client + signKey + sb.toString());
+        LogUtils.i("baseProtocol :" + sign + ":::::" + sb.toString() + ":::::secret::" + secret);
+        params.put("sign", sign);
+        params.put("client", client);
+        return params;
+    }
+
+    private String getHeadUrl() {
+        if (isTest) {
+            return UrlManager.TESTURl;
+        } else {
+            return UrlManager.RELEASEURL;
+        }
+    }
+
+    //头部参数，一系列需要加上的参数，比如不同的竞足都需要竞彩类型的参数，就可以放在头部参数里面
+    protected abstract LinkedHashMap<String, String> getHeadParams();
+
+    protected abstract String getDetailUrl();
+
+    protected abstract Data parseData(String json);
+
+    //是否需要带上client参数'
+    protected abstract boolean isNeedLogin();
+
+    protected boolean isNeedDialog() {
+        return true;
+    }
+
+}

@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "shlottery.gov.cn.lotterycenter"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "eda91e4bfdcea67536ed568c", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 8
+        versionName "1.2.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('ShanghaiLottery.jks')
+            storePassword "cll1240"
+            keyAlias "shanghailottery"
+            keyPassword "cll1240"
+        }
+        release {
+            storeFile file('ShanghaiLottery.jks')
+            storePassword "cll1240"
+            keyAlias "shanghailottery"
+            keyPassword "cll1240"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            shrinkResources true//去掉不用资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            shrinkResources false//去掉不用资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output -> output.outputFile = new File(output.outputFile.parent, "ShLottery_" + defaultConfig.versionCode + "_v" + defaultConfig.versionName + "_" + buildType.name + ".apk");
+            }
+    }
+
+
+}
+apply plugin: 'com.neenbedankt.android-apt'
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //开源地址:https://github.com/H07000223/FlycoTabLayout
+    //okhttp
+    //可以单独使用，不需要依赖下方的扩展包  开源地址  https://github.com/jeasonlzy/okhttp-OkGo
+    //下载管理和上传管理扩展，根据需要添加
+    //轮播图
+    //开源banner地址: https://github.com/youth5201314/banner
+
+    //沉浸式状态栏
+    //内存泄露检测
+    //图片加载框架
+    //注解
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //页面加载显示
+    //https://github.com/medyo/Dynamicbox
+    // 此处以JPush 3.0.0 版本为例。
+    // 此处以JCore 1.0.0 版本为例。
+
+    //    compile 'cn.jiguang.sdk:jpush:3.0.0'  // 此处以JPush 3.0.0 版本为例。
+
+    //    compile 'cn.jiguang.sdk:jcore:1.0.0'  // 此处以JCore 1.0.0 版本为例。
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile files('libs/SocialSDK_WeiXin_Full.jar')
+    /* //gradle需要2.2以上 权限管理
+         compile 'com.github.hotchemi:permissionsdispatcher:2.3.0'
+          apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.0'*/
+
+    //另一个权限管理的工具类 地址:https://github.com/googlesamples/easypermissions
+    compile files('libs/BaiduLBS_Android.jar')
+    //   compile project(':autolayout')
+    //跑马灯式公告栏
+
+    //    compile 'com.sunfusheng:marqueeview:1.2.0'
+
+    //chrom调试工具
+
+    //    compile 'com.facebook.stetho:stetho:1.3.1'
+
+    // 根据具体JAR名字替换
+    compile files('libs/Baidu_Mtj_3.7.5.5.jar')
+    //photoView
+    //侧滑返回
+    compile project(':lib_swipeback')
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.lzy.net:okgo:2.0.0'
+    compile 'com.lzy.net:okserver:1.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.youth.banner:banner:1.4.1'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.github.medyo:dynamicbox:1.2@aar'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+    compile 'cn.jiguang.sdk:jpush:3.0.0'
+    compile 'cn.jiguang.sdk:jcore:1.0.0'
+    compile 'pub.devrel:easypermissions:0.2.1'
+    compile 'im.quar:autolayout:1.0.4'
+    compile 'de.jodamob.android:android-autolayout:1.2.3'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    apt 'com.jakewharton:butterknife-compiler:8.3.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+}

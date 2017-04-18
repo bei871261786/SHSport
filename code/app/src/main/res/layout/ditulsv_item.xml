@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_size_60dp"
+    android:layout_marginBottom="@dimen/dp_size_5dp"
+    android:layout_marginTop="@dimen/dp_size_5dp"
+    android:minHeight="@dimen/dp_size_60dp">
+
+    <ImageView
+        android:id="@+id/dituitem_im"
+        android:layout_width="@dimen/dp_size_60dp"
+        android:layout_height="@dimen/dp_size_50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/dp_size_10dp"
+       />
+
+    <LinearLayout
+        android:id="@+id/dituitem_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_size_5dp"
+        android:layout_toLeftOf="@+id/juli_tv"
+        android:layout_toRightOf="@+id/dituitem_im"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:gravity="center|left"
+            android:padding="@dimen/dp_size_3dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_size_3dp">
+
+            <TextView
+                android:id="@+id/diqu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_coner_shape"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_5dp"
+                android:paddingRight="@dimen/dp_size_5dp"
+                android:paddingTop="@dimen/dp_size_3dp"
+                android:textColor="@color/black_gray1"
+                android:textSize="@dimen/sp_size_13sp_T13"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_size_8dp"
+                android:background="@drawable/text_coner_shape"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_5dp"
+                android:paddingRight="@dimen/dp_size_5dp"
+                android:paddingTop="@dimen/dp_size_3dp"
+                android:textColor="@color/black_gray1"
+                android:textSize="@dimen/sp_size_13sp_T13"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/type2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_size_8dp"
+                android:background="@drawable/text_coner_shape"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/dp_size_3dp"
+                android:paddingLeft="@dimen/dp_size_5dp"
+                android:paddingRight="@dimen/dp_size_5dp"
+                android:paddingTop="@dimen/dp_size_3dp"
+                android:textColor="@color/black_gray1"
+                android:textSize="@dimen/sp_size_13sp_T13"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dituitem_selected_im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_size_10dp"
+        android:src="@mipmap/positionred" />
+
+    <TextView
+        android:id="@+id/juli_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_size_5dp"
+        android:layout_toLeftOf="@id/dituitem_selected_im"
+        android:maxLines="1"
+        android:padding="@dimen/dp_size_3dp"
+        android:text="距离1.2km"
+        android:textColor="@color/black_gray"
+        android:textSize="@dimen/sp_size_13sp_T13" />
+
+</RelativeLayout>

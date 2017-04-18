@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:minHeight="100dp"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dp_size_3dp">
+
+    <include
+        layout="@layout/jqc_itemleft_layout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_size_30dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/dp_size_5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="3.0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_size_13sp_T13" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dp_size_8dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_size_3dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_whitegray_nocorner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="半"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_13sp_T13" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_size_3dp"
+                android:layout_marginTop="3.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/shape_whitegray_nocorner"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="全"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_13sp_T13" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/dp_size_5dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/dp_size_3dp"
+                android:layout_weight="1">
+
+                <include layout="@layout/jincai_basechild_centop" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/dp_size_3dp"
+                android:layout_marginTop="@dimen/dp_size_3dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_stroke_rectangle_white_grey_selector">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3.0">
+
+                    <CheckBox
+                        android:id="@+id/jqc_host_cbx0"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/shape_spt_option_selecotr"
+                        android:button="@null" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bqc_host_win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3.0dip"
+                            android:singleLine="true"
+                            android:text="3"
+                            android:textColor="@color/homered"
+                            android:textSize="@dimen/sp_size_13sp_T13" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/jqc_host_cbx1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/shape_spt_option_selecotr"
+                        android:button="@null" />
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bqc_host_ping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3.0dip"
+                            android:singleLine="true"
+                            android:text="1"
+                            android:textColor="@color/homered"
+                            android:textSize="@dimen/sp_size_13sp_T13" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3.0">
+
+                    <CheckBox
+                        android:id="@+id/jqc_host_cbx2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/shape_spt_option_selecotr"
+                        android:button="@null" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bqc_host_lost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3.0dip"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="@color/homered"
+                            android:textSize="@dimen/sp_size_13sp_T13" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/dp_size_10dp"
+                android:layout_marginTop="@dimen/dp_size_3dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3.0">
+
+                    <CheckBox
+                        android:id="@+id/jqc_visit_cbx0"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/shape_spt_option_selecotr"
+                        android:button="@null" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bqc_visit_win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3.0dip"
+                            android:singleLine="true"
+                            android:text="3"
+                            android:textColor="@color/homered"
+                            android:textSize="@dimen/sp_size_13sp_T13" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="0dip"
+                    android:layout_weight="3">
+
+                    <CheckBox
+                        android:id="@+id/jqc_visit_cbx1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/shape_spt_option_selecotr"
+                        android:button="@null" />
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_alignParentBottom="true">
+
+                        <TextView
+                            android:id="@+id/bqc_visit_ping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3.0dip"
+                            android:singleLine="true"
+                            android:text="1"
+                            android:textColor="@color/homered"
+                            android:textSize="@dimen/sp_size_13sp_T13" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3.0">
+
+                    <CheckBox
+                        android:id="@+id/jqc_visit_cbx2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/shape_spt_option_selecotr"
+                        android:button="@null" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bqc_visit_lost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3.0dip"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="@color/homered"
+                            android:textSize="@dimen/sp_size_13sp_T13" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_size_10dp"
+        android:layout_marginRight="@dimen/dp_size_10dp"
+        android:layout_marginTop="@dimen/dp_size_10dp"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sfcfenxi_tv"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:background="@color/gray_bg"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_size_30dp"
+            android:text="析"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+    </LinearLayout>
+
+</LinearLayout>

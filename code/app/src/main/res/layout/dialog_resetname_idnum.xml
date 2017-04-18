@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/user_updateData_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="真实姓名"
+            android:textSize="@dimen/sp_size_15sp_T15"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/resetpsw_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_size_10dp"
+            android:layout_marginTop="@dimen/dp_size_10dp"
+            android:src="@mipmap/close_dialog" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/current_realname_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_50dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_marginRight="@dimen/dp_size_15dp"
+        android:hint="便于日后兑奖，请谨慎填写，不可更改"
+        android:textSize="@dimen/sp_size_15sp_T15"
+        android:background="@drawable/gray_corner_black_shape"
+        android:maxLength="6"
+        android:paddingLeft="@dimen/dp_size_10dp"
+        android:textColorHint="@color/black_gray1" />
+
+    <TextView
+        android:id="@+id/user_updateData_title2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="@dimen/sp_size_15sp_T15"
+        android:padding="10dp"
+        android:text="身份证号"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/current_idnumer_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_50dp"
+        android:layout_marginLeft="@dimen/dp_size_15dp"
+        android:layout_marginRight="@dimen/dp_size_15dp"
+        android:background="@drawable/gray_corner_black_shape"
+        android:hint="便于日后兑奖，请谨慎填写，不可更改"
+        android:maxLength="19"
+        android:textSize="@dimen/sp_size_15sp_T15"
+        android:paddingLeft="@dimen/dp_size_10dp"
+        android:textColorHint="@color/black_gray1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="姓名和身份证一经提交不得修改，请谨慎填写！"
+        android:textColor="@color/black_gray1"
+        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+    <Button
+        android:id="@+id/userinfo_next_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15.0dip"
+        android:background="@drawable/shape_enable_bluegray_corner1_selector"
+        android:gravity="center"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip"
+        android:text="提交"
+        android:textColor="@color/text_white_blue_selecor"
+        android:textCursorDrawable="@drawable/edittext_color"
+        android:textSize="@dimen/standard_textsize_f1" />
+</LinearLayout>

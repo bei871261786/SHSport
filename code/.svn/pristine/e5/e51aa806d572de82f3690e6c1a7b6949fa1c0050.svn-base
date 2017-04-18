@@ -1,0 +1,271 @@
+package shlottery.gov.cn.lotterycenter.ui.activity;
+
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+
+import com.orhanobut.logger.Logger;
+import com.squareup.picasso.Picasso;
+import com.umeng.socialize.Config;
+import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.UMShareListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+
+import butterknife.BindView;
+import shlottery.gov.cn.lotterycenter.Base.SlideBackActivity;
+import shlottery.gov.cn.lotterycenter.R;
+import shlottery.gov.cn.lotterycenter.bean.NewsDetailBean;
+import shlottery.gov.cn.lotterycenter.callback.LoadCallback;
+import shlottery.gov.cn.lotterycenter.network.ParamsHelperInterface;
+import shlottery.gov.cn.lotterycenter.protool.NewsDetailProtocol;
+import shlottery.gov.cn.lotterycenter.ui.widget.PicassoTransformation;
+import shlottery.gov.cn.lotterycenter.utils.LogUtils;
+import shlottery.gov.cn.lotterycenter.utils.UIUtils;
+
+public class NewsDetailActivity extends SlideBackActivity implements LoadCallback {
+    private int      mId;
+    private TextView mTitle;
+    private TextView mSource;
+    private TextView mDate;
+    private ArrayList<ImageView> mImgList = new ArrayList<>();
+    private LinearLayout mContentLayout;
+    private ImageView    mShare;
+    @BindView(R.id.titlebar_back_ll)
+    LinearLayout titlebarBackLl;
+    private String title       = "";
+    private String mShareUrl   = "";
+    private String mShareTitle = "";
+    private String mShareText  = "mShareText";
+    private PopupWindow popwindow;
+    //存储当前页面图片url的集合
+    private ArrayList<String> mImgUrls = new ArrayList<>();
+    //是否可以侧滑返回
+    private boolean mCanSwipe;
+
+    //返回(如果不是从主界面进入，那返回的时候需要启动主界面)
+    @Override
+    public void onBackPressed() {
+        closeThisActivity();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setSwipeBackEnable(mCanSwipe);
+    }
+
+    @Override
+    protected void initPageView() {
+        setContentView(R.layout.activity_news_detail);
+        mTitle = (TextView) findViewById(R.id.adapter_newdetail_title);
+        mSource = (TextView) findViewById(R.id.adapter_newdetail_source);
+        mDate = (TextView) findViewById(R.id.adapter_newdetail_date);
+        mContentLayout = (LinearLayout) findViewById(R.id.adapter_newdetail_contentLayout);
+        initTitleBar();
+        titlebarTv.setText(title);
+        mShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                share();
+            }
+        });
+        beginLoad();
+    }
+
+
+    private void initTitleBar() {
+        LinearLayout mBack = (LinearLayout) findViewById(R.id.titlebar_back_ll);
+        mBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LogUtils.i("NewsDetailactivity back:");
+                closeThisActivity();
+            }
+        });
+        titlebarTv = (TextView) findViewById(R.id.titlebar_tv);
+        titlebarTv.setText("资讯");
+        mShare = (ImageView) findViewById(R.id.titlebar_indicator);
+        mShare.setImageResource(R.mipmap.share);
+        mShare.setVisibility(View.GONE);
+    }
+
+    @Override
+    protected void initData() {
+        Config.DEBUG = true;
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        mId = bundle.getInt("id");
+        title = bundle.getString("title");
+        mCanSwipe = bundle.getBoolean("canSwipe", true);
+        Logger.e(mId + "体彩分析");
+    }
+
+    private void beginLoad() {
+        NewsDetailProtocol protocol = new NewsDetailProtocol(this);
+        protocol.load(this, new ParamsHelperInterface() {
+            @Override
+            public LinkedHashMap<String, String> getParamas() {
+                LinkedHashMap<String, String> params = new LinkedHashMap<String, String>();
+                params.put("id", mId + "");
+                return params;
+            }
+        }, this);
+    }
+
+    @Override
+    public void onSucess(Object o) {
+        if (o != null) {
+            NewsDetailBean datailBean = (NewsDetailBean) o;
+            if (datailBean.getRet() == 100) {
+                NewsDetailBean.DataBean bean = datailBean.getData();
+                initInfo(bean);
+            }
+        }
+    }
+
+    private void initInfo(NewsDetailBean.DataBean bean) {
+        mTitle.setText(bean.getTitle());
+        mSource.setText("来源:  " + bean.getSource());
+        mDate.setText(bean.getNewsTime());
+        mShareTitle = bean.getTitle();
+        mShareUrl = bean.getShareUrl();
+        ArrayList<NewsDetailBean.DataBean.ContentBean> contentList = (ArrayList<NewsDetailBean.DataBean.ContentBean>)
+                bean.getContent();
+        LinearLayout.LayoutParams txtparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams imgparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        boolean isGetContent = false;
+        for (int i = 0; i < contentList.size(); i++) {
+            String txt = contentList.get(i).getText();
+            if (txt != null && !txt.isEmpty()) {
+                TextView textView = new TextView(NewsDetailActivity.this);
+                textView.setLayoutParams(txtparams);
+                textView.setLineSpacing(5, 1.2f);
+                textView.setTextColor(NewsDetailActivity.this.getResources().getColor(R.color.black));
+                textView.setTextSize(15);
+                if (!isGetContent && !contentList.get(i).getText().isEmpty()) {
+                    mShareText = contentList.get(i).getText();
+                    isGetContent = true;
+                }
+                textView.setText(contentList.get(i).getText() + "\n");
+                mContentLayout.addView(textView);
+            }
+            final String url = contentList.get(i).getUrl();
+            String type = contentList.get(i).getType();
+            if (type.equals("image") && url != null && !url.isEmpty()) {
+                LogUtils.i("NewsDetailactivity url:" + url);
+                mImgUrls.add(url);
+                ImageView img = new ImageView(NewsDetailActivity.this);
+                img.setLayoutParams(imgparams);
+                img.setScaleType(ImageView.ScaleType.FIT_XY);
+                img.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(NewsDetailActivity.this, PhotoActivity.class);
+                        intent.putStringArrayListExtra(PhotoActivity.IMG_URLS, mImgUrls);
+                        intent.putExtra(PhotoActivity.IMG_URL_POSITION, mImgUrls.indexOf(url));
+                        startActivity(intent);
+                    }
+                });
+                mImgList.add(img);
+                Picasso.with(this)
+                        .load(url)
+                        .transform(new PicassoTransformation(NewsDetailActivity.this))
+                        .into(img);
+                mContentLayout.addView(img);
+                TextView textView = new TextView(NewsDetailActivity.this);
+                textView.setLayoutParams(txtparams);
+                //                textView.setText("\n");
+                mContentLayout.addView(textView);
+            }
+        }
+    }
+
+    @Override
+    public void onError() {
+    }
+
+    private void share() {
+        createShareDialog();
+    }
+
+    private void createShareDialog() {
+        View view = View.inflate(this, R.layout.pop_share, null);
+        popwindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams
+                .WRAP_CONTENT);
+        popwindow.setOutsideTouchable(true);
+        popwindow.setFocusable(true);
+        //让pop可以点击外面消失掉
+        popwindow.setBackgroundDrawable(new ColorDrawable(0));
+        LinearLayout wechat = (LinearLayout) view.findViewById(R.id.share_wechat);
+        LinearLayout wxcircle = (LinearLayout) view.findViewById(R.id.share_wxcircle);
+        final UMImage image = new UMImage(NewsDetailActivity.this, R.mipmap.logo);//资源文件
+        wechat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new ShareAction(NewsDetailActivity.this).withTitle(mShareTitle).withText(mShareText).withTargetUrl
+                        (mShareUrl).withMedia(image)
+                        .setPlatform(SHARE_MEDIA.WEIXIN)
+                        .setCallback(umShareListener).share();
+            }
+        });
+
+        wxcircle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new ShareAction(NewsDetailActivity.this).withTitle(mShareTitle).withTargetUrl(mShareUrl).withText
+                        (mShareText).withMedia(image)
+                        .setPlatform(SHARE_MEDIA.WEIXIN_CIRCLE)
+                        .setCallback(umShareListener).share();
+            }
+        });
+        popwindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+    }
+
+    private UMShareListener umShareListener = new UMShareListener() {
+        @Override
+        public void onResult(SHARE_MEDIA platform) {
+            UIUtils.showToastSafe("分享成功");
+            popwindow.dismiss();
+        }
+
+        @Override
+        public void onError(SHARE_MEDIA platform, Throwable t) {
+
+            UIUtils.showToastSafe("分享失败");
+            if (t != null) {
+            }
+        }
+
+        @Override
+        public void onCancel(SHARE_MEDIA platform) {
+            UIUtils.showToastSafe("分享取消");
+        }
+    };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        LogUtils.i("NewsDetailactivity onActivityResult:");
+        super.onActivityResult(requestCode, resultCode, data);
+        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+    }
+
+
+    @Override
+    protected String getBaidutitle() {
+        return "新闻详情";
+    }
+}

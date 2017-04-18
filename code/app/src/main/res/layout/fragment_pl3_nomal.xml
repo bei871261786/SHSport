@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_numbg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/pl3_title"
+        android:id="@+id/pl3_title_layout"
+        />
+
+    <ScrollView
+        android:id="@+id/scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/baselottery_bottom_ll"
+        android:layout_below="@id/pl3_title_layout"
+        android:fadeScrollbars="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_size_10dp"
+                android:layout_marginLeft="@dimen/dp_size_15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pl3_guize_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_size_10dp"
+                        android:padding="@dimen/dp_size_3dp"
+                        android:text="每位至少选择一个号码"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_13sp_T13" />
+
+                    <TextView
+                        android:id="@+id/pl3_jiangjin_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_size_3dp"
+                        android:text="按顺位猜对开奖号即中100000元"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_13sp_T13" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shake_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pl3_shake_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_size_10dp"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:gravity="center"
+                        android:text="摇一摇机选"
+                        android:textColor="@color/black_gray"
+                        android:textSize="@dimen/sp_size_13sp_T13" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_size_30dp"
+                        android:layout_height="@dimen/dp_size_30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@id/pl3_shake_tv"
+                        android:src="@mipmap/shake" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/numlottery_textline"
+                        android:text="百位" />
+
+                    <TextView style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl3_l1gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/numlottery_textline"
+                        android:text="十位" />
+
+                    <TextView style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl3_l2gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        style="@style/numlottery_textline"
+                        android:text="个位"
+
+                        />
+
+                    <TextView style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/pl3_l3gridview"
+                    style="@style/numlottery_gridviewstyle" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dividerline_height"
+                android:background="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/lottery_bottom" />
+</RelativeLayout>

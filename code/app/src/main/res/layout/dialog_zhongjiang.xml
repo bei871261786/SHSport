@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+
+        <TextView
+            android:id="@+id/title_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center|left"
+            android:text="中奖总金额:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <TextView
+            android:id="@+id/total_jiangjin_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/title_dialog"
+            android:gravity="center|left"
+            android:text="5000元"
+            android:textColor="@color/select_red"
+            android:textSize="@dimen/sp_size_15sp_T15" />
+
+        <ImageView
+            android:id="@+id/cancel_zj_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_size_15dp"
+            android:layout_marginTop="@dimen/dp_size_10dp"
+            android:src="@mipmap/cancle" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_bg" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_40dp"
+        android:background="@color/gray_bglight"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="奖级"
+            android:paddingLeft="@dimen/dp_size_5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="注数"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="奖金(元)"
+            android:paddingRight="@dimen/dp_size_5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_14sp_T14" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/jiangjin_dialog_lisv"
+        android:layout_width="match_parent"
+        android:dividerHeight="@dimen/divider2"
+        android:divider="@color/back_gray"
+        android:layout_marginLeft="@dimen/dp_size_5dp"
+        android:layout_marginRight="@dimen/dp_size_5dp"
+        android:scrollbars="none"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_bg" />
+
+</LinearLayout>

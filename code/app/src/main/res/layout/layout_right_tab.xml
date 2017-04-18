@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tablerow_gray_bg"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="时间" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="命中率" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="三分" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="得分" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="篮板" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="助攻" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="失误" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="抢断" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="盖帽" />
+
+    <TextView
+        style="@style/basketball_shuju_txt"
+        android:text="犯规" />
+
+</LinearLayout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_white_corner_shape"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/send_setting_rl"
+                    style="@style/setting_relativestyle">
+
+
+                    <TextView
+                        android:id="@+id/send_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="推送设置"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f2" />
+
+                    <ImageView
+                        android:id="@+id/usephoto_right_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:src="@mipmap/icon_arraw_right" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/default_match_rl"
+                    style="@style/setting_relativestyle">
+
+                    <TextView
+                        android:id="@+id/default_match_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center"
+                        android:maxLength="6"
+                        android:text="默认赛事"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f2" />
+
+                    <ImageView
+                        android:id="@+id/default_match_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:src="@mipmap/icon_arraw_right" />
+
+
+                    <TextView
+                        android:id="@+id/default_matchname_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:layout_toLeftOf="@+id/default_match_im"
+                        android:gravity="center"
+                        android:text="竞彩足球"
+                        android:textColor="@color/black_gray1" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_bg" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/tip_setting_rl"
+                    style="@style/setting_relativestyle">
+
+                    <TextView
+                        android:id="@+id/tip_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="提示设置"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f2" />
+
+                    <ImageView
+                        android:id="@+id/tip_setting_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:src="@mipmap/icon_arraw_right" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/videosetting_rl"
+                    style="@style/setting_relativestyle">
+
+                    <TextView
+                        android:id="@+id/videosetting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center"
+                        android:maxLength="6"
+                        android:text="自动播放视频"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f2" />
+
+                    <ImageView
+                        android:id="@+id/videosetting_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:src="@mipmap/icon_arraw_right" />
+
+
+                    <TextView
+                        android:id="@+id/videosetting_name_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:layout_toLeftOf="@+id/videosetting_im"
+                        android:gravity="center"
+                        android:text="仅wifi"
+                        android:textColor="@color/black_gray1" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/cache_setting_rl"
+                    style="@style/setting_relativestyle">
+
+                    <TextView
+                        android:id="@+id/cache_setting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center"
+                        android:maxLength="6"
+                        android:text="清除缓存"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f2" />
+
+                    <ImageView
+                        android:id="@+id/cache_setting_im"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:src="@mipmap/icon_arraw_right" />
+
+
+                    <TextView
+                        android:id="@+id/cache_size_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/dp_size_15dp"
+                        android:layout_toLeftOf="@+id/cache_setting_im"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_gray1" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_bg" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/new_version_rl"
+                    style="@style/setting_relativestyle">
+
+                    <TextView
+                        android:id="@+id/new_version_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="检测版本"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/standard_textsize_f2" />
+
+
+                    <TextView
+                        android:id="@+id/new_versionnum_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/dp_size_40dp"
+                        android:gravity="center|right"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_gray1" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_bg" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

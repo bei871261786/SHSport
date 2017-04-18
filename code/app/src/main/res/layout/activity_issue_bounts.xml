@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_issue_bounts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar"></include>
+
+    <ScrollView
+        android:id="@+id/scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/issue_sh11x5_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/issue_sh11x5_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_sh11x5"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_sh11x5_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_sh11x5_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_sh11x5_listview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_lotto_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/issue_lotto_right"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+                        >
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_lotto"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_lotto_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_lotto_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_lotto_listview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_lotto_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_sort3_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/issue_sort3_right"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_pl3"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_sort3_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_sort3_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_sort3_listview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_sort3_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_sort5_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/issue_sort5_right"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_pl5"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_sort5_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_sort5_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_sort5_listview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_sort5_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_Qx_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/issue_Qx_right"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_qixing"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_Qx_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_Qx_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_Qx_listview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_Qx_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_jcSoccer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout style="@style/issuelist_layout_style">
+
+                    <TextView
+                        style="@style/issuelist_layout_item_style"
+                        android:text="@string/lotterys_jcSoccer"
+                        android:textColor="@color/txtColor_black"
+                        android:textSize="@dimen/sp_size_17sp_T17" />
+
+                    <TextView
+                        android:id="@+id/issue_jcSoccer_issueNo"
+                        style="@style/issuelist_layout_item_style"
+                        android:layout_marginLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/black_gray"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <TextView
+                        android:id="@+id/issue_jcSoccer_issueDay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textColor="@color/black_gray"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_jcSoccer_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_jcBasketBall_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout style="@style/issuelist_layout_style">
+
+                    <TextView
+                        style="@style/issuelist_layout_item_style"
+                        android:text="@string/lotterys_jcBasketball"
+                        android:textColor="@color/txtColor_black"
+                        android:textSize="@dimen/sp_size_17sp_T17" />
+
+                    <TextView
+                        android:id="@+id/issue_jcBasketBall_issueNo"
+                        style="@style/issuelist_layout_item_style"
+                        android:layout_marginLeft="20dp"
+                        android:text=""
+                        android:textColor="@color/black_gray"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+                    <TextView
+                        android:id="@+id/issue_jcBasketBall_issueDay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textColor="@color/black_gray"
+                        android:textSize="@dimen/sp_size_12sp_T12" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_jcBasketBall_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_Sf_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/issue_Sf_right"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_sf"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_Sf_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_Sf_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_Sf_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_Sf_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_Bqc6_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/issue_Bqc6_right"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_bqc6"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_Bqc6_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_Bqc6_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_Bqc6_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_Bqc6_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dingdan_background_gray"></View>
+
+            <RelativeLayout
+                android:id="@+id/issue_Bqc4_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/issue_Bqc4_right"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/issuelist_layout_style">
+
+                        <TextView
+                            style="@style/issuelist_layout_item_style"
+                            android:text="@string/lotterys_jqc4"
+                            android:textColor="@color/txtColor_black"
+                            android:textSize="@dimen/sp_size_17sp_T17" />
+
+                        <TextView
+                            android:id="@+id/issue_Bqc4_issueNo"
+                            style="@style/issuelist_layout_item_style"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+
+                        <TextView
+                            android:id="@+id/issue_Bqc4_issueDay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textColor="@color/black_gray"
+                            android:textSize="@dimen/sp_size_12sp_T12" />
+                    </LinearLayout>
+
+                    <shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView
+                        android:id="@+id/issuebonuts_Bqc4_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:focusable="false"></shlottery.gov.cn.lotterycenter.ui.widget.NoTouchRecycleView>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/issue_Bqc4_right"
+                    android:layout_width="@dimen/issue_more_width"
+                    android:layout_height="@dimen/issue_more_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right_sign" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/issue_titlebar" />
+
+    <include layout="@layout/lottery_titlebar" />
+
+</LinearLayout>

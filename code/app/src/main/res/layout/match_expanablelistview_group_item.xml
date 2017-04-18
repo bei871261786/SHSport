@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="@color/dingdan_background_gray"
+    android:minHeight="40dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/item_week"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/view"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_size_14sp_T14" />
+
+
+    <TextView
+        android:id="@+id/item_total"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/view"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <ImageView
+        android:id="@+id/expandable_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/item_week"
+        android:layout_toStartOf="@+id/item_week"
+        android:gravity="center"
+        android:paddingRight="20dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+</RelativeLayout>

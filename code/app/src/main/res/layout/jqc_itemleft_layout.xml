@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/jqc_position1_tv"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_16sp_T16" />
+
+        <TextView
+            android:id="@+id/jqc_position2_tv"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_16sp_T16" />
+
+    </LinearLayout>
+
+    <!--胜负14的 item-->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/jqcbase_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_size_15dp"
+            android:layout_weight="2"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="英超"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standard_textsize_f5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_size_20dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jqcbase_stophour_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_size_10dp"
+                android:singleLine="true"
+                android:text="10-27"
+                android:textColor="@color/black"
+                android:textSize="@dimen/standard_textsize_f5" />
+
+            <TextView
+                android:id="@+id/jqcbase_stopmin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="00:30"
+                android:textColor="@color/black"
+                android:textSize="@dimen/standard_textsize_f5" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_news_flitrate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_titlebar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/news_tag_bottom"
+        android:layout_below="@id/base_titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/news_tag_wanfaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shapegraylight"
+                android:padding="10dp"
+                android:text="玩法"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/line_gray"></View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_tag_wanfa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/news_tag_leibieTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shapegraylight"
+                android:padding="10dp"
+                android:text="类别"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/line_gray"></View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_tag_leibie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"></android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/news_tag_famousTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shapegraylight"
+                android:padding="10dp"
+                android:text="专家"
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/news_tag_famousView"
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/line_gray"></View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_tag_zhuanjia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"></android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/news_tag_quyuTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shapegraylight"
+                android:padding="10dp"
+                android:text="区域"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/line_gray"></View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_tag_quyu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"></android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/news_tag_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/base_dialog_cancle_btn"
+            android:layout_width="100dp"
+            android:layout_height="35.0dip"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/centerview"
+            android:background="@drawable/shape_enable_grayblue_corner1_selector"
+            android:text="清空"
+            android:textColor="@color/text_black_white_selecor"
+            android:textSize="@dimen/standard_textsize_f4_S" />
+
+        <View
+            android:id="@+id/centerview"
+            android:layout_width="0.5dp"
+            android:layout_height="0.5dp"
+            android:layout_centerInParent="true"></View>
+
+        <Button
+            android:id="@+id/base_dialog_submit_btn"
+            android:layout_width="100dp"
+            android:layout_height="35.0dip"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/centerview"
+            android:background="@drawable/shape_enable_bluegray_corner2_selector"
+            android:text="确定"
+            android:textColor="@color/text_white_black_selecor"
+            android:textSize="@dimen/standard_textsize_f4_S" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

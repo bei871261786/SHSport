@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:minHeight="54dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/sfcdd_position_tv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="13"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/black_gray"
+        android:textSize="@dimen/sp_size_15sp_T15" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="32"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sfc_dd_leaguename_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="德甲"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_13sp_T13" />
+
+        <TextView
+            android:id="@+id/dd_stoptime_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="11-11 18:00"
+            android:textColor="@color/black_gray"
+            android:textSize="@dimen/sp_size_12sp_T12" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="42">
+
+        <TextView
+            android:id="@+id/sfddvs_tv"
+            android:layout_width="wrap_content"
+            android:layout_weight="40"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="vs"
+            android:layout_marginLeft="@dimen/dp_size_5dp"
+            android:layout_marginRight="@dimen/dp_size_5dp"
+            android:gravity="center"
+            android:textSize="@dimen/sp_size_13sp_T13"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/sfcdd_hostname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/sfddvs_tv"
+            android:layout_weight="40"
+            android:gravity="center"
+            android:text="汉堡"
+            android:textColor="@color/expandtxt_matchname_red"
+            android:textSize="@dimen/sp_size_12sp_T12" />
+
+
+        <TextView
+            android:id="@+id/sfcdd_visitname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/sfddvs_tv"
+            android:layout_weight="40"
+            android:gravity="center"
+            android:text="卡尔斯"
+            android:textColor="@color/expandtxt_matchname_red"
+            android:textSize="@dimen/sp_size_12sp_T12" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="55"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/dd_win_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/dingdanred_bg"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/dd_ping_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/dingdanred_bg"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/dd_lost_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/dingdanred_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dd_dan_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/dd_dan_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_flitrate_gridview_selecotr2"
+                android:button="@null"
+                android:padding="@dimen/dp_size_3dp"
+                android:enabled="false"
+                android:singleLine="true"
+                android:text="胆"
+                android:textColor="@color/black_white_check_selecor2"
+                android:textSize="@dimen/sp_size_15sp_T15" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

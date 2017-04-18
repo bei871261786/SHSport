@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_sf14"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/sfc_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/calculate_fragment_title" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sfc_ball1_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball2_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball3_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball4_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball5_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball6_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball7_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball8_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball9_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball10_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball11_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball12_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball13_tv"
+                style="@style/sfc_cal_text" />
+
+            <TextView
+                android:id="@+id/sfc_ball14_tv"
+                style="@style/sfc_cal_text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_numbg" />
+    </LinearLayout>
+
+
+
+
+        <ListView
+            android:id="@+id/sf14_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/calculatebottom_ll"
+            android:layout_below="@id/sfc_ll"
+            android:background="@color/gray_bg" />
+
+
+    <include layout="@layout/calculate_bottom" />
+
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<resources>
+
+    <!--竞彩足球-->
+    <dimen name="shadow_width">30dp</dimen>
+    <dimen name="shadow_width1">250dp</dimen>
+    <dimen name="title_size">22dp</dimen>
+    <dimen name="slidingmenu_offset">50dp</dimen>
+    <dimen name="fb_dimen_itemsp">12.0dip</dimen>
+    <dimen name="list_item_txt_big_size">14dp</dimen>
+    <dimen name="standard_textsize_f1">21.0sp</dimen>
+    <dimen name="standard_textsize_f2">17.0sp</dimen>
+    <dimen name="standard_textsize_f3">16.0sp</dimen>
+    <dimen name="standard_textsize_f4">15.0sp</dimen>
+    <dimen name="standard_textsize_f4_S">14.0sp</dimen>
+    <dimen name="standard_textsize_f5">13sp</dimen>
+    <dimen name="standard_textsize_f6">12.0sp</dimen>
+    <dimen name="standard_textsize_f7">10.0sp</dimen>
+    <dimen name="standard_textsize_f8">8.0sp</dimen>
+    <dimen name="standard_textsize_f9">7.0sp</dimen>
+    <dimen name="standard_textsize_f10">6.0sp</dimen>
+    <dimen name="standard_textsize_f11">5.0sp</dimen>
+    <dimen name="list_item_divider_height">1px</dimen>
+    <dimen name="divider1">0.5dp</dimen>
+    <dimen name="divider2">1dp</dimen>
+    <dimen name="divider3">1.5dp</dimen>
+    <dimen name="divider4">2dp</dimen>
+    <dimen name="list_item_divider_padding">8dp</dimen>
+    <dimen name="list_item_margin">9dp</dimen>
+    <dimen name="list_item_bottom_margin">12dp</dimen>
+    <dimen name="list_item_loadmore_padding">5dp</dimen>
+    <dimen name="list_item_loadmore_height">40dp</dimen>
+    <dimen name="list_item_zjq_height">90dp</dimen>
+
+    <dimen name="flitrate_grid_leftright">20dp</dimen>
+    <dimen name="list_item_top_width">20dp</dimen>
+    <dimen name="list_item_top_margin">10dp</dimen>
+
+    <dimen name="corner_small_radius">6.0dip</dimen>
+    <dimen name="coener_radiues">4.0dip</dimen>
+    <dimen name="coener_radiues2">6.0dip</dimen>
+    <dimen name="coener_radiues3">8.0dip</dimen>
+
+    <dimen name="spt_list_item_height">85.0dip</dimen>
+    <dimen name="spt_maxlist_item_height">90.0dip</dimen>
+    <dimen name="spt_order_item_height">75.0dip</dimen>
+    <dimen name="spt_scor_option_height">40.0dip</dimen>
+    <dimen name="spt_line_height2">1.0px</dimen>
+    <dimen name="spt_line_height1">0.5px</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="usercenter_titleeight">200dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="image_height">30dp</dimen>
+    <dimen name="image_wight">30dp</dimen>
+    <dimen name="image_height_small">20dp</dimen>
+    <dimen name="image_wight_small">20dp</dimen>
+
+    <dimen name="dividerline_height">1.0px</dimen>
+    <dimen name="dp_size_0_3dp">0.30000007dip</dimen>
+    <dimen name="dp_size_0_5dp">0.5dip</dimen>
+    <dimen name="dp_size_2dp">2.0dip</dimen>
+    <dimen name="dp_size_3dp">3.0dip</dimen>
+    <dimen name="dp_size_4dp">4.0dip</dimen>
+    <dimen name="dp_size_5dp">5.0dip</dimen>
+    <dimen name="dp_size_6dp">6.0dip</dimen>
+    <dimen name="dp_size_8dp">8.0dip</dimen>
+    <dimen name="dp_size_10dp">10.0dip</dimen>
+    <dimen name="dp_size_12dp">12.0dip</dimen>
+    <dimen name="dp_size_14dp">14.0dip</dimen>
+    <dimen name="dp_size_15dp">15.0dip</dimen>
+    <dimen name="dp_size_16dp">16.0dip</dimen>
+    <dimen name="dp_size_18dp">18.0dip</dimen>
+    <dimen name="dp_size_20dp">20.0dip</dimen>
+    <dimen name="dp_size_24dp">24.0dip</dimen>
+    <dimen name="dp_size_26dp">26.0dip</dimen>
+    <dimen name="dp_size_30dp">30.0dip</dimen>
+    <dimen name="dp_size_34dp">34.0dip</dimen>
+    <dimen name="dp_size_35dp">35.0dip</dimen>
+    <dimen name="dp_size_36dp">36.0dip</dimen>
+    <dimen name="dp_size_40dp">40.0dip</dimen>
+    <dimen name="dp_size_44dp">44.0dip</dimen>
+    <dimen name="dp_size_45dp">45.0dip</dimen>
+    <dimen name="dp_size_48dp">48.0dip</dimen>
+    <dimen name="dp_size_50dp">50.0dip</dimen>
+    <dimen name="dp_size_56dp">56.0dip</dimen>
+    <dimen name="dp_size_60dp">60.0dip</dimen>
+    <dimen name="dp_size_80dp">80.0dip</dimen>
+
+
+    <!--textsize-->
+    <dimen name="sp_size_1sp_T1">1.0sp</dimen>
+    <dimen name="sp_size_2sp_T2">2.0sp</dimen>
+    <dimen name="sp_size_3sp_T3">3.0sp</dimen>
+    <dimen name="sp_size_4sp_T4">4.0sp</dimen>
+    <dimen name="sp_size_5sp_T5">5.0sp</dimen>
+    <dimen name="sp_size_6sp_T6">6.0sp</dimen>
+    <dimen name="sp_size_7sp_T7">7.0sp</dimen>
+    <dimen name="sp_size_8sp_T8">8.0sp</dimen>
+    <dimen name="sp_size_9sp_T9">9.0sp</dimen>
+    <dimen name="sp_size_10sp_T10">10.0sp</dimen>
+    <dimen name="sp_size_11sp_T11">11.0sp</dimen>
+    <dimen name="sp_size_12sp_T12">12.0sp</dimen>
+    <dimen name="sp_size_13sp_T13">13.0sp</dimen>
+    <dimen name="sp_size_14sp_T14">14.0sp</dimen>
+    <dimen name="sp_size_15sp_T15">15.0sp</dimen>
+    <dimen name="sp_size_16sp_T16">16.0sp</dimen>
+    <dimen name="sp_size_17sp_T17">17.0sp</dimen>
+    <dimen name="sp_size_18sp_T18">18.0sp</dimen>
+    <dimen name="sp_size_19sp_T19">19.0sp</dimen>
+    <dimen name="sp_size_20sp_T20">20.0sp</dimen>
+    <dimen name="sp_size_21sp_T21">21.0sp</dimen>
+
+    <dimen name="title_height">48.0dip</dimen>
+
+    <dimen name="key_ball_width">38.0dip</dimen>
+    <dimen name="key_ball_height">42.0dip</dimen>
+
+    <dimen name="key_block_width">17.0dip</dimen>
+    <dimen name="key_block_height">30.0dip</dimen>
+
+    <dimen name="key_ball_big_width">44.0dip</dimen>
+    <dimen name="key_ball_big_height">50.0dip</dimen>
+
+    <dimen name="issue_more_width">13.0dip</dimen>
+    <dimen name="issue_more_height">23.0dip</dimen>
+
+    <dimen name="body_padding_medium">10dp</dimen>
+    <dimen name="body_padding_large">10dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">18sp</dimen>
+    <dimen name="speaker_image_size">36dp</dimen>
+    <dimen name="speaker_image_padding">8dp</dimen>
+    <dimen name="vendor_image_size">100dp</dimen>
+    <dimen name="titlebar">54dp</dimen>
+    <dimen name="actionbar_height">45dip</dimen>
+    <dimen name="actionbar_item_height">45dip</dimen>
+    <dimen name="actionbar_item_width">45dip</dimen>
+    <dimen name="lotterys_name">16sp</dimen>
+
+
+    <!--适配规格-->
+    <!--首页推荐方案中tab之间间隔-->
+    <!--<dimen name="home_tuijian_tabmargin_right">0dp</dimen>-->
+    <!--<dimen name="home_tuijian_tabmargin_left">0dp</dimen>-->
+    <!--<dimen name="home_title_height">40dp</dimen>-->
+    <!--<dimen name="home_vp_title">32dp</dimen>-->
+    <!--<dimen name="home_vp_kaijiang">109dp</dimen>-->
+    <!--<dimen name="home_tczj_title">31dp</dimen>-->
+    <!--<dimen name="home_tj_title">35dp</dimen>-->
+    <!--<dimen name="home_padding_large">6dp</dimen>-->
+    <!--<dimen name="home_tabs_height">79dp</dimen>-->
+    <!--<dimen name="home_kj_leftimg">73dp</dimen>-->
+    <!--<dimen name="home_gonggao_height">48dp</dimen>-->
+    <!--<dimen name="home_vp_txtsize">20sp</dimen>-->
+    <!--<dimen name="home_mqrquee_txtsize">17sp</dimen>-->
+    <!--<dimen name="home_indicator_size">12dp</dimen>-->
+    <!--<dimen name="home_smalltitle_size">22dp</dimen>-->
+    <!--<dimen name="home_smalltitle_padding">11dp</dimen>-->
+    <!--<dimen name="home_zj_height">101dp</dimen>-->
+    <!--<dimen name="home_tj_value">14dp</dimen>-->
+    <!--<dimen name="home_tabs_txt">16dp</dimen>-->
+
+
+    <!--1080p参数-->
+    <dimen name="home_tuijian_tabmargin_right">5dp</dimen>
+    <dimen name="home_tuijian_tabmargin_left">13dp</dimen>
+    <dimen name="home_title_height">30dp</dimen>
+    <dimen name="home_vp_title">24dp</dimen>
+    <dimen name="home_vp_kaijiang">83dp</dimen>
+    <dimen name="home_tczj_title">24dp</dimen>
+    <dimen name="home_tj_title">27dp</dimen>
+    <dimen name="home_padding_large">4dp</dimen>
+    <dimen name="home_tabs_height">60dp</dimen>
+    <dimen name="home_tabs_txt">12dp</dimen>
+    <dimen name="home_kj_leftimg">55dp</dimen>
+    <dimen name="home_gonggao_height">37dp</dimen>
+    <dimen name="home_vp_txtsize">15sp</dimen>
+    <dimen name="home_mqrquee_txtsize">13sp</dimen>
+    <dimen name="home_indicator_size">9dp</dimen>
+    <dimen name="home_smalltitle_size">16dp</dimen>
+    <dimen name="home_smalltitle_padding">9dp</dimen>
+    <dimen name="home_zj_height">77dp</dimen>
+    <dimen name="home_tj_value">11dp</dimen>
+    <dimen name="lotteryshome_logo_txtsize">12sp</dimen>
+    <dimen name="lotteryshome_title_txtsize">16sp</dimen>
+    <dimen name="issuelist_title_issuesize">12sp</dimen>
+    <dimen name="kefu_tab_txtsize">12sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+
+</resources>
+
+
+

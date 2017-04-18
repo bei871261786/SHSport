@@ -1,0 +1,328 @@
+package shlottery.gov.cn.lotterycenter.ui.activity;
+
+import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+
+import com.orhanobut.logger.Logger;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+
+import shlottery.gov.cn.lotterycenter.Base.BaseActivity;
+import shlottery.gov.cn.lotterycenter.R;
+import shlottery.gov.cn.lotterycenter.bean.IssueListBaseBean;
+import shlottery.gov.cn.lotterycenter.callback.LoadCallback;
+import shlottery.gov.cn.lotterycenter.network.ParamsHelperInterface;
+import shlottery.gov.cn.lotterycenter.protool.IssueDatelistProtocol;
+import shlottery.gov.cn.lotterycenter.ui.calculatebouns.adapter.CalculateTimeListAdapter;
+import shlottery.gov.cn.lotterycenter.ui.fragment.IBDetailBaseFragment;
+import shlottery.gov.cn.lotterycenter.ui.fragment.IBDetailJincaiFragment;
+import shlottery.gov.cn.lotterycenter.ui.fragment.IBDetailNumberFragment;
+import shlottery.gov.cn.lotterycenter.ui.fragment.IBDetailSh115berFragment;
+import shlottery.gov.cn.lotterycenter.ui.fragment.IBDetailSoccerFragment;
+import shlottery.gov.cn.lotterycenter.ui.view.widget.MyWheelView;
+import shlottery.gov.cn.lotterycenter.ui.view.widget.OnWheelChangedListener;
+import shlottery.gov.cn.lotterycenter.utils.LogUtils;
+import shlottery.gov.cn.lotterycenter.utils.UIUtils;
+
+import static shlottery.gov.cn.lotterycenter.R.id.titlebar_indicator;
+
+public class IssueBounsDetailActivity extends BaseActivity implements LoadCallback {
+
+    private Intent               mIntent;
+    private int                  mDetailType;
+    private ImageView            mIndicatorImg;
+    private String               mTitleName;
+    private FragmentManager      mFragmentManager;
+    private IssueListBaseBean    issueListBaseBean;//开奖日期的bean
+    private String               selectedIssue;//选中日期
+    private IBDetailBaseFragment mCurrentFragment;
+    private final int INDICATOR_MORE     = 0;
+    private final int INDICATOR_CALENDAR = 1;
+    private final int INDICATOR_RIGHT    = 2;
+    private MyListener  myListener;
+    private PopupWindow mMorePop;
+    private PopupWindow mCalendarPop;
+    private AlertDialog mTimePickDialog;
+    private MyWheelView mTimeWheelPicker;
+    private String mLotid = "";
+    private List<String> mIssueList;//开奖期号的String 集合  点击头部切换按钮时,需要清空,重新请求//或者做缓存
+    private LinearLayout mBack;
+    private Resources    mResource;
+    private int    mCurrentType = 0;
+    private String mTitleType   = "";
+    private String mChartUrl    = "";
+    private int    mCurrentItem = 0;//时间选择器当前偏移量
+    private int    mTempItem    = 0;//时间选择器当前临时偏移量
+
+    @Override
+    protected void initView() {
+        setContentView(R.layout.activity_issue_bouns_detail);
+        mResource = getResources();
+        titlebarTv = (TextView) findViewById(R.id.titlebar_tv);
+        mBack = (LinearLayout) findViewById(R.id.titlebar_back_ll);
+        titlebarTv.setText(mTitleName);
+        mBack.setOnClickListener(myListener);
+        initTitleBar();
+        toggleFragment(mDetailType);
+        mIndicatorImg.setOnClickListener(myListener);
+        beginLoadDate();
+    }
+
+    private void initTitleBar() {
+        LinearLayout mBack = (LinearLayout) findViewById(R.id.titlebar_back_ll);
+        mBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                finish();
+                closeThisActivity();
+            }
+        });
+        titlebarTv = (TextView) findViewById(R.id.titlebar_tv);
+        titlebarTv.setText(mTitleName);
+        mIndicatorImg = (ImageView) findViewById(titlebar_indicator);
+        mIndicatorImg.setImageResource(R.mipmap.filtrate);
+    }
+
+    @Override
+    protected void init() {
+        mIntent = getIntent();
+        Bundle bundle = mIntent.getExtras();
+        myListener = new MyListener();
+        mFragmentManager = getSupportFragmentManager();
+        mDetailType = bundle.getInt("detailType");
+        mTitleName = bundle.getString("issueName");
+        mLotid = (String) bundle.getSerializable("lotid");
+        LogUtils.i("IssueDetailActivity init:" + mLotid + "::::" + mTitleName + "::::" + mDetailType);
+    }
+
+    private void beginLoadDate() {
+        IssueDatelistProtocol protocol = new IssueDatelistProtocol(this);
+        protocol.load(this, new ParamsHelperInterface() {
+            @Override
+            public LinkedHashMap<String, String> getParamas() {
+                LinkedHashMap<String, String> params = new LinkedHashMap<String, String>();
+                params.put("lotId", mLotid);
+                return params;
+            }
+        }, this);
+    }
+
+    private void toggleFragment(int mDetailType) {
+        switch (mDetailType) {
+            case 0:
+                mCurrentFragment = new IBDetailNumberFragment();
+                mFragmentManager.beginTransaction().replace(R.id.issueDetail_fragment, mCurrentFragment).commit();
+                toggleIndicator(INDICATOR_MORE);
+                break;
+            case 1:
+                mCurrentFragment = new IBDetailJincaiFragment();
+                mFragmentManager.beginTransaction().replace(R.id.issueDetail_fragment, mCurrentFragment).commit();
+                toggleIndicator(INDICATOR_CALENDAR);
+                break;
+            case 2:
+                mCurrentFragment = new IBDetailSoccerFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("titlename", mTitleName);
+                mCurrentFragment.setArguments(bundle);
+                mFragmentManager.beginTransaction().replace(R.id.issueDetail_fragment, mCurrentFragment).commit();
+                toggleIndicator(INDICATOR_CALENDAR);
+                break;
+            case 3:
+                mCurrentFragment = new IBDetailSh115berFragment();
+                mFragmentManager.beginTransaction().replace(R.id.issueDetail_fragment, mCurrentFragment).commit();
+                toggleIndicator(INDICATOR_MORE);
+                break;
+        }
+    }
+
+    private void toggleIndicator(int mIndicatorType) {
+        switch (mIndicatorType) {
+            case INDICATOR_CALENDAR:
+                mIndicatorImg.setImageResource(R.mipmap.calendar);
+                mCurrentType = 0;
+                break;
+            case INDICATOR_MORE:
+                mIndicatorImg.setImageResource(R.mipmap.indicator_more);
+                mCurrentType = 1;
+                break;
+            case INDICATOR_RIGHT:
+                mIndicatorImg.setImageResource(R.mipmap.indicator_right);
+                mCurrentType = 2;
+                break;
+        }
+    }
+
+    @Override
+    public void onSucess(Object o) {
+        if (o != null) {
+            IssueListBaseBean bean = (IssueListBaseBean) o;
+            if (bean.getRet() == 100) {
+                issueListBaseBean = bean;
+                mChartUrl = issueListBaseBean.getData().getChartUrl();
+                LogUtils.i("mChartUrl:" + mChartUrl);
+            }
+        }
+    }
+
+    @Override
+    public void onError() {
+
+    }
+
+    private class MyListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+                //启动更多popwindow
+                //启动往期查询popwindow
+                case titlebar_indicator:
+                    if (mCurrentType == 0) {
+                        showTimePicker();
+                    } else if (mCurrentType == 1) {
+                        if (mMorePop != null && mMorePop.isShowing()) {
+                            mMorePop.dismiss();
+                        } else {
+                            createMorePop(mIndicatorImg);
+                        }
+                    }
+
+                    break;
+                //powpindow奖金奖级
+                case R.id.pop_levellayout:
+                    mMorePop.dismiss();
+                    Intent intent = new Intent(IssueBounsDetailActivity.this, JiangjiActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("issueName", mTitleName);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    break;
+                //powpindow走势图
+                case R.id.pop_zoushilayout:
+                    beginZoushi();
+                    mMorePop.dismiss();
+                    break;
+                //powpindow往期回查
+                case R.id.pop_calendarlayout:
+                    mMorePop.dismiss();
+                    showTimePicker();
+                    break;
+                //日期查询取消
+                case R.id.issuepicker_cancle_tv:
+                    mTimePickDialog.dismiss();
+                    break;
+                //日期查询确定
+                case R.id.issuepicker_ok_tv:
+                    mCurrentItem = mTempItem;
+                    mCurrentFragment.updateByIssueno(selectedIssue);
+                    mTimePickDialog.dismiss();
+                    break;
+                //日期查询回到当期
+                case R.id.issuepicker_backto_tv:
+                    mTimeWheelPicker.setCurrentItem(0);
+                    mCurrentItem = mTempItem;
+                    mCurrentFragment.updateByIssueno(selectedIssue);
+                    mTimePickDialog.dismiss();
+                    break;
+                case R.id.titlebar_back_ll:
+                    finish();
+                    break;
+            }
+        }
+    }
+
+    private void beginZoushi() {
+        Intent intent = new Intent(IssueBounsDetailActivity.this, ZoushiActivity.class);
+        intent.putExtra("url", mChartUrl);
+        intent.putExtra("title", mTitleName);
+        startActivity(intent);
+    }
+
+
+    //弹出更多选项的popwindow
+    private void createMorePop(View attachView) {
+        LogUtils.i("createMorePop");
+        View view = LayoutInflater.from(this).inflate(R.layout.popuwindow_issuemore, null);
+        mMorePop = new PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams
+                .WRAP_CONTENT);
+        mMorePop.showAsDropDown(attachView, 10, 0);
+        mMorePop.setOutsideTouchable(true);
+        mMorePop.setTouchable(true);
+        //让pop可以点击外面消失掉
+        mMorePop.setBackgroundDrawable(new ColorDrawable(0));
+        LinearLayout level = (LinearLayout) view.findViewById(R.id.pop_levellayout);
+        LinearLayout zoushi = (LinearLayout) view.findViewById(R.id.pop_zoushilayout);
+        LinearLayout canlendar = (LinearLayout) view.findViewById(R.id.pop_calendarlayout);
+        level.setOnClickListener(myListener);
+        zoushi.setOnClickListener(myListener);
+        canlendar.setOnClickListener(myListener);
+        if (mLotid.equals("pl3") || mLotid.equals("pl5")) {
+            level.setVisibility(View.GONE);
+        }
+    }
+
+    //弹出时间选择框
+    private void showTimePicker() {
+        LogUtils.i("showTimePicker");
+        if (issueListBaseBean != null) {
+            // TODO Auto-generated method stub
+            View mDialogView = UIUtils.inflate(R.layout.dialog_issue_picker);
+            if (null == mTimePickDialog) {
+                mTimePickDialog = new AlertDialog.Builder(this).create();
+            } else {
+                mTimePickDialog = null;//避免复用dialog导致MywheelView当前可见条目与数据不符合
+                mTimePickDialog = new AlertDialog.Builder(this).create();
+            }
+            mTimePickDialog.setView(mDialogView, 0, 0, 0, 0);
+            TextView mTimeCancle = (TextView) mDialogView.findViewById(R.id.issuepicker_cancle_tv);
+            TextView mTimeOk = (TextView) mDialogView.findViewById(R.id.issuepicker_ok_tv);
+            TextView mTimeBack = (TextView) mDialogView.findViewById(R.id.issuepicker_backto_tv);
+
+            mTimeCancle.setOnClickListener(myListener);//取消
+            mTimeOk.setOnClickListener(myListener);//确定
+            mTimeBack.setOnClickListener(myListener);//确定
+
+            mTimeWheelPicker = (MyWheelView) mDialogView.findViewById(R.id.time_pick_whl);
+            mIssueList = new ArrayList<>();
+            for (int i = 0; i < issueListBaseBean.getData().getIssueList().size(); i++) {
+                mIssueList.add(issueListBaseBean.getData().getIssueList().get(i).getIssueNo() + "期");
+            }
+
+            CalculateTimeListAdapter mTimeWheelAdapter = new CalculateTimeListAdapter(this, mIssueList);
+            mTimeWheelPicker.setViewAdapter(mTimeWheelAdapter);
+            mTimeWheelPicker.setCurrentItem(mCurrentItem);
+
+            mTimeWheelPicker.addChangingListener(new OnWheelChangedListener() {
+                @Override
+                public void onChanged(MyWheelView wheel, int oldValue, int newValue) {
+                    if (null != mIssueList && mIssueList.size() >= 1) {
+                        selectedIssue = mIssueList.get(newValue);
+                        selectedIssue = selectedIssue.substring(0, selectedIssue.length() - 1);
+                        mTempItem = newValue;
+                        Logger.e(selectedIssue + "期号");
+                    }
+                }
+            });
+            mTimePickDialog.show();
+        }
+    }
+    @Override
+    protected String getBaidutitle() {
+        return "";
+    }
+    @Override
+    public void onBackPressed() {
+        closeThisActivity();
+    }
+}

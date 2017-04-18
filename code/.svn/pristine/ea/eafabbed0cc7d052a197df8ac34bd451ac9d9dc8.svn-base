@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_vp_kaijiang"
+    android:background="@drawable/home_vpgblue_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/home_kj_leftimg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/kaijiangbg_top" />
+
+    <LinearLayout
+        android:id="@+id/topll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_size_20dp">
+
+        <TextView
+            android:id="@+id/home_lotteryname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上海11选5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_vp_txtsize" />
+
+        <TextView
+            android:id="@+id/home_issue_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_size_24dp"
+            android:text="第20161020期"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_vp_txtsize" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/kaijiang_plusAward_img"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/home_kj_leftimg"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:src="@mipmap/plus_award" />
+
+
+    <LinearLayout
+        android:id="@+id/kaijiang_num_tv"
+        android:layout_below="@id/topll"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_size_10dp"
+        android:orientation="horizontal" />
+
+
+</RelativeLayout>

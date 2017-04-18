@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@color/white"
+    android:minHeight="30dp">
+
+    <TextView
+        android:id="@+id/hostball_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="[0']"
+        android:textColor="@color/back_gray"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <TextView
+        android:id="@+id/hostballname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/hostball_time_tv"
+        android:gravity="center"
+        android:text="罗纳尔多"
+        android:textColor="@color/back_gray"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <ImageView
+        android:id="@+id/hostgoal1_im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/hostballname_tv"
+        android:src="@mipmap/goal" />
+
+    <TextView
+        android:id="@+id/hostassistname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/hostgoal1_im"
+        android:gravity="center"
+        android:text="罗纳尔多"
+        android:textColor="@color/back_gray"
+        android:visibility="gone"
+        android:textSize="@dimen/standard_textsize_f5" />
+
+    <ImageView
+        android:id="@+id/hostgoal2_im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/hostassistname_tv"
+        android:src="@mipmap/goal"
+        android:visibility="gone" />
+
+</RelativeLayout>

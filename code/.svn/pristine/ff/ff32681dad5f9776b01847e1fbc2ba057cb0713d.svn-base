@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/head_title_barstyle">
+
+    <ImageView
+        android:id="@+id/topButton_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="25dp"
+        android:src="@mipmap/topback" />
+
+    <RelativeLayout
+        android:id="@+id/topTitleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/topTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="胜平负"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_size_20sp_T20"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/xialaButton"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/topTv"
+            android:src="@mipmap/up_light"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/shangla_button"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/topTv"
+            android:src="@mipmap/down_light" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/filtrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="25dp"
+        android:src="@mipmap/filtrate" />
+
+</RelativeLayout>

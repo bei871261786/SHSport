@@ -1,0 +1,490 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="android:listDivider">@drawable/divider</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="lottoTheme" parent="AppTheme.Base">
+        <!--<item name="android:windowAnimationStyle">@style/AnimationActivity</item>-->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Activity背景透明 -->
+    <style name="TranslucentTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AnimationActivity" mce_bogus="1" parent="@android:style/Animation.Activity">
+
+        <item name="android:activityOpenEnterAnimation">@anim/push_left_in</item>
+
+        <item name="android:activityOpenExitAnimation">@anim/push_left_out</item>
+
+    </style>
+
+    <style name="head_title_barstyle">
+        <item name="android:background">@color/homeblue</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+    </style>
+
+    <style name="dialog_corner" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="dialog_fullscreen">
+        <item name="android:windowBackground">@color/transparent_half</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="dialog_fullscreen2">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--竞彩足球-->
+    <style name="jincai_sleected_selector">
+        <item name="android:textColor">@color/black_white_check_selecor</item>
+        <item name="android:background">@drawable/red_gray_jincai_selector</item>
+        <item name="android:textSize">@dimen/sp_size_14sp_T14</item>
+    </style>
+
+    <style name="score_setting_nosale_tv_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#ffffffff</item>
+        <item name="android:text">未开售</item>
+    </style>
+
+    //圆角dialog样式参数
+
+    <style name="corner_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>  
+    </style>
+
+    <style name="head_title_backImg_style">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:src">@mipmap/back</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="head_title_text_style">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edittext_password">
+        <item name="android:digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+        </item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:numeric">integer</item>
+        <item name="android:inputType">number</item>
+        <item name="android:password">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textCursorDrawable">@drawable/edittext_color</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    //用户中心字体风格
+
+    <style name="usercenter_txtstyle">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    //用户中心textview的风格
+
+    <style name="usercenter_listtextstyle" parent="@style/usercenter_txtstyle">
+        <item name="android:textSize">@dimen/standard_textsize_f2</item>
+        <item name="android:textColor">@color/standard_textcolor_c2</item>
+    </style>
+
+    //用户中心每个item风格
+
+    <style name="userinfo_listitemstyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <!--<item name="android:background">@drawable/white_corner_shape_selector</item>-->
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">70dp</item>
+    </style>
+
+
+    <!--  全屏没有标题-->
+    <style name="NotitleThemeFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="ProgressBarBig">
+        <item name="android:indeterminateDrawable">@drawable/progress_big</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:maxWidth">48dip</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">3500</item>
+    </style>
+
+    <declare-styleable name="MarqueeView">
+        <!--间隔时间-->
+        <attr name="intervalTime" format="integer" />
+        <attr name="scrollTime" format="integer" />
+        <attr name="orientation" format="enum">
+            <enum name="bottomToTop" value="1" />
+            <enum name="topToBottom" value="2" />
+            <enum name="rightToLeft" value="3" />
+            <enum name="leftToRight" value="4" />
+        </attr>
+        <attr name="enableAlphaAnim" format="boolean" />
+        <attr name="enableScaleAnim" format="boolean" />
+    </declare-styleable>
+
+    <!--  android:layout_width="@dimen/key_ball_width"
+      android:layout_height="@dimen/key_ball_width"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/circle_num_bg"
+      android:gravity="center"
+      android:text="1"
+      android:textColor="@color/standard_textcolor_c8"
+      android:textSize="@dimen/sp_size_18sp_T18"-->
+    <style name="numlottery_textstyle">
+
+        <item name="android:layout_width">@dimen/key_ball_width</item>
+        <item name="android:layout_height">@dimen/key_ball_height</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@mipmap/ball_unselect</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">@dimen/dp_size_3dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_size_18sp_T18</item>
+    </style>
+
+    <!-- android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="@dimen/dp_size_5dp"
+     android:layout_weight="5"
+     android:horizontalSpacing="1dp"
+     android:numColumns="5"
+     android:stretchMode="columnWidth"
+     android:verticalSpacing="1dp"-->
+    <style name="numlottery_gridviewstyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_size_10dp</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:numColumns">7</item>
+        <item name="android:stretchMode">columnWidth</item>
+        <item name="android:verticalSpacing">10dp</item>
+    </style>
+    <!-- android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center"
+     android:gravity="center"
+     android:paddingTop="@dimen/dp_size_10dp"
+
+     android:textColor="@color/black_gray"
+     android:textSize="@dimen/sp_size_15sp_T15"-->
+    <style name="numlottery_textline">
+        <item name="android:layout_width">54dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@mipmap/numbg_inactor</item>
+        <item name="android:layout_marginTop">@dimen/dp_size_15dp</item>
+        <item name="android:paddingTop">@dimen/dp_size_3dp</item>
+        <item name="android:paddingLeft">@dimen/dp_size_6dp</item>
+        <item name="android:paddingRight">@dimen/dp_size_6dp</item>
+        <item name="android:paddingBottom">@dimen/dp_size_3dp</item>
+        <item name="android:textColor">@color/black_gray</item>
+        <item name="android:textSize">@dimen/sp_size_14sp_T14</item>
+    </style>
+    <!-- android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_gravity="center"
+     android:gravity="center"
+     android:paddingTop="@dimen/dp_size_10dp"
+     android:text="遗漏"
+     android:textColor="@color/black_gray"
+     android:textSize="@dimen/sp_size_12sp_T12"-->
+    <style name="numlottery_textyilou">
+        <item name="android:layout_width">54dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/dp_size_10dp</item>
+        <!--<item name="android:paddingTop">@dimen/dp_size_4dp</item>-->
+        <item name="android:paddingLeft">@dimen/dp_size_6dp</item>
+        <item name="android:paddingRight">@dimen/dp_size_6dp</item>
+        <item name="android:paddingBottom">@dimen/dp_size_4dp</item>
+        <item name="android:textColor">@color/black_gray</item>
+        <item name="android:text">@string/yilou</item>
+        <item name="android:textSize">@dimen/sp_size_12sp_T12</item>
+    </style>
+
+
+    <!-- android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="@dimen/dp_size_20dp"
+     android:layout_marginLeft="@dimen/dp_size_12dp"
+     android:orientation="horizontal"-->
+    <style name="numlottery_parentLL">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/dp_size_20dp</item>
+        <item name="android:layout_marginLeft">@dimen/dp_size_12dp</item>
+        <item name="android:layout_marginRight">@dimen/dp_size_12dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="register_mipmap">
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <!--设置中的relativelayout 的style -->
+    <style name="setting_relativestyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:background">@drawable/white_nocorner_lightgray_shape_selector</item>
+    </style>
+
+    <!--设置中的开关按钮image 的style -->
+    <style name="setting_onoffstyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_size_15dp</item>
+    </style>
+    <!--设置中彩种image 的style -->
+
+    <style name="setting_lottery_icon">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/dp_size_15dp</item>
+    </style>
+
+    <!--设置中彩种name 的style -->
+    <style name="setting_lottery_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/standard_textsize_f3</item>
+        <item name="android:layout_marginLeft">@dimen/dp_size_15dp</item>
+    </style>
+
+
+    <!--注单详情页 竞足adapter中的item  LinearLayout的style -->
+    <style name="zhudan_item_ll">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <!--注单详情页 竞足adapter中的item 主胜text的style -->
+    <style name="zhudan_item_text1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/select_red</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/sp_size_13sp_T13</item>
+    </style>
+
+    <!--注单详情页 竞足adapter中的item sps  text的style -->
+    <style name="zhudan_item_text2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/dp_size_10dp</item>
+        <item name="android:textColor">@color/expandtxt_matchname_red</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/sp_size_13sp_T13</item>
+    </style>
+
+    <!--注单详情页 竞足adapter中的item sps  正行的 -->
+    <style name="zhudan_item_llayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_marginLeft">@dimen/dp_size_15dp</item>
+        <item name="android:layout_marginBottom">@dimen/dp_size_5dp</item>
+        <item name="android:layout_marginTop">@dimen/dp_size_5dp</item>
+    </style>
+
+    <!--注单详情页 竞足adapter中的item sps  正行的 -->
+
+    <style name="sfc_cal_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/gray_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:layout_marginLeft">@dimen/dp_size_8dp</item>
+        <item name="android:layout_marginTop">@dimen/dp_size_8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:text">-</item>
+        <item name="android:textSize">@dimen/sp_size_16sp_T16</item>
+        <item name="android:textColor">@color/select_red</item>
+    </style>
+
+    <style name="popupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popuwindow_in</item>
+        <item name="android:windowExitAnimation">@anim/popuwindow_out</item>
+    </style>
+
+    <!--篮球赛事页比分tablerow的stytle-->
+    <style name="basketball_tabrow" parent="android:Animation">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/dp_size_3dp</item>
+        <item name="android:textSize">@dimen/sp_size_13sp_T13</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--篮球赛事页数据页表格文字的stytle-->
+
+    <style name="basketball_shuju_txt" parent="android:Animation">
+        <item name="android:layout_width">@dimen/dp_size_50dp</item>
+        <item name="android:layout_height">@dimen/dp_size_30dp</item>
+        <item name="android:padding">@dimen/dp_size_3dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/sp_size_13sp_T13</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!--彩种大厅图标的style-->
+    <style name="lotteryshome_logo">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">41dp</item>
+    </style>
+    <!--彩种大厅图标文字的style-->
+    <style name="lotteryshome_txt_logo">
+        <item name="android:textSize">@dimen/lotteryshome_logo_txtsize</item>
+    </style>
+    <!--彩种大厅大标题文字的style-->
+    <style name="lotteryshome_title_txt">
+        <item name="android:textSize">@dimen/lotterys_name</item>
+    </style>
+    <!--彩种大厅大描述文字的style-->
+    <style name="lotteryshome_instrucation_txt">
+        <item name="android:textSize">@dimen/sp_size_14sp_T14</item>
+    </style>
+
+    <!--新闻资讯标签的tab-->
+    <style name="news_tab_style">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/text_coner_shape2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingRight">@dimen/dp_size_5dp</item>
+        <item name="android:paddingLeft">@dimen/dp_size_5dp</item>
+        <item name="android:paddingBottom">@dimen/dp_size_3dp</item>
+        <item name="android:paddingTop">@dimen/dp_size_3dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:textColor">@color/news_tab_txt</item>
+        <item name="android:textSize">@dimen/dp_size_12dp</item>
+    </style>
+
+    <!--开奖列表每个彩种文字栏的layout的style-->
+    <style name="issuelist_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--开奖列表文字栏内部前两个textview的style-->
+    <style name="issuelist_layout_item_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+
+    <style name="empty_txt_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textSize">@dimen/sp_size_18sp_T18</item>
+        <item name="android:textColor">@color/black</item>
+
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

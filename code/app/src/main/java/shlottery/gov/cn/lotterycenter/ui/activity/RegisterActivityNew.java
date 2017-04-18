@@ -1,0 +1,332 @@
+package shlottery.gov.cn.lotterycenter.ui.activity;
+
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
+
+import org.greenrobot.eventbus.EventBus;
+
+import java.util.LinkedHashMap;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import shlottery.gov.cn.lotterycenter.Base.BaseActivity;
+import shlottery.gov.cn.lotterycenter.Base.Configure;
+import shlottery.gov.cn.lotterycenter.R;
+import shlottery.gov.cn.lotterycenter.aplication.BaseApplication;
+import shlottery.gov.cn.lotterycenter.bean.LoginBean;
+import shlottery.gov.cn.lotterycenter.bean.UserInfoBean;
+import shlottery.gov.cn.lotterycenter.bean.VcodeBean;
+import shlottery.gov.cn.lotterycenter.bean.VcodeBean2;
+import shlottery.gov.cn.lotterycenter.callback.LoadCallback;
+import shlottery.gov.cn.lotterycenter.callback.LoginEvenbus;
+import shlottery.gov.cn.lotterycenter.manager.UrlManager;
+import shlottery.gov.cn.lotterycenter.network.ParamsHelperInterface;
+import shlottery.gov.cn.lotterycenter.protool.ChkChartCodeProtocol;
+import shlottery.gov.cn.lotterycenter.protool.GetSmsVcodeProtocol;
+import shlottery.gov.cn.lotterycenter.protool.RegisterAccountProtocol;
+import shlottery.gov.cn.lotterycenter.utils.LogUtils;
+import shlottery.gov.cn.lotterycenter.utils.MyCountDownTimer;
+import shlottery.gov.cn.lotterycenter.utils.PrefUtils;
+import shlottery.gov.cn.lotterycenter.utils.RegexUtils;
+import shlottery.gov.cn.lotterycenter.utils.SharedPreferencesUtils;
+import shlottery.gov.cn.lotterycenter.utils.StringUtils;
+import shlottery.gov.cn.lotterycenter.utils.UIUtils;
+
+import static shlottery.gov.cn.lotterycenter.manager.UrlManager.getChartCode;
+
+/**
+ * @创建者 Tyler Wang.
+ * @创建时间 2017/4/7  15:35.
+ * @描述 ${新的注册页面}.
+ */
+public class RegisterActivityNew extends BaseActivity implements LoadCallback {
+    @BindView(R.id.registertop_back_ll)
+    LinearLayout mRegistertopBackLl;
+    @BindView(R.id.registertop_tv)
+    TextView mRegistertopTv;
+    @BindView(R.id.registertop_ll)
+    LinearLayout mRegistertopLl;
+    @BindView(R.id.base_titleBar)
+    RelativeLayout mBaseTitleBar;
+    @BindView(R.id.et_register_name)
+    EditText mEtRegisterName;
+    @BindView(R.id.et_register_pwd)
+    EditText mEtRegisterPwd;
+    @BindView(R.id.et_register_repwd)
+    EditText mEtRegisterRepwd;
+    @BindView(R.id.et_register_imgvcode)
+    EditText mEtRegisterImgvcode;
+    @BindView(R.id.iv_register_imgvcode)
+    ImageView mIvRegisterImgvcode;
+    @BindView(R.id.tv_register_refreshimgvcode)
+    TextView mIvRegisterRefreshimgvcode;
+    @BindView(R.id.btn_register_next)
+    Button mBtnRegisterNext;
+    @BindView(R.id.ll_redister_first)
+    LinearLayout mLlRedisterFirst;
+    @BindView(R.id.et_register_phone)
+    EditText mEtRegisterPhone;
+    @BindView(R.id.tv_register_getvcode)
+    TextView mTvRegisterGetvcode;
+    @BindView(R.id.et_register_vcode)
+    EditText mEtRegisterVcode;
+    @BindView(R.id.btn_register_submit)
+    Button mBtnRegisterSubmit;
+    @BindView(R.id.ll_redister_second)
+    LinearLayout mLlRedisterSecond;
+    private GetSmsVcodeProtocol mVcodeProtocol;
+    private String mName;
+    private String mPwd;
+    //是否在下一步
+    private boolean mIsNext;
+    private String mPhoneNum;
+    private RegisterAccountProtocol mRegisterAccountProtocol;
+
+    @Override
+    protected void initView() {
+        setContentView(R.layout.activity_register_new);
+        ButterKnife.bind(this);
+        getImgvcode();
+    }
+
+    @Override
+    protected void init() {
+        mVcodeProtocol = new GetSmsVcodeProtocol(this);
+        mRegisterAccountProtocol = new RegisterAccountProtocol(this);
+    }
+
+    @Override
+    protected String getBaidutitle() {
+        return "注册";
+    }
+
+    @OnClick({R.id.registertop_back_ll, R.id.tv_register_refreshimgvcode, R.id.btn_register_next, R.id
+            .tv_register_getvcode, R.id.btn_register_submit})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.registertop_back_ll:
+                finish();
+                break;
+            case R.id.tv_register_refreshimgvcode:
+                getImgvcode();
+                break;
+            case R.id.btn_register_next:
+                next();
+                break;
+            case R.id.tv_register_getvcode:
+                getSmsVcode();
+                break;
+            case R.id.btn_register_submit:
+                regist();
+                break;
+        }
+    }
+
+    private void regist() {
+        final String smsVcode = mEtRegisterVcode.getText().toString().trim();
+        if (TextUtils.isEmpty(mPhoneNum)) {
+            UIUtils.showToastSafe("手机号不能为空");
+            return;
+        }
+        if (!RegexUtils.checkMobile(mPhoneNum)) {
+            UIUtils.showToastSafe("手机号格式有误");
+            return;
+        }
+        if (TextUtils.isEmpty(smsVcode)) {
+            UIUtils.showToastSafe("验证码不能为空");
+            return;
+        }
+        if (!smsVcode.matches("^\\d{6}$")) {
+            UIUtils.showToastSafe("验证码格式错误");
+            return;
+        }
+        final String password = StringUtils.getMD5(mPhoneNum + mPwd);
+        mRegisterAccountProtocol.load(this, new ParamsHelperInterface() {
+            @Override
+            public LinkedHashMap<String, String> getParamas() {
+                LinkedHashMap<String, String> paramas = new LinkedHashMap<>();
+                paramas.put("mobile", mPhoneNum);
+                paramas.put("smsCode", smsVcode);
+                paramas.put("nickName", mName);
+                paramas.put("password", password);
+                return paramas;
+            }
+        }, this);
+    }
+
+    private void getSmsVcode() {
+        mPhoneNum = mEtRegisterPhone.getText().toString().trim();
+        if (StringUtils.isEmpty(mPhoneNum)) {
+            UIUtils.showToastSafe("手机号不能为空");
+            return;
+        } else if (!RegexUtils.checkMobile(mPhoneNum)) {
+            UIUtils.showToastSafe("手机号格式错误");
+            return;
+        }
+        mVcodeProtocol.load(this, new ParamsHelperInterface() {
+            @Override
+            public LinkedHashMap<String, String> getParamas() {
+                LinkedHashMap<String, String> paramas = new LinkedHashMap<>();
+                paramas.put("mobile", mPhoneNum);
+                paramas.put("type", "1");
+                return paramas;
+            }
+        }, this);
+    }
+
+    private void next() {
+        mName = mEtRegisterName.getText().toString().trim();
+        mPwd = mEtRegisterPwd.getText().toString().trim();
+        String rePwd = mEtRegisterRepwd.getText().toString().trim();
+        String imgVcode = mEtRegisterImgvcode.getText().toString().trim();
+        if (TextUtils.isEmpty(mName)) {
+            UIUtils.showToastSafe("用户名不能为空");
+            return;
+        }
+        if (!RegexUtils.checkNickName(mName)) {
+            UIUtils.showToastSafe("请输入昵称(2-16个中英文字或者数字组成)");
+            return;
+        }
+        if (TextUtils.isEmpty(mPwd)) {
+            UIUtils.showToastSafe("密码不能为空");
+            return;
+        }
+        if (!RegexUtils.checkPassWord(mPwd)) {
+            UIUtils.showToastSafe("密码由6-16个英文+数字组成,区分大小写");
+            return;
+        }
+        if (TextUtils.isEmpty(rePwd)) {
+            UIUtils.showToastSafe("重复密码不能为空");
+            return;
+        }
+        if (!TextUtils.equals(mPwd, rePwd)) {
+            UIUtils.showToastSafe("两次输入的密码不一致");
+            return;
+        }
+        if (TextUtils.isEmpty(imgVcode)) {
+            UIUtils.showToastSafe("图片验证码不能为空");
+            return;
+        }
+        //TODO  checkImgVcode
+        checkImgVcode();
+    }
+
+    private void checkImgVcode() {
+        LogUtils.i("RegisterNew checkImgVcode:");
+        ChkChartCodeProtocol protocol = new ChkChartCodeProtocol();
+        protocol.load(this, new ParamsHelperInterface() {
+            @Override
+            public LinkedHashMap<String, String> getParamas() {
+                LinkedHashMap<String, String> params = new LinkedHashMap<String, String>();
+                String imgCode = mEtRegisterImgvcode.getText().toString();
+                String nickNme = mEtRegisterName.getText().toString();
+                params.put("nickName", nickNme);
+                params.put("code", imgCode);
+                return params;
+            }
+        }, this);
+    }
+
+    private void getImgvcode() {
+        //TODO 测试
+        String testImgUrl = UrlManager.getHostUrl() + getChartCode + "?client=" + PrefUtils.getString(this,
+                "Client", "");
+        LogUtils.i("getImageCode url:" + testImgUrl);
+        Picasso.with(this).load(testImgUrl).placeholder(null).skipMemoryCache().into(mIvRegisterImgvcode);
+    }
+
+    @Override
+    public void onSucess(Object o) {
+        if (o == null) {
+            return;
+        }
+        if (o instanceof VcodeBean) {
+            //获取验证码
+            VcodeBean vcode = (VcodeBean) o;
+            int ret = vcode.getRet();
+            if (ret == 100) {
+                UIUtils.showToastSafe("验证码获取成功,请等待");
+                MyCountDownTimer timer = new MyCountDownTimer(60 * 1000, 500, mTvRegisterGetvcode);
+                timer.start();
+            } else if (ret == 208) {
+                UIUtils.showToastSafe("图片验证码已失效");
+                mEtRegisterImgvcode.setText("");
+                mIsNext = false;
+                switchNext();
+                getImgvcode();
+            } else {
+                String msg = vcode.getMsg();
+                UIUtils.showToastSafe(msg);
+                mTvRegisterGetvcode.setEnabled(true);
+            }
+        } else if (o instanceof LoginBean) {
+            //注册
+            LoginBean loginBean = (LoginBean) o;
+            int ret = loginBean.getRet();
+            if (ret == 100) {
+                if (loginBean != null && loginBean.getData() != null) {
+                    LogUtils.i("LoginFragment 登陆成功" + loginBean);
+                    LoginBean.DataBean mLoginData = loginBean.getData();
+                    UserInfoBean mUserInfoBean = new UserInfoBean();
+                    mUserInfoBean.setLogoUrl(mLoginData.getLogoUrl());
+                    mUserInfoBean.setMobile(mLoginData.getMobile());
+                    mUserInfoBean.setNickName(mLoginData.getNickName());
+                    mUserInfoBean.setRealName(mLoginData.getRealName());
+                    mUserInfoBean.setSecret(mLoginData.getSecret());
+                    mUserInfoBean.setUserType(mLoginData.getUserType());
+                    BaseApplication.setmLoginStatus(true);
+                    SharedPreferencesUtils.putObject(Configure.SPKEY_USERINFO, mUserInfoBean);
+                    UIUtils.showToastSafe("注册成功");
+                    LoginEvenbus eventbus = new LoginEvenbus();
+                    eventbus.setLogin(true);
+                    EventBus.getDefault().post(eventbus);
+                    finish();
+                }
+            } else {
+                String msg = loginBean.getMsg();
+                UIUtils.showToastSafe(msg);
+            }
+        } else if (o instanceof VcodeBean2) {
+            VcodeBean2 data = (VcodeBean2) o;
+            LogUtils.i("RegisterNew ckdCode:" + data.getRet());
+            if (data.getRet() == 100) {
+                mIsNext = true;
+                switchNext();
+            } else {
+                LogUtils.i("RegisterNew ckdCode:" + data.getMsg());
+                UIUtils.showToastSafe(data.getMsg());
+            }
+        }
+    }
+
+    @Override
+    public void onError() {
+        UIUtils.showToastSafe("网络错误,请检查网络");
+        mTvRegisterGetvcode.setEnabled(true);
+        mTvRegisterGetvcode.setText("获取验证码");
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mIsNext) {
+            mIsNext = !mIsNext;
+            switchNext();
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    private void switchNext() {
+        mLlRedisterFirst.setVisibility(mIsNext ? View.GONE : View.VISIBLE);
+        mLlRedisterSecond.setVisibility(mIsNext ? View.VISIBLE : View.INVISIBLE);
+    }
+}

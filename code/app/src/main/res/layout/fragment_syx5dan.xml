@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_bottom" />
+
+    <ScrollView
+        android:id="@+id/syx5dan_scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/baselottery_bottom_ll"
+        android:layout_below="@id/base_titleBar"
+        android:fadeScrollbars="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/syx5_shaketop_layout" />-->
+            <TextView
+                android:id="@+id/syx5_issuedetaile_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_size_3dp"
+                android:layout_marginLeft="17dp"
+                android:text="按顺位猜对开奖号即中100000元"
+                android:layout_marginTop="@dimen/dp_size_10dp"
+                android:layout_marginBottom="@dimen/dp_size_10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_13sp_T13" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider3"
+                android:background="@color/gray_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_size_20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_size_10dp"
+                    android:text="胆码"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_14sp_T14" />
+
+                <TextView
+                    android:id="@+id/dandetail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_size_10dp"
+                    android:text="我认为必出的号码"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_13sp_T13" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/numlottery_textline"
+                        android:text="选号" />
+
+                    <TextView style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/syx5dan_l1gridview"
+                    style="@style/numlottery_gridviewstyle"
+                    android:numColumns="6" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider3"
+                android:background="@color/gray_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_size_20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_size_10dp"
+                    android:text="拖码"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_14sp_T14" />
+
+                <TextView
+                    android:id="@+id/tuomadetail_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_size_10dp"
+                    android:text="我认为可能出的号码"
+                    android:textColor="@color/black_gray"
+                    android:textSize="@dimen/sp_size_13sp_T13" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/numlottery_textline"
+                        android:text="选号" />
+
+                    <TextView style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/syx5dan_l2gridview"
+                    style="@style/numlottery_gridviewstyle"
+                    android:numColumns="6" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider3"
+                android:background="@color/gray_bg" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

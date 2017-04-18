@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_white_corner_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/expandtback_red"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dialog_zjq_hostrank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:text="[主]"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f6" />
+
+            <TextView
+                android:id="@+id/dialog_zjq_hostame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="队名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f4_S" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:textColor="@color/white"
+            android:textSize="@dimen/standard_textsize_f5" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dialog_zjq_visitname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="队名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f4_S" />
+
+            <TextView
+                android:id="@+id/dialog_zjq_visitrank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:text="[主]"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="6dip"
+        android:layout_height="60dip">
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="6dip"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="30dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/red_gray_jincai_selector"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/black" />
+
+            <Button
+                android:layout_width="@dimen/standard_textsize_f6"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4.5dip"
+                android:background="@drawable/red_gray_jincai_selector"
+                android:gravity="center"
+                android:text="总进球"
+                android:textColor="@color/fb_color_text_matchname"
+                android:textSize="@dimen/standard_textsize_f6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spt_goal_option_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="6dip"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/red_gray_jincai_selector"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_0_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:clickable="true"
+                    android:gravity="center" />
+
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_1_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:clickable="false"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_2_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:button="@null"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_3_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+
+                    android:button="@null"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_4_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+
+                    android:clickable="true"
+                    android:gravity="center" />
+
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_5_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+
+                    android:clickable="false"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_6_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+
+                    android:button="@null"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+                <CheckedTextView
+                    android:id="@+id/zjq_dialog_7_ct"
+                    style="@style/jincai_sleected_selector"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+
+                    android:button="@null"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="0.5dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="6dip"
+        android:background="@color/black" />
+
+    <include layout="@layout/basecalcel_submit1"></include>
+
+</LinearLayout>

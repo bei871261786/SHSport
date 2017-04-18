@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_advert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/advertImag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/kaiji" />
+
+    <TextView
+        android:id="@+id/countdown_tv"
+        android:layout_width="@dimen/dp_size_60dp"
+        android:layout_height="@dimen/dp_size_40dp"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_size_30dp"
+        android:layout_marginTop="@dimen/dp_size_40dp"
+        android:alpha="0.7"
+        android:background="@drawable/advert_corner_shape"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_size_17sp_T17" />
+</RelativeLayout>

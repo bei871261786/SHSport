@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/zu3_scorll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/baselottery_bottom_ll"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fadeScrollbars="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/syx5_shaketop_layout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider3"
+                android:background="@color/gray_bg" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/numlottery_textline"
+                        android:text="万位" />
+
+                    <TextView style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/syx5z2_l1gridview"
+                    style="@style/numlottery_gridviewstyle"
+                    android:numColumns="6" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider3"
+                android:background="@color/gray_bg" />
+
+            <LinearLayout style="@style/numlottery_parentLL">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/numlottery_textline"
+                        android:text="千位" />
+
+                    <TextView style="@style/numlottery_textyilou" />
+
+                </LinearLayout>
+
+                <shlottery.gov.cn.lotterycenter.ui.view.GridViewWithoutScroll
+                    android:id="@+id/syx5z2_l2gridview"
+                    style="@style/numlottery_gridviewstyle"
+                    android:numColumns="6" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider3"
+                android:background="@color/gray_bg" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/lottery_bottom" />
+</RelativeLayout>

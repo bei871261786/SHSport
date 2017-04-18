@@ -1,0 +1,434 @@
+<resources>
+    <string name="app_name">上海体彩</string>
+    <string name="yilou">遗漏</string>
+    <string name="pl2_zu3_least">请至少选2个号码哦</string>
+    <string name="pl2_zu6_least">请至少选3个号码哦</string>
+    <!--用户中心-->
+    <string name="user_data">个人资料</string>
+    <string name="user_account">账户</string>
+    <string name="user_subscribe">订阅</string>
+    <string name="user_order">模拟注单</string>
+    <string name="user_wd">代销资格申请</string>
+    <string name="user_manager">专管员</string>
+    <string name="user_qrcode">二维码</string>
+
+
+    <string-array name="homegridviewitem">
+        <item>最新开奖</item>
+        <item>模拟购彩</item>
+        <item>奖金计算</item>
+        <item>推荐分析</item>
+        <item>体彩活动</item>
+        <item>超G竞彩</item>
+        <item>网点导航</item>
+        <item>客服热线</item>
+    </string-array>
+
+    <!--竞彩足球-->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="load_error">加载失败,点击重试</string>
+    <string name="load_more">加载中...</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <item name="group_tag" type="id"></item>
+    <item name="child_tag" type="id"></item>
+    <string name="lottery_version">1.0.0</string>
+    <string name="copyright">www.shlottery.gov.cn All Rights Reserved</string>
+
+
+    <string-array name="issue_type">
+        <item>竞彩足球</item>
+    </string-array>
+
+    <string-array name="title_jincaizuqiu">
+        <item>胜平负</item>
+        <item>让球胜平负</item>
+        <item>比分</item>
+        <item>总进球</item>
+        <item>半全场</item>
+        <item>混合过关</item>
+    </string-array>
+
+    <string-array name="title_jincailanqiu">
+        <item>胜负</item>
+        <item>让分胜负</item>
+        <item>大小分</item>
+        <item>胜分差</item>
+        <item>混合过关</item>
+    </string-array>
+
+    <string-array name="dingdan_chuanlian">
+        <item>2串1</item>
+        <item>3串1</item>
+        <item>4串1</item>
+        <item>5串1</item>
+        <item>6串1</item>
+        <item>7串1</item>
+        <item>8串1</item>
+    </string-array>
+
+    <string-array name="title_mainactiviey">
+        <item>彩票比分</item>
+        <item>竞彩开奖</item>
+        <item>赛事分析</item>
+        <item>新闻资讯</item>
+    </string-array>
+    <string-array name="content_mainactiviey">
+        <item>彩票比分即时直播</item>
+        <item>最新竞彩开奖信息</item>
+        <item>特邀名家赛事分析</item>
+        <item>国际体坛最新动向</item>
+    </string-array>
+
+    <string name="detail_amount">注数:%1$s注</string>
+    <string name="detail_mulltiple">倍数:%1$s倍</string>
+    <string name="detail_playtype">投注方式:%1$s</string>
+    <string name="detail_statust">状态:%1$s</string>
+    <string name="detail_stakeMoney">投注金额:%1$s元</string>
+    <string name="detail_stakeId">投注单号:%1$s</string>
+    <string name="detail_lotname">竞彩%1$s</string>
+    <string name="detail_issueNo">%1$s期</string>
+    <string name="detail_stakeOptiono">投注选项：%1$s</string>
+    <string name="detail_stakeSp">投注奖金值：%1$s</string>
+    <string name="detail_stakeResult">开奖结果：%1$s</string>
+    <string name="detail_bonusMoney">中奖金额：%1$s</string>
+    <string name="detail_scheme_issueNo">期次：%1$s</string>
+
+
+    <string name="score_desc">竞猜全场90分钟（含伤停补时）的比分</string>
+    <string name="bqcdialog_description">竞猜主队在上半场和全场比赛（不含加时赛和点球大战）的胜平负结果</string>
+    <string name="dingdan_back_title">返回首页</string>
+    <string name="dingdan_back_description">退出将清空当前已选号码</string>
+    <item name="tag_zjq_child" type="id"></item>
+
+    <string name="usernamehint">请输入手机号</string>
+    <string name="username">用户名</string>
+    <string name="regist">免费注册</string>
+    <string name="password">请输入密码</string>
+    <string name="passwordmi">密</string>
+    <string name="passwordma">码</string>
+    <string name="vertifycode">验证码</string>
+    <string name="inputvertifycode">请输入验证码</string>
+    <string name="rememberpassword">记住密码</string>
+    <string name="forgetpassword">忘记密码 </string>
+    <string name="fastregist">快速注册</string>
+    <string name="cancle">取消</string>
+
+    <string name="lotteryInfo_startjc">投注竞彩足球</string>
+    <string name="lotteryInfo_title">竞彩足球</string>
+    <string name="userinfo">个人资料</string>
+    <string name="nickname">昵称</string>
+    <string name="realname">真实姓名</string>
+    <string name="mobilenumber">手机号码</string>
+    <string name="bignumber">大奖号码</string>
+    <string name="userinfopassword">登陆密码</string>
+    <string name="userinfo_idnumber">身份证号</string>
+    <string name="bignumber_des">如您购彩中奖,客服将通过该电话第一时间通知您</string>
+    <string name="write_bignumber">请填写您的大奖号码</string>
+    <string name="write_numberid">请输入身份证号码</string>
+    <string name="argee_nochange">一经确认,不可更改</string>
+    <string name="input_idnumber">请填写您的身份证号</string>
+    <string name="input_realname">请输入您的真实姓名</string>
+    <string name="the_realname">请填写您的真实姓名</string>
+    <string name="agree_button">确认</string>
+
+    <string name="chang_login_password">修改登录密码</string>
+    <string name="title_modify_paypwd">修改支付密码</string>
+    <string name="chang_bignumber">修改大奖号码</string>
+    <string name="updateuserinfo">完善个人资料</string>
+    <string name="login">登录</string>
+    <string name="register">用户注册</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="wanshangerenziliao_dialog">请确认您填写的姓名和身份证号码是否有误\n一经确认无法更改</string>
+
+    <string name="payment_dialog_input">请输入您的支付密码</string>
+    <string name="payment_dialog_forget">忘记支付密码？</string>
+    <string name="tishi">温馨提示:</string>
+    <string name="chongzhi_tishi" formatted="false">1． 请确认您已开通网银，具体限额以银行限额为准，免手续费。\n2．本平台每单笔充值最低10元，最高1万元，单日最高1万元。\n3．储蓄卡单笔充值金额用于购彩消费60%后方可取款；消费金额低于60%时申请提款，将加收2%的异常处理手续费用，在5个工作日内处理完成。\n4．信用卡充值金额只适用于本站购彩，不能提现（国家明令禁止一切洗钱行为）；如遇特殊情况需要退款，需先联系客服确定后，在用户提现申请的30个工作日后进行处理，退款由原路退回至充值信用卡中。</string>
+    <string name="tixianshuoming" formatted="false">1．单笔充值金额用于购彩消费60%后方可取款；消费金额低于60%时申请提款，将加收2%的异常处理手续费用，在5个工作日内处理完成。\n2．购彩产生的奖金用于可正常提现，具体到账时间视各银行具体规定。\n3．账户金额在20元及以下用户如需提款，需一次提清，处理流程为15个工作日以内。</string>
+    <string name="tixianzhuyi" formatted="false">1．用户提现实际到账金额是已扣除手续费后的资金，提现每笔手续费为2元。\n2．本平台单笔提现金额最高限额为人民币2万元（含）；每日单个用户最高提款上限为10万元；如遇特殊情况，请先联系客服。\n3．提款账户开户姓名必须和真实姓名一致。\n4．填写账户请务必填写正确的银行借记卡号，存折号和信用卡号系统无法进行办理。</string>
+    <string name="bangdingyinhang">1.  为了你的资金安全,必须使用本人的 银行卡,银行卡户主必须和持卡人移植。\n2.银行卡分行或者支行名必须填写正确,否则可能导致无法到账。\n3.系统默认该卡作为您申请提现的唯一用卡。\n4.如需更改银行卡,请致电客服电话:400 670 8808。</string>
+    <string name="wangyinchongzhi">网银充值</string>
+
+    <string name="modify_pay_pwd_descripe">请输入登录密码，以验证身份</string>
+    <string name="goucaixieyi">第1条\n雪缘园的各项电子服务的所有权及经营运作权归其所属公司所有。雪缘园敬请您在每次登录雪缘园时阅读本条款。雪缘园提供的服务将完全按照其发布的章程、服务条款和操作规则严格执行，用户必须完全同意接受所有服务条款并完成注册程序，才能成为雪缘园的注册用户，而且，当用户使用某一或若干雪缘园提供的服务时，您和本平台应受针对并适用于该服务且已发布的相应的指引和规定的约束。\n\n第2条\n雪缘园将不时提供其它服务，而这些其它服务是受不同的服务条款和条件约束的，若该其它服务并未发布服务条款和条件，则本条款适用之，其未尽事宜，雪缘园拥有最终解释权利。\n\n第3条\n敬请注意，雪缘园在提供服务的若干领域可能涉及对18周岁以下的未成年人不适合的内容。在该些领域中，雪缘园将在提供服务时予以提示。另请牢记雪缘园的服务是针对广大用户，因此当您为法定监护人时，您有责任决定哪些服务和/或材料内容适合您的被监护人。\n\n第4条\n雪缘园运用自己的操作系统通过国际互联网络为用户提供网络服务。同时，用户必须：\n(1)自行配备上网的所需设备；\n(2)自行负担个人上网所支付的与此服务有关的电话费用、网络费用；\n(3)提供详尽、准确的的个人资料；\n(4)不断更新注册资料，符合及时、详尽、准确的要求。如果用户提供的资料包含有不正确的信息，雪缘园保留取消用户使用需经注册方可使用的服务的权利。\n\n第5条\n雪缘园有权在必要时修改服务条款，雪缘园服务条款一旦发生变动，将会在重要页面上提示修改内容。如果不同意所改动的内容，用户可以主动取消获得的网络服务。如果用户继续使用网络服务，则视为接受服务条款的变动。雪缘园保留随时修改或中断服务而不需知照用户的权利。雪缘园行使修改或中断服务的权利，不需对用户或第三方负责。\n\n第6条\n用户一经注册成功，将立即成为雪缘园的合法用户。用户将对用户名和密码的安全负全部责任。另外，每个用户都要对以其用户名进行的所有活动和事件负全责。您可随时根据指示改变您的密码。用户若发现任何非法使用用户帐号或存在安全漏洞的情况，请立即通告雪缘园。\n\n第7条\n雪缘园将在为用户提供服务的过程中，竭尽可能地维护和完善雪缘园提供的各种服务。用户在使用雪缘园络过程中自行承担风险，雪缘园不担保服务一定能满足用户的要求，也不担保服务不会受中断，对服务的及时性，安全性，出错发生都不作担保。雪缘园同时不对用户所发布信息的删除或储存失败负责。\n\n第8条\n任何用户在登录雪缘园和接受雪缘园提供的各种服务过程中不得采用任何非正当手段，包括但不限于利用程序错误等行为，雪缘园保留对违反者采取一切手段，直至追究法律责任的权利。\n\n第9条\n雪缘园对任何直接、间接、偶然、特殊及继起的损害不负责任，这些损害包括来自但不限于：不正当使用网络服务，非法使用网络服务或用户传送的信息有所变动。这些行为都有可能会导致雪缘园的形象受损，所以雪缘园事先提出这种损害的可能性。\n\n第10条\n尊重用户的隐私是雪缘园的原则。倘若未事先征得同意，雪缘园不会更改、公开任何有关您本人或帐户的资料，如姓名、电子信箱、地址、或帐户内容。除了下面情况以外：\n(1)政府机关或法院的命令或要求；\n(2)符合法律规定且过程合法；\n(3)用户授权许可。\n\n第11条\n用户单独承担发布内容的责任。用户对服务的使用是根据所有适用于雪缘园的国家法律、地方法律和国际法律标准的。用户须承诺：\n(1)不传输任何非法的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、伤害性的、庸俗的，淫秽等信息资料。\n(2)不传输任何教唆他人构成犯罪行为的资料；不传输助长国内不利条件和涉及国家安全的资料；\n(3)不传输任何不符合当地法规、国家法律和国际法律的资料。未经许可而非法进入其它电脑系统是禁止的。\n若用户的行为违反以上承诺，雪缘园将做出独立判断立即取消用户服务帐号。用户需对自己的行为承担法律责任。用户若在雪缘园上散布和传播反动、色情或其他违反国家法律的信息，雪缘园的系统记录有可能作为用户违反法律的证据。\n12条\n用户同意保障和维护雪缘园全体成员的利益，负责支付由用户使用超出服务范围引起的律师费用，违反服务条款的损害补偿费用等。\n\n第13条\n用户或雪缘园可随时根据实际情况中断一项或多项网络服务。雪缘园不需对任何个人或第三方负责而随时中断服务。用户对后来的条款修改有异议，或对雪缘园的服务不满，可以行使如下权利：\n(1)停止使用雪缘园的网络服务；\n(2)通告雪缘园停止对该用户的服务。\n结束用户服务后，用户使用网络服务的权利马上中止。从那时起，用户没有权利，雪缘园也没有义务传送任何未处理的信息或未完成的服务给用户或第三方。\n\n第14条\n雪缘园的网络服务内容包括：文字、软件、声音、图片、录象、图表、广告中的全部内容；电子邮件的全部内容；雪缘园为用户提供的其他信息。所有这些内容受版权、商标、标签和其它财产所有权法律的保护。所以，用户只能在雪缘园和授权代理人授权下才能使用这些内容，而不能擅自复制、再造这些内容、或创造与内容有关的派生产品。雪缘园所有的文章版权归原文作者和雪缘园共同所有，任何人需要转载雪缘园的文章，必须征得原文作者或雪缘园授权。\n\n第15条\n本服务条款受中华人民共和国现行法律、法规以及此后颁布和实施的法律、法规的约束和保护，用户和雪缘园一致同意服从其管辖。如发生雪缘园服务条款与中华人民共和国法律相抵触时，则这些条款将完全按法律规定重新解释，而其它条款则依旧保持对用户产生法律效力和影响。\n\n第16条\n用户及雪缘园任一方的任何争议和质疑，均需及时告知对方，并尽可能友好协商解决。如协商不成，任一方可提请上海仲裁委员会申请仲裁，仲裁裁决是终局的，对双方均具有约束力。\n\n第17条\n本服务条款未尽事项，雪缘园在不违背有关法律、法规，不违反公共道德准则的情况下，由雪缘园作出最终解释、补充，或另行约定附则。</string>
+
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_last_time">上次更新时间:</string>
+    <string name="xlistview_footer_hint_ready">查看更多</string>
+    <string name="xlistview_footer_hint_normal">加载更多</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载···</string>
+
+
+    <string-array name="tab_names">
+        <item>首页</item>
+        <item>资讯</item>
+        <item>彩种</item>
+        <item>赛事</item>
+        <item>用户</item>
+    </string-array>
+
+    <string-array name="titlebar_names">
+        <item>首页</item>
+        <item>资讯</item>
+        <item>彩种</item>
+        <item>赛事</item>
+        <item>用户中心</item>
+    </string-array>
+
+    <string name="lotterys_pl3">排列三</string>
+    <string name="lotterys_pl5">排列五</string>
+    <string name="lotterys_sh11x5">上海11选5</string>
+    <string name="lotterys_lotto">超级大乐透</string>
+    <string name="lotterys_qixing">七星彩</string>
+    <string name="lotterys_jcSoccer">竞彩足球</string>
+    <string name="lotterys_jcBasketball">竞彩篮球</string>
+    <string name="lotterys_sf">胜负彩</string>
+    <string name="lotterys_bqc6">6场半全场</string>
+    <string name="lotterys_jqc4">4场进球彩</string>
+
+    <string name="lotto_title_pool">奖池：%1$s元</string>
+
+    <string name="dantuozhushi">大乐透的胆拖投注是；在前区号码或后区号码中选择少于单式投注号码个数的号码作为每注都有的号码成为胆码，再选取除胆码以外的号码作为拖码，由胆码和拖码组和成多注投注，称为单拖投注。\n \t\t胆拖投注包含三种形式：\n\t\t（一）前区胆拖：从01-35中选取1至4个号码为胆码，再选取除胆码以外的号码作为拖码，胆码和拖码组成前区号码（其数量之和必须等于或多于6个号码），并从01-12中选取2个号码为后区号码。\n \t\t（二）后区胆拖：从01-35中至少选取5个号码为前区号码，并从01-12中选取1个号码为胆码，再选取除胆码以外的2个以上（含2个）的号码为拖码，胆码和拖码组成后区号码。\n\t\t（三）双区胆拖：从01-35中选取1至4个号码为胆码，再选取除胆码以外的号码作为拖码，胆码和拖码组成前区号码（其数量之和必须等于或多于6个号码），并从01-12中选取1个号码为胆码，再选取除胆码以外的2个以上（含2个）的号码为拖码，胆码和拖码组成后区号码。\n</string>
+    <string name="awarding_instructions">本期兑奖截止日为%1$s,逾期作弃奖处理</string>
+    <string-array name="syx5_title">
+        <item>任选二</item>
+        <item>任选三</item>
+        <item>任选四</item>
+        <item>任选五</item>
+        <item>任选六</item>
+        <item>任选七</item>
+        <item>任选八</item>
+        <item>前一直选</item>
+        <item>前二直选</item>
+        <item>前二组选</item>
+        <item>前三直选</item>
+        <item>前三组选</item>
+    </string-array>
+    <string-array name="syx5dan_title">
+        <item>任选二</item>
+        <item>任选三</item>
+        <item>任选四</item>
+        <item>任选五</item>
+        <item>任选六</item>
+        <item>任选七</item>
+        <item>任选八</item>
+        <item>前二组选</item>
+        <item>前三组选</item>
+    </string-array>
+
+    <string-array name="calculate_title">
+        <item>超级大乐透</item>
+        <item>排列三</item>
+        <item>排列五</item>
+        <item>七星彩</item>
+        <item>任选九</item>
+        <item>胜负彩14场</item>
+        <item>6场半全场</item>
+        <item>4场进球彩</item>
+    </string-array>
+
+    <string-array name="syx5dan_detail">
+        <item>猜对任意2个开奖号即中6元</item>
+        <item>猜对任意3个开奖号即中19元</item>
+        <item>猜对任意4个开奖号即中78元</item>
+        <item>猜对任意5个开奖号即中540元</item>
+        <item>猜对任意5个开奖号即中90元</item>
+        <item>猜对任意5个开奖号即中26元</item>
+        <item>猜对任意5个开奖号即中9元</item>
+        <item>猜对前两位开奖号即中65元</item>
+        <item>猜对前三位开奖号即中195元</item>
+    </string-array>
+
+    <string-array name="syx5dan_detail_colorText">
+        <item>6</item>
+        <item>19</item>
+        <item>78</item>
+        <item>540</item>
+        <item>90</item>
+        <item>26</item>
+        <item>9</item>
+        <item>65</item>
+        <item>195</item>
+    </string-array>
+
+    <string-array name="syx5ren_detail">
+        <item>猜对任意2个开奖号即中6元</item>
+        <item>猜对任意3个开奖号即中19元</item>
+        <item>猜对任意4个开奖号即中78元</item>
+        <item>猜对任意5个开奖号即中540元</item>
+        <item>猜对任意5个开奖号即中90元</item>
+        <item>猜对任意5个开奖号即中26元</item>
+        <item>猜对任意5个开奖号即中9元</item>
+        <item>猜对第一位即中13元</item>
+        <item>按位猜对前两位即中130元</item>
+        <item>猜对前两位开奖号即中65元</item>
+        <item>按位猜对前三位即中1170元</item>
+        <item>猜对前三位开奖号即中195元</item>
+    </string-array>
+
+    <string-array name="syx5ren_detail_colorText">
+        <item>6</item>
+        <item>19</item>
+        <item>78</item>
+        <item>540</item>
+        <item>90</item>
+        <item>26</item>
+        <item>9</item>
+        <item>13</item>
+        <item>130</item>
+        <item>65</item>
+        <item>1170</item>
+        <item>195</item>
+    </string-array>
+
+
+    <string-array name="syx5ren_leastnum">
+        <item>至少选2个号码</item>
+        <item>至少选3个号码</item>
+        <item>至少选4个号码</item>
+        <item>至少选5个号码</item>
+        <item>至少选6个号码</item>
+        <item>至少选7个号码</item>
+        <item>至少选8个号码</item>
+        <item>至少选1个号码</item>
+        <item>每位至少选1个不同号码</item>
+        <item>至少选2个号码</item>
+        <item>每位至少选1个不同号码</item>
+        <item>至少选3个号码</item>
+    </string-array>
+
+    <string name="facebook_app_id">1266254913438718</string>
+    <string name="umeng_update_content">版本号：6.1.1\n1.debug模式增加了更多工程配置的检测\n2.核心包进行了又一次的压缩\n3.微信精简版进行了又一次的压缩\n4.增加了图片打水印的功能\n5.为用户提供了文字图片合成的功能\n7.提供了图片合成的功能</string>
+    <string name="umeng_home_title">U-Share产品Demo</string>
+    <string name="umeng_home_update">新版更新内容</string>
+    <string name="umeng_share_title">分享</string>
+    <string name="umeng_auth_title">授权</string>
+    <string name="umeng_delauth_title">删除授权</string>
+    <string name="umeng_getinfo_title">获取用户信息</string>
+    <string name="umeng_check_title">自检工具</string>
+    <string name="umeng_menu_title">分享菜单模板</string>
+
+    <string name="umeng_check_sign">检查签名</string>
+    <string name="umeng_check_sina">检查新浪</string>
+    <string name="umeng_check_wx">检查微信</string>
+    <string name="umeng_check_alipay">检查支付宝</string>
+    <string name="umeng_check_qq">检查qq</string>
+    <string name="umeng_check_fb">检查facebook</string>
+    <string name="umeng_choose_style">选择分享类型</string>
+
+    <string name="umeng_sharebutton_custom">自定义分享按钮</string>
+
+    <string name="editextpsw">请输入密码(6-16个英文+数字组成,区分大小写)</string>
+
+    <!--适配规格-->
+    <!--首页开奖viewpager下方指示圆点大小-->
+    <integer name="home_kjpoint_size">40</integer>
+    <string name="title_activity_coordinator_test">CoordinatorTestActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+</resources>

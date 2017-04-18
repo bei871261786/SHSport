@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/superg_flitrateLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="10dp">-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/superG_flitrata_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/superG_flitrata_recycleview"
+        android:background="@color/dingdan_background_gray"></View>
+
+    <LinearLayout
+        android:id="@+id/basecancel_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/superG_flitrata_recycleview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/base_dialog_submit_btn"
+            style="@null"
+            android:layout_width="80dp"
+            android:layout_height="35.0dip"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/shape_enable_bluegray_corner2_selector"
+            android:text="确定"
+            android:textColor="@color/text_white_black_selecor"
+            android:textSize="@dimen/standard_textsize_f4_S" />
+
+        <Button
+            android:id="@+id/base_dialog_cancle_btn"
+            android:layout_width="80dp"
+            android:layout_height="35.0dip"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/shape_enable_grayblue_corner1_selector"
+            android:text="取消"
+            android:textColor="@color/text_black_white_selecor"
+            android:textSize="@dimen/standard_textsize_f4_S" />
+
+    </LinearLayout>
+
+    <!--</LinearLayout>-->
+</RelativeLayout>

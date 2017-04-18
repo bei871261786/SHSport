@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_matchanalytics"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/lottery_titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_white_corner_shape"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_white_corner_shape">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/matchname_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                <!--  <TextView
+                      android:id="@+id/matchdengji_tv"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:gravity="center"
+                      android:text="二级"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/standard_textsize_f5" />-->
+
+                <TextView
+                    android:id="@+id/livematchtime_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                <!--  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:gravity="center"
+                      android:text="10:20"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/standard_textsize_f5" />-->
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/visitimage_im"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/fenshu_ll"
+                android:padding="5dp"/>
+
+            <ImageView
+                android:id="@+id/hostimage_im"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/fenshu_ll"
+                android:padding="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/fenshu_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/visitscore_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/select_red"
+                        android:textSize="@dimen/sp_size_18sp_T18"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/live_maohao_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/select_red"
+                        android:textSize="@dimen/sp_size_18sp_T18"
+                        android:visibility="invisible"/>
+
+
+                    <TextView
+                        android:id="@+id/host_score_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="100"
+                        android:textColor="@color/select_red"
+                        android:textSize="@dimen/sp_size_18sp_T18"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/haltscore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_maohao_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_12sp_T12"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/extrascore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_maohao_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_12sp_T12"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/pointscore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/live_maohao_tv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_size_12sp_T12"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/match_staus_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/standard_textsize_f5"/>
+
+            <TextView
+                android:id="@+id/visitteam_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/match_staus_tv"
+                android:gravity="center"
+                android:textColor="@color/homeblue"
+                android:textSize="@dimen/sp_size_14sp_T14"/>
+
+            <TextView
+                android:id="@+id/hostteam_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/match_staus_tv"
+                android:gravity="center"
+                android:textColor="@color/homeblue"
+                android:textSize="@dimen/sp_size_14sp_T14"/>
+
+            <TextView
+                android:id="@+id/hostrank_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:layout_toRightOf="@id/hostteam_tv"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_12sp_T12"/>
+
+            <TextView
+                android:id="@+id/visitrank_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toLeftOf="@id/visitteam_tv"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_size_12sp_T12"/>
+
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_size_10dp"
+            android:layout_marginLeft="@dimen/dp_size_15dp"
+            android:layout_marginRight="@dimen/dp_size_15dp"
+            android:layout_marginTop="@dimen/dp_size_5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tablerow_gray_bg"
+                    android:gravity="center"
+                    android:text="球队排名"
+                    android:textSize="@dimen/sp_size_14sp_T14"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/tablerow_gray_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/basketball_tabrow"
+                        android:text="1节"/>
+
+                    <TextView
+                        style="@style/basketball_tabrow"
+                        android:text="2节"/>
+
+                    <TextView
+                        style="@style/basketball_tabrow"
+                        android:text="3节"/>
+
+                    <TextView
+                        style="@style/basketball_tabrow"
+                        android:text="4节"/>
+
+                    <TextView
+                        android:id="@+id/title_jia1_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="加1"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/title_jia2_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="加2"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/title_jia3_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="加3"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/title_jia4_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="加4"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tab_hostname_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tablerow_white_bg"
+                    android:gravity="center"
+                    android:text="主场"
+                    android:textSize="@dimen/sp_size_14sp_T14"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/tablerow_white_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hostfirst_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/hostsecond_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/hostthird_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/hostforth_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/hostjia1_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/hostjia2_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/hostjia3_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/hostjia4_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tab_visitname_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tablerow_white_bg"
+                    android:gravity="center"
+                    android:text="客场"
+                    android:textSize="@dimen/sp_size_14sp_T14"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/tablerow_white_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/visitfirst_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/visitsecond_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/visitthird_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/visitforth_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"/>
+
+                    <TextView
+                        android:id="@+id/visitjia1_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/visitjia2_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/visitjia3_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/visitjia4_num_tv"
+                        style="@style/basketball_tabrow"
+                        android:text="--"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/analysis_scr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_white_corner_shape"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_size_15dp"
+                android:paddingRight="@dimen/dp_size_15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <TextView
+                        android:id="@+id/analytics_vs_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="近6战交战往绩"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <RelativeLayout
+                        android:id="@+id/analysis_base_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/baseclose_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/close"/>
+
+                        <ImageView
+                            android:id="@+id/baseopen_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/open"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/base_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/base_vs_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/analytics_vs_tv"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray_bg"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/base_visit_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/select_red"
+                                android:gravity="center"
+                                android:padding="@dimen/dp_size_3dp"
+                                android:text="主队4胜"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                            <TextView
+                                android:id="@+id/base_ping_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/standard_textcolor_c9"
+                                android:gravity="center"
+                                android:padding="@dimen/dp_size_3dp"
+                                android:text="主队4胜"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_size_15sp_T15"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/base_host_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/standard_textcolor_c7"
+                                android:gravity="center"
+                                android:padding="@dimen/dp_size_3dp"
+                                android:text="主队4胜"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_size_10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:text="时间"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="赛事"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4.5"
+                                android:gravity="center"
+                                android:text="主队"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4.5"
+                                android:gravity="center"
+                                android:text="客队"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_size_5dp"
+                            android:background="@color/black"/>
+                    </LinearLayout>
+
+
+                    <ListView
+                        android:id="@+id/base_listv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:divider="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/white_white_corner_shape"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_size_15dp"
+                android:paddingRight="@dimen/dp_size_15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/host_zhanji_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="近6战赛况"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                    <RelativeLayout
+                        android:id="@+id/host_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/hostclose_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/close"/>
+
+                        <ImageView
+                            android:id="@+id/hostopen_im"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/open"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/host_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/white_white_corner_shape"
+                    android:orientation="vertical">
+
+                    <!--客队-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_size_60dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/host_visit_im"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/white_corner_gray_shape"
+                            android:padding="5dp"
+                            android:src="@mipmap/smallfootball"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/visit_name_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="主队 曼彻斯特联队"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/visit_win_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/select_red"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_size_5dp"
+                                    android:text="主队4胜"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_13sp_T13"/>
+
+                                <TextView
+                                    android:id="@+id/visit_ping_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/standard_textcolor_c9"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_size_5dp"
+                                    android:text="主队4胜"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_13sp_T13"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/visit_lose_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/standard_textcolor_c7"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_size_5dp"
+                                    android:text="主队4胜"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_13sp_T13"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_size_10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:text="时间"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="赛事"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4.5"
+                            android:gravity="center"
+                            android:text="主队"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4.5"
+                            android:gravity="center"
+                            android:text="客队"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp_size_5dp"
+                        android:background="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/visit_listv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"/>
+
+                    <!--主队-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_size_60dp"
+                        android:layout_marginTop="@dimen/dp_size_15dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/host_host_im"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/white_corner_gray_shape"
+                            android:padding="5dp"
+                            android:src="@mipmap/smallfootball"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/host_host_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="主队 曼彻斯特联队"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/host_win_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/select_red"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_size_5dp"
+                                    android:text="主队4胜"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_13sp_T13"/>
+
+                                <TextView
+                                    android:id="@+id/host_ping_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/standard_textcolor_c9"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_size_5dp"
+                                    android:text="主队4胜"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_13sp_T13"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/host_lose_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/standard_textcolor_c7"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_size_5dp"
+                                    android:text="主队4胜"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp_size_13sp_T13"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_size_10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:text="时间"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="赛事"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4.5"
+                            android:gravity="center"
+                            android:text="主队"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4.5"
+                            android:gravity="center"
+                            android:text="客队"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_size_15sp_T15"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp_size_5dp"
+                        android:background="@color/black"/>
+
+                    <ListView
+                        android:id="@+id/host_listv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_bg"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="10dp"
+                 android:background="@drawable/white_white_corner_shape"
+                 android:orientation="vertical"
+                 android:paddingLeft="@dimen/dp_size_15dp"
+                 android:paddingRight="@dimen/dp_size_15dp">
+
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <TextView
+                         android:id="@+id/statistics_live_tv"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="10dp"
+                         android:background="@color/white"
+                         android:gravity="left"
+                         android:padding="5dp"
+                         android:text="两队伤停名单"
+                         android:textColor="@color/black"
+                         android:textSize="@dimen/standard_textsize_f4" />
+
+                     <RelativeLayout
+                         android:id="@+id/statistics_rl"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:layout_marginRight="5dp"
+                         android:padding="10dp">
+
+                         <ImageView
+                             android:id="@+id/injury_close_im"
+                             android:layout_width="25dp"
+                             android:layout_height="25dp"
+                             android:layout_centerVertical="true"
+                             android:src="@mipmap/close" />
+
+                         <ImageView
+                             android:id="@+id/injury_open_im"
+                             android:layout_width="25dp"
+                             android:layout_height="25dp"
+                             android:layout_centerVertical="true"
+                             android:src="@mipmap/open" />
+                     </RelativeLayout>
+                 </RelativeLayout>
+
+                 <LinearLayout
+                     android:id="@+id/injury_ll"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/dp_size_45dp"
+                         android:orientation="horizontal">
+
+                         <LinearLayout
+                             android:layout_width="0dp"
+                             android:layout_height="@dimen/dp_size_50dp"
+                             android:layout_weight="1"
+                             android:orientation="horizontal">
+
+                             <ImageView
+                                 android:id="@+id/injury_host_im"
+                                 android:layout_width="40dp"
+                                 android:layout_height="40dp"
+                                 android:layout_margin="5dp"
+                                 android:background="@drawable/white_corner_gray_shape"
+                                 android:padding="5dp"
+                                 android:src="@mipmap/smallfootball" />
+
+                             <TextView
+                                 android:id="@+id/injury_hostname_tv"
+                                 android:layout_width="0dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:text="曼彻斯特联队"
+                                 android:textColor="@color/black_gray1" />
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="0dp"
+                             android:layout_height="@dimen/dp_size_45dp"
+                             android:layout_weight="1"
+                             android:orientation="horizontal">
+
+                             <ImageView
+                                 android:id="@+id/injury_visit_im"
+                                 android:layout_width="40dp"
+                                 android:layout_height="40dp"
+                                 android:layout_margin="5dp"
+                                 android:background="@drawable/white_corner_gray_shape"
+                                 android:padding="5dp"
+                                 android:src="@mipmap/smallfootball" />
+
+                             <TextView
+                                 android:id="@+id/injury_visitname_tv"
+                                 android:layout_width="0dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight="1"
+                                 android:gravity="center"
+                                 android:text="曼彻斯特联队"
+                                 android:textColor="@color/black_gray1" />
+
+                         </LinearLayout>
+                     </LinearLayout>
+
+                     <View
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"
+                         android:layout_marginBottom="@dimen/dp_size_5dp"
+                         android:layout_marginTop="@dimen/dp_size_5dp"
+                         android:background="@color/black" />
+
+                     <ListView
+                         android:id="@+id/statistics_listv"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="5dp"
+                         android:layout_marginTop="@dimen/dp_size_10dp"
+                         android:divider="@null" />
+                 </LinearLayout>
+             </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
